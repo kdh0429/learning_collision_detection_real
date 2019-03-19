@@ -1,0 +1,14 @@
+2019-03-19 14:17:50.351821: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-03-19 14:17:50.433835: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:964] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-03-19 14:17:50.434152: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: GeForce GTX 1060 3GB major: 6 minor: 1 memoryClockRate(GHz): 1.7845
+pciBusID: 0000:01:00.0
+totalMemory: 2.95GiB freeMemory: 2.29GiB
+2019-03-19 14:17:50.434171: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-03-19 14:17:50.608169: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-03-19 14:17:50.608199: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-03-19 14:17:50.608204: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-03-19 14:17:50.608320: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 1985 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1060 3GB, pci bus id: 0000:01:00.0, compute capability: 6.1)
+Epoch: 0001
+Train Accuracy = 0.553057848 Train l2 reg cost = 0.000000000
+Validation Accuracy: 0.570412993 Validation l2 regularization: 0.000000000

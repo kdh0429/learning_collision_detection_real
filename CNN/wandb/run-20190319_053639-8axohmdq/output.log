@@ -1,0 +1,38 @@
+2019-03-19 14:36:55.164906: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-03-19 14:36:55.247533: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:964] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-03-19 14:36:55.247860: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: GeForce GTX 1060 3GB major: 6 minor: 1 memoryClockRate(GHz): 1.7845
+pciBusID: 0000:01:00.0
+totalMemory: 2.95GiB freeMemory: 2.28GiB
+2019-03-19 14:36:55.247882: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-03-19 14:36:55.430097: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-03-19 14:36:55.430125: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-03-19 14:36:55.430133: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-03-19 14:36:55.430258: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 1975 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1060 3GB, pci bus id: 0000:01:00.0, compute capability: 6.1)
+Epoch: 0001
+Train Accuracy = 0.814113687
+Validation Accuracy = 0.920804024
+Epoch: 0002
+Train Accuracy = 0.883859387
+Validation Accuracy = 0.925025126
+Epoch: 0003
+Train Accuracy = 0.893403142
+Validation Accuracy = 0.927889449
+Epoch: 0004
+Train Accuracy = 0.899177264
+Validation Accuracy = 0.929748745
+Epoch: 0005
+Train Accuracy = 0.902939418
+Validation Accuracy = 0.930201004
+Epoch: 0006
+Train Accuracy = 0.906454751
+Validation Accuracy = 0.932010050
+Epoch: 0007
+Train Accuracy = 0.909543757
+Validation Accuracy = 0.930854272
+Epoch: 0008
+Train Accuracy = 0.911772628
+Validation Accuracy = 0.935477388
+Epoch: 0009
+Train Accuracy = 0.913994019
+Validation Accuracy = 0.932110553

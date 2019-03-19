@@ -1,0 +1,464 @@
+2019-03-19 14:39:58.642345: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-03-19 14:39:58.729431: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:964] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-03-19 14:39:58.729735: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: GeForce GTX 1060 3GB major: 6 minor: 1 memoryClockRate(GHz): 1.7845
+pciBusID: 0000:01:00.0
+totalMemory: 2.95GiB freeMemory: 2.29GiB
+2019-03-19 14:39:58.729752: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-03-19 14:39:58.906172: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-03-19 14:39:58.906203: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-03-19 14:39:58.906208: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-03-19 14:39:58.906320: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 1977 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1060 3GB, pci bus id: 0000:01:00.0, compute capability: 6.1)
+Epoch: 0001
+Train Accuracy = 0.811249064
+Validation Accuracy = 0.919899497
+Epoch: 0002
+Train Accuracy = 0.882056844
+Validation Accuracy = 0.921608040
+Epoch: 0003
+Train Accuracy = 0.893014213
+Validation Accuracy = 0.926984924
+Epoch: 0004
+Train Accuracy = 0.899753181
+Validation Accuracy = 0.931959800
+Epoch: 0005
+Train Accuracy = 0.903911745
+Validation Accuracy = 0.928492463
+Epoch: 0006
+Train Accuracy = 0.906821244
+Validation Accuracy = 0.932814070
+Epoch: 0007
+Train Accuracy = 0.910014960
+Validation Accuracy = 0.935879398
+Epoch: 0008
+Train Accuracy = 0.911944654
+Validation Accuracy = 0.934321609
+Epoch: 0009
+Train Accuracy = 0.913971579
+Validation Accuracy = 0.933869349
+Epoch: 0010
+Train Accuracy = 0.915243083
+Validation Accuracy = 0.936281408
+Epoch: 0011
+Train Accuracy = 0.916963353
+Validation Accuracy = 0.934472364
+Epoch: 0012
+Train Accuracy = 0.918840690
+Validation Accuracy = 0.937085428
+Epoch: 0013
+Train Accuracy = 0.919678386
+Validation Accuracy = 0.935226131
+Epoch: 0014
+Train Accuracy = 0.920949889
+Validation Accuracy = 0.936532665
+Epoch: 0015
+Train Accuracy = 0.922266269
+Validation Accuracy = 0.936984925
+Epoch: 0016
+Train Accuracy = 0.923163802
+Validation Accuracy = 0.938241207
+Epoch: 0017
+Train Accuracy = 0.923994018
+Validation Accuracy = 0.937688442
+Epoch: 0018
+Train Accuracy = 0.925946149
+Validation Accuracy = 0.938542715
+Epoch: 0019
+Train Accuracy = 0.926761407
+Validation Accuracy = 0.940703519
+Epoch: 0020
+Train Accuracy = 0.927247570
+Validation Accuracy = 0.938140705
+Epoch: 0021
+Train Accuracy = 0.928070308
+Validation Accuracy = 0.939497488
+Epoch: 0022
+Train Accuracy = 0.928863128
+Validation Accuracy = 0.936984924
+Epoch: 0023
+Train Accuracy = 0.929274496
+Validation Accuracy = 0.937185931
+Epoch: 0024
+Train Accuracy = 0.930321617
+Validation Accuracy = 0.939798995
+Epoch: 0025
+Train Accuracy = 0.930994767
+Validation Accuracy = 0.937236182
+Epoch: 0026
+Train Accuracy = 0.932348543
+Validation Accuracy = 0.938140703
+Epoch: 0027
+Train Accuracy = 0.932557967
+Validation Accuracy = 0.934874373
+Epoch: 0028
+Train Accuracy = 0.933425581
+Validation Accuracy = 0.930904523
+Epoch: 0029
+Train Accuracy = 0.933687361
+Validation Accuracy = 0.930753770
+Epoch: 0030
+Train Accuracy = 0.934831714
+Validation Accuracy = 0.934924623
+Epoch: 0031
+Train Accuracy = 0.935100975
+Validation Accuracy = 0.935527637
+Epoch: 0032
+Train Accuracy = 0.935527302
+Validation Accuracy = 0.936884421
+Epoch: 0033
+Train Accuracy = 0.936200450
+Validation Accuracy = 0.937336684
+Epoch: 0034
+Train Accuracy = 0.936686614
+Validation Accuracy = 0.938542712
+Epoch: 0035
+Train Accuracy = 0.937060585
+Validation Accuracy = 0.936180905
+Epoch: 0036
+Train Accuracy = 0.937928200
+Validation Accuracy = 0.939798993
+Epoch: 0037
+Train Accuracy = 0.937778611
+Validation Accuracy = 0.939346733
+Epoch: 0038
+Train Accuracy = 0.938332089
+Validation Accuracy = 0.937336683
+Epoch: 0039
+Train Accuracy = 0.938982799
+Validation Accuracy = 0.937939700
+Epoch: 0040
+Train Accuracy = 0.939132388
+Validation Accuracy = 0.940402011
+Epoch: 0041
+Train Accuracy = 0.940029920
+Validation Accuracy = 0.943718593
+Epoch: 0042
+Train Accuracy = 0.940531042
+Validation Accuracy = 0.940301509
+Epoch: 0043
+Train Accuracy = 0.940598356
+Validation Accuracy = 0.942110554
+Epoch: 0044
+Train Accuracy = 0.941293943
+Validation Accuracy = 0.942763820
+Epoch: 0045
+Train Accuracy = 0.941129397
+Validation Accuracy = 0.943567839
+Epoch: 0046
+Train Accuracy = 0.941518327
+Validation Accuracy = 0.942361809
+Epoch: 0047
+Train Accuracy = 0.942161557
+Validation Accuracy = 0.942160804
+Epoch: 0048
+Train Accuracy = 0.942842186
+Validation Accuracy = 0.941005025
+Epoch: 0049
+Train Accuracy = 0.943059089
+Validation Accuracy = 0.941959800
+Epoch: 0050
+Train Accuracy = 0.943231117
+Validation Accuracy = 0.939849245
+Epoch: 0051
+Train Accuracy = 0.944106210
+Validation Accuracy = 0.941959799
+Epoch: 0052
+Train Accuracy = 0.944367990
+Validation Accuracy = 0.945577890
+Epoch: 0053
+Train Accuracy = 0.943941662
+Validation Accuracy = 0.938743718
+Epoch: 0054
+Train Accuracy = 0.944764400
+Validation Accuracy = 0.940150754
+Epoch: 0055
+Train Accuracy = 0.945467467
+Validation Accuracy = 0.943819098
+Epoch: 0056
+Train Accuracy = 0.945519822
+Validation Accuracy = 0.942814071
+Epoch: 0057
+Train Accuracy = 0.945273002
+Validation Accuracy = 0.941407033
+Epoch: 0058
+Train Accuracy = 0.946050862
+Validation Accuracy = 0.929296485
+Epoch: 0059
+Train Accuracy = 0.946694093
+Validation Accuracy = 0.939748744
+Epoch: 0060
+Train Accuracy = 0.946656697
+Validation Accuracy = 0.938492463
+Epoch: 0061
+Train Accuracy = 0.946910997
+Validation Accuracy = 0.942412061
+Epoch: 0062
+Train Accuracy = 0.948160061
+Validation Accuracy = 0.940402011
+Epoch: 0063
+Train Accuracy = 0.947232612
+Validation Accuracy = 0.933015077
+Epoch: 0064
+Train Accuracy = 0.947726255
+Validation Accuracy = 0.942713570
+Epoch: 0065
+Train Accuracy = 0.948130144
+Validation Accuracy = 0.937386935
+Epoch: 0066
+Train Accuracy = 0.947853405
+Validation Accuracy = 0.935829146
+Epoch: 0067
+Train Accuracy = 0.949042635
+Validation Accuracy = 0.941608041
+Epoch: 0068
+Train Accuracy = 0.949267018
+Validation Accuracy = 0.941859297
+Epoch: 0069
+Train Accuracy = 0.948967840
+Validation Accuracy = 0.937236181
+Epoch: 0070
+Train Accuracy = 0.950164550
+Validation Accuracy = 0.942110553
+Epoch: 0071
+Train Accuracy = 0.949394168
+Validation Accuracy = 0.940703516
+Epoch: 0072
+Train Accuracy = 0.949566195
+Validation Accuracy = 0.937889447
+Epoch: 0073
+Train Accuracy = 0.950441289
+Validation Accuracy = 0.940201005
+Epoch: 0074
+Train Accuracy = 0.950628274
+Validation Accuracy = 0.941557791
+Epoch: 0075
+Train Accuracy = 0.950680630
+Validation Accuracy = 0.941105527
+Epoch: 0076
+Train Accuracy = 0.950673151
+Validation Accuracy = 0.939698492
+Epoch: 0077
+Train Accuracy = 0.951039643
+Validation Accuracy = 0.937738693
+Epoch: 0078
+Train Accuracy = 0.950927452
+Validation Accuracy = 0.940402010
+Epoch: 0079
+Train Accuracy = 0.951413615
+Validation Accuracy = 0.940854270
+Epoch: 0080
+Train Accuracy = 0.950852658
+Validation Accuracy = 0.940804021
+Epoch: 0081
+Train Accuracy = 0.952064326
+Validation Accuracy = 0.937286433
+Epoch: 0082
+Train Accuracy = 0.951817504
+Validation Accuracy = 0.938241207
+Epoch: 0083
+Train Accuracy = 0.952348544
+Validation Accuracy = 0.941206030
+Epoch: 0084
+Train Accuracy = 0.951660436
+Validation Accuracy = 0.941507538
+Epoch: 0085
+Train Accuracy = 0.952662680
+Validation Accuracy = 0.938391961
+Epoch: 0086
+Train Accuracy = 0.952744953
+Validation Accuracy = 0.941055276
+Epoch: 0087
+Train Accuracy = 0.953358268
+Validation Accuracy = 0.940904524
+Epoch: 0088
+Train Accuracy = 0.953724759
+Validation Accuracy = 0.934020101
+Epoch: 0089
+Train Accuracy = 0.953126404
+Validation Accuracy = 0.942261308
+Epoch: 0090
+Train Accuracy = 0.953597609
+Validation Accuracy = 0.942462313
+Epoch: 0091
+Train Accuracy = 0.954046375
+Validation Accuracy = 0.938693468
+Epoch: 0092
+Train Accuracy = 0.954083773
+Validation Accuracy = 0.942512562
+Epoch: 0093
+Train Accuracy = 0.954218401
+Validation Accuracy = 0.941256282
+Epoch: 0094
+Train Accuracy = 0.954166046
+Validation Accuracy = 0.927939700
+Epoch: 0095
+Train Accuracy = 0.954584894
+Validation Accuracy = 0.938241207
+Epoch: 0096
+Train Accuracy = 0.954353031
+Validation Accuracy = 0.944321608
+Epoch: 0097
+Train Accuracy = 0.954667168
+Validation Accuracy = 0.937537688
+Epoch: 0098
+Train Accuracy = 0.955205687
+Validation Accuracy = 0.937336683
+Epoch: 0099
+Train Accuracy = 0.954592373
+Validation Accuracy = 0.935979900
+Epoch: 0100
+Train Accuracy = 0.955669411
+Validation Accuracy = 0.930954775
+Epoch: 0101
+Train Accuracy = 0.955213167
+Validation Accuracy = 0.935376885
+Epoch: 0102
+Train Accuracy = 0.955564700
+Validation Accuracy = 0.941457286
+Epoch: 0103
+Train Accuracy = 0.956260288
+Validation Accuracy = 0.937738695
+Epoch: 0104
+Train Accuracy = 0.955347796
+Validation Accuracy = 0.935728644
+Epoch: 0105
+Train Accuracy = 0.955542262
+Validation Accuracy = 0.935628141
+Epoch: 0106
+Train Accuracy = 0.956462232
+Validation Accuracy = 0.939597991
+Epoch: 0107
+Train Accuracy = 0.956551985
+Validation Accuracy = 0.943015075
+Epoch: 0108
+Train Accuracy = 0.956290205
+Validation Accuracy = 0.935326633
+Epoch: 0109
+Train Accuracy = 0.957180257
+Validation Accuracy = 0.936984925
+Epoch: 0110
+Train Accuracy = 0.956342562
+Validation Accuracy = 0.936633164
+Epoch: 0111
+Train Accuracy = 0.956514589
+Validation Accuracy = 0.939346735
+Epoch: 0112
+Train Accuracy = 0.956858641
+Validation Accuracy = 0.935226133
+Epoch: 0113
+Train Accuracy = 0.957853407
+Validation Accuracy = 0.935678392
+Epoch: 0114
+Train Accuracy = 0.957322367
+Validation Accuracy = 0.938492463
+Epoch: 0115
+Train Accuracy = 0.957696338
+Validation Accuracy = 0.938391959
+Epoch: 0116
+Train Accuracy = 0.956686615
+Validation Accuracy = 0.938643216
+Epoch: 0117
+Train Accuracy = 0.957748695
+Validation Accuracy = 0.938542714
+Epoch: 0118
+Train Accuracy = 0.957344805
+Validation Accuracy = 0.937939698
+Epoch: 0119
+Train Accuracy = 0.957786093
+Validation Accuracy = 0.936130654
+Epoch: 0120
+Train Accuracy = 0.958234858
+Validation Accuracy = 0.931457289
+Epoch: 0121
+Train Accuracy = 0.957965598
+Validation Accuracy = 0.934623116
+Epoch: 0122
+Train Accuracy = 0.957943160
+Validation Accuracy = 0.931306534
+Epoch: 0123
+Train Accuracy = 0.958137626
+Validation Accuracy = 0.931356783
+Epoch: 0124
+Train Accuracy = 0.958519076
+Validation Accuracy = 0.938592963
+Epoch: 0125
+Train Accuracy = 0.958212419
+Validation Accuracy = 0.936633165
+Epoch: 0126
+Train Accuracy = 0.958556474
+Validation Accuracy = 0.940402010
+Epoch: 0127
+Train Accuracy = 0.958982801
+Validation Accuracy = 0.935979900
+Epoch: 0128
+Train Accuracy = 0.959020198
+Validation Accuracy = 0.929748744
+Epoch: 0129
+Train Accuracy = 0.958653706
+Validation Accuracy = 0.931809046
+Epoch: 0130
+Train Accuracy = 0.957890803
+Validation Accuracy = 0.938693467
+Epoch: 0131
+Train Accuracy = 0.960381455
+Validation Accuracy = 0.939095477
+Epoch: 0132
+Train Accuracy = 0.959768141
+Validation Accuracy = 0.937989950
+Epoch: 0133
+Train Accuracy = 0.959394170
+Validation Accuracy = 0.937386935
+Epoch: 0134
+Train Accuracy = 0.959633512
+Validation Accuracy = 0.933819094
+Epoch: 0135
+Train Accuracy = 0.960149593
+Validation Accuracy = 0.934321609
+Epoch: 0136
+Train Accuracy = 0.960007483
+Validation Accuracy = 0.932010052
+Epoch: 0137
+Train Accuracy = 0.959857894
+Validation Accuracy = 0.934170856
+Epoch: 0138
+Train Accuracy = 0.959558717
+Validation Accuracy = 0.935628143
+Epoch: 0139
+Train Accuracy = 0.960403893
+Validation Accuracy = 0.937587942
+Epoch: 0140
+Train Accuracy = 0.959798059
+Validation Accuracy = 0.934070353
+Epoch: 0141
+Train Accuracy = 0.960231867
+Validation Accuracy = 0.932060303
+Epoch: 0142
+Train Accuracy = 0.960987289
+Validation Accuracy = 0.940100504
+Epoch: 0143
+Train Accuracy = 0.960867618
+Validation Accuracy = 0.938190955
+Epoch: 0144
+Train Accuracy = 0.961241589
+Validation Accuracy = 0.934422113
+Epoch: 0145
+Train Accuracy = 0.961368740
+Validation Accuracy = 0.932010051
+Epoch: 0146
+Train Accuracy = 0.960770386
+Validation Accuracy = 0.937487438
+Epoch: 0147
+Train Accuracy = 0.960725509
+Validation Accuracy = 0.938944725
+Epoch: 0148
+Train Accuracy = 0.961241590
+Validation Accuracy = 0.938542714
+Epoch: 0149
+Train Accuracy = 0.961944656
+Validation Accuracy = 0.933869347
+Epoch: 0150
+Train Accuracy = 0.961398658
+Validation Accuracy = 0.936683417
+Learning Finished!
+Test Accuracy:  0.9263541689142577
+2304.6382508277893

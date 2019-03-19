@@ -1,0 +1,9 @@
+{"training Accuracy": 0.8141136865341192, "validation Accuracy": 0.9208040237426764, "_runtime": 41.53082728385925, "_timestamp": 1552973840.3020856, "_step": 0}
+{"training Accuracy": 0.8838593869754918, "validation Accuracy": 0.9250251264428374, "_runtime": 56.59534668922424, "_timestamp": 1552973855.366605, "_step": 1}
+{"training Accuracy": 0.8934031421333933, "validation Accuracy": 0.9278894486139778, "_runtime": 71.69515180587769, "_timestamp": 1552973870.4664102, "_step": 2}
+{"training Accuracy": 0.8991772640794585, "validation Accuracy": 0.9297487445213086, "_runtime": 86.59433221817017, "_timestamp": 1552973885.3655903, "_step": 3}
+{"training Accuracy": 0.9029394175102187, "validation Accuracy": 0.9302010041984481, "_runtime": 101.61747241020203, "_timestamp": 1552973900.3887308, "_step": 4}
+{"training Accuracy": 0.9064547512276238, "validation Accuracy": 0.9320100503950268, "_runtime": 116.56985712051392, "_timestamp": 1552973915.3411157, "_step": 5}
+{"training Accuracy": 0.9095437568608872, "validation Accuracy": 0.9308542717042285, "_runtime": 131.62996625900269, "_timestamp": 1552973930.4012246, "_step": 6}
+{"training Accuracy": 0.9117726275255698, "validation Accuracy": 0.9354773879650252, "_runtime": 146.74605131149292, "_timestamp": 1552973945.5173097, "_step": 7}
+{"training Accuracy": 0.9139940186320776, "validation Accuracy": 0.9321105534107845, "_runtime": 161.94891738891602, "_timestamp": 1552973960.7201755, "_step": 8}

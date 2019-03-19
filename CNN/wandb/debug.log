@@ -1,0 +1,796 @@
+2019-03-19 14:39:48,228 DEBUG   MainThread:9562 [wandb_config.py:_load_defaults():81] no defaults not found in config-defaults.yaml
+2019-03-19 14:39:48,231 DEBUG   MainThread:9562 [git_repo.py:repo():30] git repository is invalid
+2019-03-19 14:39:48,237 DEBUG   MainThread:9562 [run_manager.py:__init__():452] Initialized sync for collision_detection_CNN_data_edit/x2ts3mz0
+2019-03-19 14:39:48,238 INFO    MainThread:9562 [run_manager.py:wrap_existing_process():986] wrapping existing process 9547
+2019-03-19 14:39:48,238 WARNING MainThread:9562 [io_wrap.py:register():104] SIGWINCH handler was not None: <Handlers.SIG_DFL: 0>
+2019-03-19 14:39:48,240 DEBUG   MainThread:9562 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): pypi.org:443
+2019-03-19 14:39:48,570 DEBUG   MainThread:9562 [connectionpool.py:_make_request():393] https://pypi.org:443 "GET /pypi/wandb/json HTTP/1.1" 200 30540
+2019-03-19 14:39:48,621 INFO    MainThread:9562 [run_manager.py:init_run():810] system metrics and metadata threads started
+2019-03-19 14:39:48,622 INFO    MainThread:9562 [run_manager.py:init_run():844] upserting run before process can begin, waiting at most 10 seconds
+2019-03-19 14:39:48,630 DEBUG   Thread-13 :9562 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-03-19 14:39:49,231 INFO    Thread-2  :9562 [run_manager.py:_on_file_created():576] file/dir created: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:39:58,628 ERROR   MainThread:9562 [run_manager.py:init_run():849] Failed to connect to W&B servers after 10 seconds.                    Letting user process proceed while attempting to reconnect.
+2019-03-19 14:39:58,628 INFO    MainThread:9562 [run_manager.py:wrap_existing_process():1003] informing user process we are ready to proceed
+2019-03-19 14:39:58,629 INFO    MainThread:9562 [run_manager.py:_sync_etc():1059] entering loop for messages from user process
+2019-03-19 14:40:04,019 DEBUG   Thread-13 :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 439
+2019-03-19 14:40:04,020 INFO    Thread-13 :9562 [run_manager.py:_upsert_run():900] saving patches
+2019-03-19 14:40:04,021 INFO    Thread-13 :9562 [run_manager.py:_upsert_run():902] saving pip packages
+2019-03-19 14:40:04,021 INFO    Thread-13 :9562 [run_manager.py:_upsert_run():904] initializing streaming files api
+2019-03-19 14:40:04,021 INFO    Thread-13 :9562 [run_manager.py:_upsert_run():911] unblocking file change observer, beginning sync with W&B servers
+2019-03-19 14:40:04,235 INFO    Thread-2  :9562 [run_manager.py:_on_file_created():576] file/dir created: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/requirements.txt
+2019-03-19 14:40:05,235 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:40:06,022 DEBUG   Thread-6  :9562 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-03-19 14:40:08,235 INFO    Thread-2  :9562 [run_manager.py:_on_file_created():576] file/dir created: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/config.yaml
+2019-03-19 14:40:08,246 DEBUG   Thread-2  :9562 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-03-19 14:40:13,629 DEBUG   Thread-2  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 1091
+2019-03-19 14:40:13,632 DEBUG   Thread-14 :9562 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-03-19 14:40:17,237 INFO    Thread-2  :9562 [run_manager.py:_on_file_created():576] file/dir created: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:40:21,238 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:40:23,239 INFO    Thread-2  :9562 [run_manager.py:_on_file_created():576] file/dir created: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:40:23,239 INFO    Thread-2  :9562 [run_manager.py:_on_file_created():576] file/dir created: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:40:26,429 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:40:26,679 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:40:29,003 DEBUG   Thread-14 :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 806
+2019-03-19 14:40:29,006 DEBUG   Thread-14 :9562 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): storage.googleapis.com:443
+2019-03-19 14:40:34,526 DEBUG   Thread-14 :9562 [connectionpool.py:_make_request():393] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/config.yaml?Expires=1552974088&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=Uzeka91%2FCZ8Je%2FgHUExf6O9MEH7%2BQXHL9T55%2B94p4zlVU0ApHEfCr0tmEj%2BeZEhPJKBqi9vWe60hv7nqLlGl6%2BSwwd4x1TcuDVkHMTlXSLh2gQCMewjB1lommIWAhdyQ6ly7noCxxgQRXAxsy7FEXnuaFlr2x2SSJAYPEqziXCGsQ9r7EZsmPrC9tiuYLgoG1ERVgdasVgh0fHyQL%2FKVPCGDkJs2jOK58veZNwix0OI3tyyb3eCypE69Z%2BIPDTt6VpVGyN9COHA5EBijVTfMzxI%2FWNGh3nHTWmlRcWft7pMBtNZ8KLpXHZjrxBth6On1rf28KYs3Dz8RldngTSzFjA%3D%3D HTTP/1.1" 200 0
+2019-03-19 14:40:37,242 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:40:37,251 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:40:39,242 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:40:39,243 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:40:39,492 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:40:47,244 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:40:47,516 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:40:53,246 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:40:53,246 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:40:53,246 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:41:03,518 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:41:08,249 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:41:08,249 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:41:09,249 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:41:17,251 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:41:17,546 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:41:23,253 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:41:23,253 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:41:25,253 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:41:33,548 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:41:38,256 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:41:38,256 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:41:41,257 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:41:47,258 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:41:47,577 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:41:53,259 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:41:53,262 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:41:57,260 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:42:03,583 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:42:08,263 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:42:08,263 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:42:13,264 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:42:17,265 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:42:17,609 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:42:23,266 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:42:23,266 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:42:29,267 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:42:33,607 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:42:38,269 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:42:38,270 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:42:45,271 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:42:47,271 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:42:47,631 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:42:53,273 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:42:53,273 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:43:01,275 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:43:03,630 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:43:08,276 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:43:08,276 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:43:17,278 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:43:17,278 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:43:17,663 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:43:23,280 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:43:23,280 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:43:33,282 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:43:33,669 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:43:38,283 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:43:38,283 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:43:47,285 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:43:47,701 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:43:49,285 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:43:53,286 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:43:53,287 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:44:03,691 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:44:05,289 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:44:08,290 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:44:08,290 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:44:17,292 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:44:17,730 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:44:21,293 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:44:23,293 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:44:23,293 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:44:33,749 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:44:37,296 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:44:38,297 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:44:38,297 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:44:47,298 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:44:47,747 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:44:53,300 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:44:53,300 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:44:53,300 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:45:08,303 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:45:08,303 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:45:09,303 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:45:17,305 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:45:17,786 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:45:23,306 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:45:23,307 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:45:25,307 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:45:38,310 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:45:38,310 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:45:41,310 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:45:47,812 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:45:48,312 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:45:54,314 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:45:54,314 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:45:57,314 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:46:10,317 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:46:10,317 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:46:13,318 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:46:17,850 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:46:18,319 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:46:26,321 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:46:26,321 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:46:29,321 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:46:41,324 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:46:41,324 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:46:45,325 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:46:47,882 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:46:48,326 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:46:57,328 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:46:57,328 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:47:01,329 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:47:12,331 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:47:12,332 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:47:17,333 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:47:17,915 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:47:18,333 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:47:28,335 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:47:28,335 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:47:33,336 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:47:43,338 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:47:43,339 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:47:47,941 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:47:48,340 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:47:49,340 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:47:59,342 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:47:59,343 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:48:05,344 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:48:15,346 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:48:15,346 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:48:17,966 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:48:18,347 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:48:21,348 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:48:30,350 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:48:30,350 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:48:37,351 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:48:46,353 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:48:46,354 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:48:47,991 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:48:48,354 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:48:53,355 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:49:02,357 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:49:02,357 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:49:09,359 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:49:17,360 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:49:17,361 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:49:18,014 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:49:18,361 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:49:25,362 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:49:32,364 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:49:32,364 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:49:41,366 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:49:47,367 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:49:47,368 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:49:48,047 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:49:48,368 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:49:57,370 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:50:02,371 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:50:02,371 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:50:13,373 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:50:17,374 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:50:17,375 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:50:18,073 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:50:18,374 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:50:29,377 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:50:32,378 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:50:32,378 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:50:45,380 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:50:47,381 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:50:47,381 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:50:48,105 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:50:48,381 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:51:01,384 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:51:03,385 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:51:03,385 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:51:17,388 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:51:18,347 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:51:18,388 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:51:18,388 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:51:18,388 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:51:33,391 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:51:33,391 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:51:33,391 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:51:48,395 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:51:48,917 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:51:49,395 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:51:49,395 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:51:49,395 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:52:04,398 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:52:04,399 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:52:05,399 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:52:18,402 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:52:19,215 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:52:19,402 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:52:19,402 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:52:21,402 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:52:34,405 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:52:34,405 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:52:37,406 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:52:48,408 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:52:49,241 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:52:49,408 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:52:49,409 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:52:53,409 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:53:04,412 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:53:04,412 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:53:09,413 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:53:18,415 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:53:19,264 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:53:19,415 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:53:19,415 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:53:25,416 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:53:34,418 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:53:34,419 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:53:42,420 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:53:48,421 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:53:49,292 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:53:49,422 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:53:49,422 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:53:58,424 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:54:05,425 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:54:05,426 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:54:14,427 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:54:18,428 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:54:19,320 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:54:20,429 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:54:20,429 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:54:30,431 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:54:35,432 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:54:35,433 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:54:46,435 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:54:49,346 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:54:49,436 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:54:50,436 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:54:50,436 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:55:02,439 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:55:05,439 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:55:05,439 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:55:18,442 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:55:19,372 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:55:19,442 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:55:20,442 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:55:20,443 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:55:34,445 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:55:35,446 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:55:35,446 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:55:49,428 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:55:49,449 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:55:50,449 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:55:50,449 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:55:50,449 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:56:05,453 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:56:05,453 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:56:06,453 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:56:19,455 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:56:19,456 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:56:20,456 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:56:20,456 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:56:22,456 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:56:35,459 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:56:35,460 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:56:38,460 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:56:49,463 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:56:49,476 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:56:50,463 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:56:50,463 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:56:54,464 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:57:05,466 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:57:05,467 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:57:10,467 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:57:19,469 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:57:19,519 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:57:21,470 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:57:21,470 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:57:26,471 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:57:36,473 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:57:36,473 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:57:42,475 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:57:49,476 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:57:49,536 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:57:51,477 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:57:51,477 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:57:58,478 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:58:06,480 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:58:06,481 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:58:14,482 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:58:19,483 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:58:19,568 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:58:22,484 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:58:22,484 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:58:30,485 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:58:37,487 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:58:37,487 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:58:46,489 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:58:49,490 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:58:49,616 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:58:52,491 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:58:52,491 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:59:02,493 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:59:07,494 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:59:07,495 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:59:18,497 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:59:19,497 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:59:19,650 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:59:23,498 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:59:23,499 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:59:34,501 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:59:38,502 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:59:38,502 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 14:59:49,504 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 14:59:49,658 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 14:59:50,504 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 14:59:53,505 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 14:59:53,505 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:00:06,508 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:00:08,508 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:00:08,509 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:00:19,511 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:00:19,685 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:00:22,512 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:00:24,512 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:00:24,513 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:00:38,515 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:00:39,516 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:00:39,516 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:00:49,518 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:00:49,713 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:00:54,519 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:00:54,519 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:00:54,519 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:01:09,522 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:01:09,522 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:01:10,523 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:01:19,524 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:01:19,746 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:01:25,526 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:01:25,526 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:01:26,526 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:01:40,529 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:01:40,530 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:01:42,530 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:01:49,531 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:01:49,773 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:01:55,533 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:01:55,533 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:01:58,534 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:02:10,536 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:02:10,536 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:02:14,537 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:02:19,538 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:02:19,825 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:02:26,539 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:02:26,540 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:02:30,540 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:02:41,543 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:02:41,543 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:02:46,544 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:02:49,545 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:02:49,851 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:02:56,546 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:02:56,547 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:03:02,548 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:03:11,550 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:03:11,550 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:03:18,551 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:03:19,552 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:03:19,874 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:03:27,553 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:03:27,554 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:03:34,555 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:03:42,557 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:03:42,557 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:03:49,558 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:03:49,909 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:03:50,559 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:03:57,560 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:03:57,561 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:04:06,562 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:04:12,564 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:04:12,564 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:04:19,565 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:04:19,919 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:04:22,566 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:04:27,567 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:04:27,567 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:04:38,569 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:04:43,571 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:04:43,571 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:04:49,954 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:04:50,572 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:04:54,573 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:04:58,574 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:04:58,575 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:05:10,577 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:05:13,578 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:05:13,578 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:05:19,984 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:05:20,579 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:05:26,581 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:05:28,581 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:05:28,581 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:05:42,584 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:05:44,585 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:05:44,585 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:05:50,003 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:05:50,586 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:05:58,588 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:05:59,588 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:05:59,588 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:06:14,591 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:06:14,592 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:06:14,592 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:06:20,024 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:06:20,593 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:06:29,595 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:06:29,595 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:06:30,595 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:06:45,599 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:06:45,599 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:06:46,599 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:06:50,600 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:06:51,065 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:07:00,602 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:07:00,603 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:07:02,603 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:07:15,605 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:07:15,608 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:07:18,606 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:07:20,606 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:07:21,089 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:07:30,609 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:07:30,609 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:07:34,610 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:07:46,612 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:07:46,613 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:07:50,613 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:07:50,614 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:07:51,128 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:08:01,616 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:08:01,616 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:08:06,617 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:08:16,619 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:08:16,619 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:08:20,620 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:08:21,165 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:08:22,620 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:08:31,622 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:08:31,623 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:08:38,624 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:08:47,626 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:08:47,626 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:08:50,627 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:08:51,195 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:08:54,628 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:09:02,630 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:09:02,630 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:09:10,631 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:09:17,633 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:09:17,633 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:09:20,634 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:09:21,224 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:09:26,635 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:09:32,636 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:09:32,636 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:09:42,638 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:09:48,640 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:09:48,640 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:09:50,640 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:09:51,247 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:09:58,642 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:10:03,643 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:10:03,644 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:10:14,646 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:10:18,647 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:10:18,647 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:10:20,647 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:10:21,274 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:10:30,650 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:10:33,650 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:10:33,650 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:10:46,653 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:10:49,654 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:10:49,660 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:10:50,654 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:10:51,312 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:11:02,657 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:11:04,657 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:11:04,657 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:11:18,661 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:11:19,661 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:11:19,662 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:11:20,662 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:11:21,320 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:11:34,665 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:11:34,665 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:11:34,665 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:11:50,668 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:11:50,669 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:11:50,669 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:11:50,669 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:11:51,375 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:12:05,672 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:12:05,672 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:12:06,672 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:12:20,675 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:12:20,675 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:12:20,675 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:12:21,400 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:12:22,675 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:12:36,679 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:12:36,679 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:12:38,679 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:12:50,682 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:12:51,409 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:12:51,682 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:12:51,683 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:12:54,683 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:13:06,685 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:13:06,686 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:13:10,686 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:13:20,688 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:13:21,461 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:13:21,689 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:13:21,689 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:13:26,690 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:13:37,693 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:13:37,693 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:13:42,694 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:13:50,696 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:13:51,483 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:13:52,696 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:13:52,697 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:13:58,698 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:14:07,700 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:14:07,700 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:14:14,701 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:14:21,513 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:14:21,702 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:14:22,703 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:14:22,703 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:14:30,704 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:14:38,706 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:14:38,706 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:14:46,708 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:14:51,539 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:14:51,709 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:14:53,710 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:14:53,710 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:15:02,712 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:15:08,713 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:15:08,714 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:15:18,715 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:15:21,569 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:15:21,716 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:15:23,716 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:15:23,717 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:15:34,719 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:15:39,720 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:15:39,720 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:15:50,722 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:15:51,611 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:15:51,722 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:15:54,723 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:15:54,723 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:16:06,726 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:16:09,727 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:16:09,733 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:16:21,635 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:16:21,729 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:16:22,730 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:16:24,730 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:16:24,730 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:16:39,734 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:16:39,734 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:16:39,734 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:16:51,665 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:16:51,736 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:16:55,737 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:16:55,737 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:16:55,738 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:17:10,741 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:17:10,741 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:17:11,741 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:17:21,743 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:17:21,938 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:17:25,744 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:17:25,744 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:17:27,745 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:17:40,748 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:17:40,748 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:17:43,748 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:17:51,750 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:17:51,751 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:17:56,751 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:17:56,757 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:17:59,752 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:18:11,754 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-summary.json
+2019-03-19 15:18:11,755 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-history.jsonl
+2019-03-19 15:18:13,756 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/config.yaml
+2019-03-19 15:18:13,782 DEBUG   Thread-2  :9562 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-03-19 15:18:19,203 DEBUG   Thread-2  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 1158
+2019-03-19 15:18:19,208 INFO    Thread-2  :9562 [run_manager.py:_on_file_created():576] file/dir created: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/model/model.ckpt.meta
+2019-03-19 15:18:19,209 INFO    Thread-2  :9562 [run_manager.py:_on_file_created():576] file/dir created: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/model/model.ckpt.data-00000-of-00001
+2019-03-19 15:18:19,211 INFO    Thread-2  :9562 [run_manager.py:_on_file_created():576] file/dir created: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/model/checkpoint
+2019-03-19 15:18:19,212 INFO    Thread-2  :9562 [run_manager.py:_on_file_created():576] file/dir created: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/model/model.ckpt.index
+2019-03-19 15:18:19,213 INFO    Thread-2  :9562 [run_manager.py:_on_file_created():576] file/dir created: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/model
+2019-03-19 15:18:19,214 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:18:19,222 DEBUG   Thread-17 :9562 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-03-19 15:18:19,818 DEBUG   Thread-17 :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 821
+2019-03-19 15:18:19,828 DEBUG   Thread-17 :9562 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): storage.googleapis.com:443
+2019-03-19 15:18:20,445 DEBUG   Thread-17 :9562 [connectionpool.py:_make_request():393] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/config.yaml?Expires=1552976359&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=DJQ8YTeLaGBgrdOaQv8P52LUGolM3Y7oo6n4QqSQXBt9Lbvsujabc8Hk8UswTk19BiXhc2FeqYPnB9bXFPOKdj7SmQ%2Bb3tso0lNv0LLcNWcYLRWBoCytpwrjYsm3kjuu7OH5iIkSh4D6fmZf6c0UJBTnx2pMIkwngakQDXiaOB%2Few709CtJFCp1tOqgrTyF7mM9ObWXKeNl%2F79oC7RwkUhi8CWrn45x9%2B9Yzj%2Fo%2Fz5Dn0Gr7qBCt9T%2BLyaWb7AnWrjliaTgQz3BOQ%2BcFP6WHeJdrsOn6laTJ2yzUvUZPuqysdYlYAePprlDcvCyj2bJ417tZJZ3Z2tVxTXfhE8b2Eg%3D%3D HTTP/1.1" 200 0
+2019-03-19 15:18:21,764 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:18:21,784 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:18:31,773 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:18:47,786 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:18:51,789 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:18:51,795 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:19:03,801 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:19:19,813 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:19:21,816 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:19:21,832 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:19:35,827 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:19:51,841 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:19:51,842 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:19:51,861 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:20:07,855 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:20:21,871 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:20:22,102 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:20:22,889 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:20:23,873 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:20:39,886 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:20:51,896 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:20:52,928 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:20:55,898 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:21:11,911 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:21:21,920 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:21:22,979 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:21:27,924 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:21:43,938 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:21:52,945 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:21:52,998 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:21:59,951 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:22:15,964 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:22:22,969 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:22:23,034 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:22:31,977 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:22:47,990 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:22:52,993 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:22:53,062 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:23:04,004 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:23:20,017 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:23:23,019 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:23:23,093 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:23:36,029 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:23:52,042 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:23:53,043 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:23:53,138 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:24:08,056 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:24:23,069 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:24:23,177 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:24:24,070 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:24:40,084 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:24:53,095 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:24:53,210 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:24:56,099 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:25:12,113 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:25:23,122 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:25:23,228 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:25:28,127 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:25:44,140 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:25:53,148 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:25:53,267 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:26:00,154 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:26:16,167 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:26:23,174 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:26:23,299 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:26:32,180 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:26:48,193 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:26:53,199 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:26:53,533 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:26:54,344 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:27:04,208 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:27:20,221 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:27:24,224 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:27:24,370 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:27:36,235 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:27:52,247 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:27:54,250 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:27:54,397 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:28:08,263 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:28:24,280 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:28:24,281 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:28:24,439 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:28:40,293 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:28:54,304 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:28:54,483 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:28:56,306 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:29:12,320 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:29:24,330 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:29:24,510 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:29:28,334 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:29:44,348 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:29:54,356 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:29:54,534 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:30:00,363 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:30:16,376 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:30:24,382 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:30:24,576 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:30:32,389 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:30:48,403 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:30:54,407 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:30:54,616 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:31:04,417 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:31:20,428 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:31:21,639 INFO    MainThread:9562 [run_manager.py:_sync_etc():1082] received message from user process: {"exitcode": 0}
+2019-03-19 15:31:21,639 INFO    MainThread:9562 [run_manager.py:_sync_etc():1163] closing log streams and sending exitcode to W&B
+2019-03-19 15:31:21,640 INFO    MainThread:9562 [run_manager.py:shutdown():918] shutting down system stats and metadata service
+2019-03-19 15:31:22,430 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-events.jsonl
+2019-03-19 15:31:22,665 INFO    MainThread:9562 [run_manager.py:shutdown():923] stopping streaming files and file change observer
+2019-03-19 15:31:23,430 INFO    Thread-2  :9562 [run_manager.py:_on_file_modified():587] file/dir modified: /home/kim/dusan_ws/real/CNN/wandb/run-20190319_053947-x2ts3mz0/wandb-metadata.json
+2019-03-19 15:31:23,445 DEBUG   Thread-18 :9562 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-03-19 15:31:23,447 DEBUG   Thread-19 :9562 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-03-19 15:31:23,452 DEBUG   MainThread:9562 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-03-19 15:31:23,825 DEBUG   Thread-18 :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 828
+2019-03-19 15:31:23,833 DEBUG   Thread-18 :9562 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): storage.googleapis.com:443
+2019-03-19 15:31:24,063 DEBUG   MainThread:9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 1158
+2019-03-19 15:31:24,079 DEBUG   Thread-20 :9562 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-03-19 15:31:24,239 DEBUG   Thread-19 :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 824
+2019-03-19 15:31:24,249 DEBUG   Thread-19 :9562 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): storage.googleapis.com:443
+2019-03-19 15:31:24,724 DEBUG   Thread-20 :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 821
+2019-03-19 15:31:24,737 DEBUG   Thread-20 :9562 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): storage.googleapis.com:443
+2019-03-19 15:31:25,387 DEBUG   Thread-20 :9562 [connectionpool.py:_make_request():393] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/config.yaml?Expires=1552977144&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=b0TaiwLhJ%2Bw2MCazaCsQxaF8a0ZB1KlTPTMJzRcjDdNhDxjPE6UGsnHeMGjw0rFzurohbel4sbXlRSF8E0H37gc4c%2B62N1P46V55%2Flw3MAvEIUPjULlf51MCLug3O6cJGi8XqfjnB%2Bq9ueuYWsqW0bI4ww91dCzYazN9OXvXYnzEFrSarVtl6%2B1AswtwnTT49bZvCT8AmhT1BUhkxCtE8nFh8JCMMQb0Z%2FhW7gOVI%2FwkM7V8KZFSnpd7q6RkhMhBYdtXmk453h5CgYyvDcK6hKiJ5Vy2zQCioGxphbD3eunNUH6thCMAZiNeXjutmgJqGroHWacvoVzJvlCGMSC%2BNg%3D%3D HTTP/1.1" 200 0
+2019-03-19 15:31:25,389 DEBUG   Thread-21 :9562 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-03-19 15:31:25,413 DEBUG   Thread-23 :9562 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-03-19 15:31:25,415 DEBUG   Thread-22 :9562 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-03-19 15:31:25,425 DEBUG   Thread-24 :9562 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-03-19 15:31:25,659 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 312
+2019-03-19 15:31:25,800 DEBUG   Thread-21 :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 818
+2019-03-19 15:31:25,807 DEBUG   Thread-21 :9562 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): storage.googleapis.com:443
+2019-03-19 15:31:25,814 DEBUG   Thread-24 :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 828
+2019-03-19 15:31:25,821 DEBUG   Thread-24 :9562 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): storage.googleapis.com:443
+2019-03-19 15:31:25,903 DEBUG   Thread-6  :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/file_stream HTTP/1.1" 200 309
+2019-03-19 15:31:25,906 INFO    MainThread:9562 [run_manager.py:_sync_etc():1181] rendering summary
+2019-03-19 15:31:25,909 INFO    MainThread:9562 [run_manager.py:_sync_etc():1212] syncing files to cloud storage
+2019-03-19 15:31:26,456 DEBUG   Thread-24 :9562 [connectionpool.py:_make_request():393] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/model/model.ckpt.index?Expires=1552977145&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=iIaLS9jTN11L%2BWB3bFLi34m8qgl71%2FRozpYbi2EXRl5kYd5opehCLg1THt0RTmAbSdeg1qOCceLMZ2vaTZFWRjnmo8ULFzuwdHyGMmGVz9AOEdKWuFqH27HGar39NosStHe9j2PUAWTp5qd%2BzSfarz3ZY9gj2Gl%2FudGf7zH1xk8Mx99eH1%2BxWX8GNwGhwjK9ZBk17RHRhQleJADq6nmHCX8BISNUO0H9PYuLyPjg0wW%2FkIOSxj8YQZGciE%2B4CAgU8m1IaHzLEWg%2FN6UJl4BDml9mRFfBSpMoZW6DHr3nZjtOsYjeRvBuXXutoqDiDqDT39ToqjVvgPdvnismaJzR%2Bg%3D%3D HTTP/1.1" 200 0
+2019-03-19 15:31:26,461 DEBUG   Thread-25 :9562 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): api.wandb.ai:443
+2019-03-19 15:31:26,840 DEBUG   Thread-25 :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 814
+2019-03-19 15:31:26,850 DEBUG   Thread-25 :9562 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): storage.googleapis.com:443
+2019-03-19 15:31:30,789 DEBUG   Thread-22 :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 842
+2019-03-19 15:31:30,792 DEBUG   Thread-22 :9562 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): storage.googleapis.com:443
+2019-03-19 15:31:31,382 DEBUG   Thread-21 :9562 [connectionpool.py:_make_request():393] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/wandb-summary.json?Expires=1552977145&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=j9zuaQnaeFN1SZjwYgx34ZBjpD34HUu%2B1RER5TSdoOw9hLr0ufgr42RoH0aTlX9H%2BC5fFHkz7TQjdIudGOgtM1O8gVOMEX%2Fg3yVse25iTkU8hea72kdrCv5M8qkCvUU2JECHnTF1zsnPCryQjIOcwsy0%2B3dn4OsQjzbZor2r7sinsVdZUDEZLRepsqxqK9IYddyizeMFsmZmYlyVX2ywbiGwO1EvFJyXvsYYK2pRN8MEIXcgVs9Oen5lO%2Bkw3f%2B%2BQtzsfuXNjFfW%2F1QRtKIf2rOyztxOS5AUgfXXr6h38DWf6TCU5dhVghGF8AnHmhTf0UsigpxBWzwKQa7tqRpPYQ%3D%3D HTTP/1.1" 200 0
+2019-03-19 15:31:31,783 DEBUG   Thread-22 :9562 [connectionpool.py:_make_request():393] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/model/model.ckpt.meta?Expires=1552977150&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=TBOYXJeRLpqt0OH9SaKs7j60fTaIQkOqPqXJ5ezbmA0Xe68PWqTE5p%2Bucu97FWGdmM1DXslt0f%2Fz5DSa4Baf%2Fwmy9YDraoJjiNK%2F6%2FUiFSKimRBIQR9YESqL3QbX3xlMFzPiufdhkX2%2FvHwGwfAo8q0yqv6aPn0%2FcXPmWaDpW5V4x4buZ463WbkdRKa%2BmHcySey0EmAuBOoI4Obxm6Cx2FfV0oEP%2BaxjclEQ%2F%2FOBkJa7wOxn1vfA3vi5aB27%2FHhl0a5%2BaH%2FflX0UuGf%2FQQ9QkR4fKKY%2BDUIK9Xb0uZUCKzW%2FoKJdLaErQXhppwHCUPde27A2pmyHhWpZUHwb0fEMKA%3D%3D HTTP/1.1" 200 0
+2019-03-19 15:31:32,484 DEBUG   Thread-25 :9562 [connectionpool.py:_make_request():393] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/model/checkpoint?Expires=1552977146&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=UTqiDhcEYIMsia0Pwl0T51ttWRC66Q7Sm%2FSjH4jArIn6zG4IOHjBMz4efPOMkaLBA5qnTS%2FJnN%2Fz%2FULWyGToPmYyhA6Hz3fMGN1Ms7UfiPlM9g3VnHUwLU9h4Z%2FowzjPrXEMOtammOqUafFEDyOjvo7WG1J7qX9RTPhFjt86Xk2yaz2tTTnlFUqmyq7LbHiiD0WFwJsxNh8UIjUDHtbFqqxpeEcLHns72y7ksD%2FfpSzstRiVsFiHgT1aO%2FWsMsCbGizMPflFO67cJRGo0svd8rQsfjGoLH8cHJKybgru8ulbjF9zZtUf0pPd4GZtTTV%2BqIvglUS79Cz4yzmG0Mcjgw%3D%3D HTTP/1.1" 200 0
+2019-03-19 15:31:34,885 DEBUG   Thread-19 :9562 [connectionpool.py:_make_request():393] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/requirements.txt?Expires=1552977144&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=NSsKeNTA%2FXqPRWlZ594kCr6AsJWQbPVURm4YQJU6AN6WACwlByTSS9lSISnjE33l%2FFhu5u8WYZHeSPzsizU4ySbUemOIL2kseXqDWeV2%2BCZL3P7yO3BPwkbgytbdgU94ySbQBSsJAn75jZRSxcKg35PCUsl14h0rD%2Fr%2B1%2BSYSu9L3Ky1mkz363HF8yo6WgkRBEK0uWrmXbemocoO%2BObE0ofDDd0FqRaLXNfsTaeX%2FgBpS%2FPLM2BOKcvR732eK9GbVW6YOK8Ws3Sn6rw3OY2bWTTowt%2B5m8CUAmf%2BvaxovGaaDX5ooggeP9jusMs%2B9iG%2BaR8tuFxPjsyWMVF9yyWleA%3D%3D HTTP/1.1" 200 0
+2019-03-19 15:31:40,805 DEBUG   Thread-23 :9562 [connectionpool.py:_make_request():393] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 854
+2019-03-19 15:31:40,816 DEBUG   Thread-23 :9562 [connectionpool.py:_new_conn():813] Starting new HTTPS connection (1): storage.googleapis.com:443
+2019-03-19 15:31:44,483 DEBUG   Thread-18 :9562 [connectionpool.py:_make_request():393] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/wandb-metadata.json?Expires=1552977143&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=dfTtPLrRhoXJSWFkumF75OFVXF%2Bx%2B3ww94iQcbWURI5waDzghwXK5vt3KGvmuzeM7RQiCFLZomXXfNvGWNPRjdxSy7F85wJAJJl%2FPP1msfH44z9xYFvnhR5cdv%2BdBirHUmvXorMm5iy3jfR8TJmXClXu8nSKNS1AADV%2FFm%2BZvJS85UIbofMZNR%2F0NgfoTEe4J4NNIhiUtpyR4pyUlQMHLn2rr2xdj5SG4%2Fq1NbNpCfvNLk5iixKBZXHeXoE5nUQ0vjKxhpqK6QAH4kGdo0b2%2BVdHTUFtN7uK20K9e6L%2BE1GFfIfm88FR%2BBanNwnxWnVTKCEFGOo9OcBiTdlnF1%2BU3g%3D%3D HTTP/1.1" 200 0
+2019-03-19 15:31:57,063 DEBUG   Thread-23 :9562 [connectionpool.py:_make_request():393] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/kdh93429/collision_detection_CNN_data_edit/x2ts3mz0/model/model.ckpt.data-00000-of-00001?Expires=1552977160&GoogleAccessId=gorilla-cloud-storage%40wandb-production.iam.gserviceaccount.com&Signature=P4tGDaTeThOIW%2Brj7uwMoWVEfIMwhFGUuX8dZkqY9qBqCR9nTV9rSPTdURcLuD%2BuHG2%2F9aRrxN6Opt8UwyyjIy6sfq1nUKROJkTws3jgMRctpIaiCI6Ve2aRFTs2k67ogOfiJ%2FGspyAZwtdcfXDt78LAgxz15TtHkk57YdMxK7iwJrydARc6L86a9FGT7qiwnsipWhhjq0D3z9Vp3%2FBg8GYnkXYEK4W3%2FruoolmG2qGUkrftqzfF%2BBRG5Qz6up9Jd5B9FdUfwKTEysM2Hpgby3zuCLvajuKgyWOf042DICvr2awnLbrcTPZamFdOPhZVDKqA%2FI2KAAraH5NWuUBXFQ%3D%3D HTTP/1.1" 200 0
+2019-03-19 15:31:58,223 INFO    MainThread:9562 [run_manager.py:_sync_etc():1274] syncing complete: https://app.wandb.ai/kdh93429/collision_detection_CNN_data_edit/runs/x2ts3mz0
+2019-03-19 15:31:58,223 INFO    MainThread:9562 [x2ts3mz0:run_manager.py:_sync_etc():1274] syncing complete: https://app.wandb.ai/kdh93429/collision_detection_CNN_data_edit/runs/x2ts3mz0

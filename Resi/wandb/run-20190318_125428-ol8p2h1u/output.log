@@ -1,0 +1,2567 @@
+2019-03-18 21:54:30.850272: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-03-18 21:54:30.925794: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:964] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-03-18 21:54:30.926102: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: GeForce GTX 1060 3GB major: 6 minor: 1 memoryClockRate(GHz): 1.7845
+pciBusID: 0000:01:00.0
+totalMemory: 2.95GiB freeMemory: 2.34GiB
+2019-03-18 21:54:30.926120: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-03-18 21:54:31.103848: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-03-18 21:54:31.103877: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-03-18 21:54:31.103882: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-03-18 21:54:31.104002: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 2030 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1060 3GB, pci bus id: 0000:01:00.0, compute capability: 6.1)
+Epoch: 0001
+1st Train error = 6.386368041
+1st Validation error: 6.074506760
+Epoch: 0002
+1st Train error = 6.200494173
+1st Validation error: 5.871845245
+Epoch: 0003
+1st Train error = 6.088131444
+1st Validation error: 5.767250061
+Epoch: 0004
+1st Train error = 6.013686443
+1st Validation error: 5.670498848
+Epoch: 0005
+1st Train error = 5.947533217
+1st Validation error: 5.584117413
+Epoch: 0006
+1st Train error = 5.885905902
+1st Validation error: 5.498550415
+Epoch: 0007
+1st Train error = 5.818136257
+1st Validation error: 5.414631367
+Epoch: 0008
+1st Train error = 5.754743169
+1st Validation error: 5.342568874
+Epoch: 0009
+1st Train error = 5.693883479
+1st Validation error: 5.266668320
+Epoch: 0010
+1st Train error = 5.624685247
+1st Validation error: 5.182275772
+Epoch: 0011
+1st Train error = 5.545835270
+1st Validation error: 5.094681740
+Epoch: 0012
+1st Train error = 5.465394853
+1st Validation error: 5.001750469
+Epoch: 0013
+1st Train error = 5.385125776
+1st Validation error: 4.909044266
+Epoch: 0014
+1st Train error = 5.305571953
+1st Validation error: 4.820962429
+Epoch: 0015
+1st Train error = 5.228907588
+1st Validation error: 4.735451698
+Epoch: 0016
+1st Train error = 5.151529832
+1st Validation error: 4.647099018
+Epoch: 0017
+1st Train error = 5.072476639
+1st Validation error: 4.556941032
+Epoch: 0018
+1st Train error = 4.990275841
+1st Validation error: 4.463676453
+Epoch: 0019
+1st Train error = 4.906508793
+1st Validation error: 4.371162415
+Epoch: 0020
+1st Train error = 4.823344113
+1st Validation error: 4.276902676
+Epoch: 0021
+1st Train error = 4.739229710
+1st Validation error: 4.182875156
+Epoch: 0022
+1st Train error = 4.655327998
+1st Validation error: 4.087453842
+Epoch: 0023
+1st Train error = 4.571578308
+1st Validation error: 3.992809534
+Epoch: 0024
+1st Train error = 4.487049281
+1st Validation error: 3.895879507
+Epoch: 0025
+1st Train error = 4.400754890
+1st Validation error: 3.795070410
+Epoch: 0026
+1st Train error = 4.312126531
+1st Validation error: 3.694123507
+Epoch: 0027
+1st Train error = 4.221631756
+1st Validation error: 3.593161345
+Epoch: 0028
+1st Train error = 4.129925336
+1st Validation error: 3.489547491
+Epoch: 0029
+1st Train error = 4.037178819
+1st Validation error: 3.381415844
+Epoch: 0030
+1st Train error = 3.943962495
+1st Validation error: 3.271048546
+Epoch: 0031
+1st Train error = 3.850460242
+1st Validation error: 3.161724329
+Epoch: 0032
+1st Train error = 3.756409646
+1st Validation error: 3.050221682
+Epoch: 0033
+1st Train error = 3.661561358
+1st Validation error: 2.935672522
+Epoch: 0034
+1st Train error = 3.566606455
+1st Validation error: 2.820941210
+Epoch: 0035
+1st Train error = 3.472950487
+1st Validation error: 2.706753254
+Epoch: 0036
+1st Train error = 3.380468997
+1st Validation error: 2.594465256
+Epoch: 0037
+1st Train error = 3.290403319
+1st Validation error: 2.484058619
+Epoch: 0038
+1st Train error = 3.203711478
+1st Validation error: 2.374629021
+Epoch: 0039
+1st Train error = 3.120624389
+1st Validation error: 2.267342091
+Epoch: 0040
+1st Train error = 3.040846082
+1st Validation error: 2.161846399
+Epoch: 0041
+1st Train error = 2.964745933
+1st Validation error: 2.057954073
+Epoch: 0042
+1st Train error = 2.892791840
+1st Validation error: 1.954245567
+Epoch: 0043
+1st Train error = 2.824787617
+1st Validation error: 1.851925492
+Epoch: 0044
+1st Train error = 2.761320153
+1st Validation error: 1.753460407
+Epoch: 0045
+1st Train error = 2.702968848
+1st Validation error: 1.660180569
+Epoch: 0046
+1st Train error = 2.650152941
+1st Validation error: 1.571802616
+Epoch: 0047
+1st Train error = 2.602789156
+1st Validation error: 1.489657640
+Epoch: 0048
+1st Train error = 2.560866026
+1st Validation error: 1.414650559
+Epoch: 0049
+1st Train error = 2.524025061
+1st Validation error: 1.347277045
+Epoch: 0050
+1st Train error = 2.492009259
+1st Validation error: 1.288500071
+Epoch: 0051
+1st Train error = 2.464348935
+1st Validation error: 1.238503337
+Epoch: 0052
+1st Train error = 2.440342209
+1st Validation error: 1.195917964
+Epoch: 0053
+1st Train error = 2.419450159
+1st Validation error: 1.158540249
+Epoch: 0054
+1st Train error = 2.401215550
+1st Validation error: 1.126319766
+Epoch: 0055
+1st Train error = 2.385135729
+1st Validation error: 1.098488688
+Epoch: 0056
+1st Train error = 2.370772112
+1st Validation error: 1.073853254
+Epoch: 0057
+1st Train error = 2.357794801
+1st Validation error: 1.052494049
+Epoch: 0058
+1st Train error = 2.346003933
+1st Validation error: 1.033630729
+Epoch: 0059
+1st Train error = 2.335148888
+1st Validation error: 1.016726017
+Epoch: 0060
+1st Train error = 2.325014056
+1st Validation error: 1.001859903
+Epoch: 0061
+1st Train error = 2.315519554
+1st Validation error: 0.988122642
+Epoch: 0062
+1st Train error = 2.306565564
+1st Validation error: 0.975458741
+Epoch: 0063
+1st Train error = 2.298073411
+1st Validation error: 0.964174092
+Epoch: 0064
+1st Train error = 2.289953967
+1st Validation error: 0.953757465
+Epoch: 0065
+1st Train error = 2.282184741
+1st Validation error: 0.944003463
+Epoch: 0066
+1st Train error = 2.274740312
+1st Validation error: 0.934836566
+Epoch: 0067
+1st Train error = 2.267536742
+1st Validation error: 0.926388383
+Epoch: 0068
+1st Train error = 2.260599163
+1st Validation error: 0.918467104
+Epoch: 0069
+1st Train error = 2.253892095
+1st Validation error: 0.910941958
+Epoch: 0070
+1st Train error = 2.247416884
+1st Validation error: 0.903846741
+Epoch: 0071
+1st Train error = 2.241147417
+1st Validation error: 0.897007585
+Epoch: 0072
+1st Train error = 2.235065998
+1st Validation error: 0.890560627
+Epoch: 0073
+1st Train error = 2.229140667
+1st Validation error: 0.884352148
+Epoch: 0074
+1st Train error = 2.223370675
+1st Validation error: 0.878305316
+Epoch: 0075
+1st Train error = 2.217728736
+1st Validation error: 0.872506976
+Epoch: 0076
+1st Train error = 2.212264753
+1st Validation error: 0.866844416
+Epoch: 0077
+1st Train error = 2.206898157
+1st Validation error: 0.861041903
+Epoch: 0078
+1st Train error = 2.201684806
+1st Validation error: 0.855603218
+Epoch: 0079
+1st Train error = 2.196590371
+1st Validation error: 0.850201190
+Epoch: 0080
+1st Train error = 2.191654102
+1st Validation error: 0.844766378
+Epoch: 0081
+1st Train error = 2.186818090
+1st Validation error: 0.839523911
+Epoch: 0082
+1st Train error = 2.182102878
+1st Validation error: 0.834122837
+Epoch: 0083
+1st Train error = 2.177516734
+1st Validation error: 0.829000175
+Epoch: 0084
+1st Train error = 2.173028952
+1st Validation error: 0.824006677
+Epoch: 0085
+1st Train error = 2.168666360
+1st Validation error: 0.819302678
+Epoch: 0086
+1st Train error = 2.164367648
+1st Validation error: 0.814807296
+Epoch: 0087
+1st Train error = 2.160198925
+1st Validation error: 0.810410678
+Epoch: 0088
+1st Train error = 2.156111333
+1st Validation error: 0.806014478
+Epoch: 0089
+1st Train error = 2.152150718
+1st Validation error: 0.801796019
+Epoch: 0090
+1st Train error = 2.148255919
+1st Validation error: 0.797684133
+Epoch: 0091
+1st Train error = 2.144468889
+1st Validation error: 0.793857098
+Epoch: 0092
+1st Train error = 2.140732993
+1st Validation error: 0.790102661
+Epoch: 0093
+1st Train error = 2.137096241
+1st Validation error: 0.786454082
+Epoch: 0094
+1st Train error = 2.133524819
+1st Validation error: 0.782849073
+Epoch: 0095
+1st Train error = 2.130054122
+1st Validation error: 0.779358923
+Epoch: 0096
+1st Train error = 2.126636532
+1st Validation error: 0.775950432
+Epoch: 0097
+1st Train error = 2.123314085
+1st Validation error: 0.772549987
+Epoch: 0098
+1st Train error = 2.120032942
+1st Validation error: 0.769141078
+Epoch: 0099
+1st Train error = 2.116832328
+1st Validation error: 0.765869975
+Epoch: 0100
+1st Train error = 2.113661892
+1st Validation error: 0.762602210
+Epoch: 0101
+1st Train error = 2.110578000
+1st Validation error: 0.759393036
+Epoch: 0102
+1st Train error = 2.107529691
+1st Validation error: 0.756170630
+Epoch: 0103
+1st Train error = 2.104540679
+1st Validation error: 0.753199041
+Epoch: 0104
+1st Train error = 2.101610130
+1st Validation error: 0.750178456
+Epoch: 0105
+1st Train error = 2.098744395
+1st Validation error: 0.747269392
+Epoch: 0106
+1st Train error = 2.095914217
+1st Validation error: 0.744466841
+Epoch: 0107
+1st Train error = 2.093152172
+1st Validation error: 0.741793811
+Epoch: 0108
+1st Train error = 2.090428411
+1st Validation error: 0.739009976
+Epoch: 0109
+1st Train error = 2.087775736
+1st Validation error: 0.736468852
+Epoch: 0110
+1st Train error = 2.085143000
+1st Validation error: 0.733663976
+Epoch: 0111
+1st Train error = 2.082568533
+1st Validation error: 0.731294334
+Epoch: 0112
+1st Train error = 2.080038616
+1st Validation error: 0.728729069
+Epoch: 0113
+1st Train error = 2.077578845
+1st Validation error: 0.726538777
+Epoch: 0114
+1st Train error = 2.075125132
+1st Validation error: 0.724210858
+Epoch: 0115
+1st Train error = 2.072729477
+1st Validation error: 0.722159743
+Epoch: 0116
+1st Train error = 2.070347882
+1st Validation error: 0.719740629
+Epoch: 0117
+1st Train error = 2.068038571
+1st Validation error: 0.717765868
+Epoch: 0118
+1st Train error = 2.065730167
+1st Validation error: 0.715486169
+Epoch: 0119
+1st Train error = 2.063479758
+1st Validation error: 0.713496923
+Epoch: 0120
+1st Train error = 2.061262156
+1st Validation error: 0.711284459
+Epoch: 0121
+1st Train error = 2.059107476
+1st Validation error: 0.709329903
+Epoch: 0122
+1st Train error = 2.056963397
+1st Validation error: 0.707198560
+Epoch: 0123
+1st Train error = 2.054875982
+1st Validation error: 0.705243349
+Epoch: 0124
+1st Train error = 2.052786850
+1st Validation error: 0.703264177
+Epoch: 0125
+1st Train error = 2.050746666
+1st Validation error: 0.701440811
+Epoch: 0126
+1st Train error = 2.048705782
+1st Validation error: 0.699394941
+Epoch: 0127
+1st Train error = 2.046727220
+1st Validation error: 0.697624385
+Epoch: 0128
+1st Train error = 2.044761745
+1st Validation error: 0.695615470
+Epoch: 0129
+1st Train error = 2.042830875
+1st Validation error: 0.693920732
+Epoch: 0130
+1st Train error = 2.040928567
+1st Validation error: 0.692140996
+Epoch: 0131
+1st Train error = 2.039070981
+1st Validation error: 0.690626144
+Epoch: 0132
+1st Train error = 2.037222816
+1st Validation error: 0.688857913
+Epoch: 0133
+1st Train error = 2.035402691
+1st Validation error: 0.687266350
+Epoch: 0134
+1st Train error = 2.033587924
+1st Validation error: 0.685445487
+Epoch: 0135
+1st Train error = 2.031821255
+1st Validation error: 0.683910549
+Epoch: 0136
+1st Train error = 2.030063416
+1st Validation error: 0.682218850
+Epoch: 0137
+1st Train error = 2.028334205
+1st Validation error: 0.680626690
+Epoch: 0138
+1st Train error = 2.026604398
+1st Validation error: 0.679019868
+Epoch: 0139
+1st Train error = 2.024908643
+1st Validation error: 0.677609026
+Epoch: 0140
+1st Train error = 2.023209955
+1st Validation error: 0.675892115
+Epoch: 0141
+1st Train error = 2.021530160
+1st Validation error: 0.674523115
+Epoch: 0142
+1st Train error = 2.019869429
+1st Validation error: 0.672958612
+Epoch: 0143
+1st Train error = 2.018219371
+1st Validation error: 0.671665430
+Epoch: 0144
+1st Train error = 2.016583384
+1st Validation error: 0.670087576
+Epoch: 0145
+1st Train error = 2.014976304
+1st Validation error: 0.668789327
+Epoch: 0146
+1st Train error = 2.013385935
+1st Validation error: 0.667144239
+Epoch: 0147
+1st Train error = 2.011822410
+1st Validation error: 0.665689528
+Epoch: 0148
+1st Train error = 2.010274394
+1st Validation error: 0.664056480
+Epoch: 0149
+1st Train error = 2.008750003
+1st Validation error: 0.662627459
+Epoch: 0150
+1st Train error = 2.007242546
+1st Validation error: 0.661018908
+Epoch: 0151
+1st Train error = 2.005755818
+1st Validation error: 0.659718871
+Epoch: 0152
+1st Train error = 2.004265657
+1st Validation error: 0.658196568
+Epoch: 0153
+1st Train error = 2.002798503
+1st Validation error: 0.656787395
+Epoch: 0154
+1st Train error = 2.001355522
+1st Validation error: 0.655332386
+Epoch: 0155
+1st Train error = 1.999926564
+1st Validation error: 0.654046834
+Epoch: 0156
+1st Train error = 1.998512960
+1st Validation error: 0.652567446
+Epoch: 0157
+1st Train error = 1.997119507
+1st Validation error: 0.651311576
+Epoch: 0158
+1st Train error = 1.995738206
+1st Validation error: 0.649965823
+Epoch: 0159
+1st Train error = 1.994355002
+1st Validation error: 0.648732781
+Epoch: 0160
+1st Train error = 1.992995079
+1st Validation error: 0.647529483
+Epoch: 0161
+1st Train error = 1.991655440
+1st Validation error: 0.646211922
+Epoch: 0162
+1st Train error = 1.990319468
+1st Validation error: 0.644942760
+Epoch: 0163
+1st Train error = 1.988998895
+1st Validation error: 0.643827796
+Epoch: 0164
+1st Train error = 1.987701939
+1st Validation error: 0.642555535
+Epoch: 0165
+1st Train error = 1.986430702
+1st Validation error: 0.641452968
+Epoch: 0166
+1st Train error = 1.985176239
+1st Validation error: 0.640481830
+Epoch: 0167
+1st Train error = 1.983930041
+1st Validation error: 0.639275968
+Epoch: 0168
+1st Train error = 1.982690014
+1st Validation error: 0.638130665
+Epoch: 0169
+1st Train error = 1.981467265
+1st Validation error: 0.637128294
+Epoch: 0170
+1st Train error = 1.980258812
+1st Validation error: 0.635949552
+Epoch: 0171
+1st Train error = 1.979057728
+1st Validation error: 0.634815931
+Epoch: 0172
+1st Train error = 1.977888321
+1st Validation error: 0.633857310
+Epoch: 0173
+1st Train error = 1.976690788
+1st Validation error: 0.632700384
+Epoch: 0174
+1st Train error = 1.975532556
+1st Validation error: 0.631748259
+Epoch: 0175
+1st Train error = 1.974395098
+1st Validation error: 0.630647540
+Epoch: 0176
+1st Train error = 1.973248596
+1st Validation error: 0.629685640
+Epoch: 0177
+1st Train error = 1.972151467
+1st Validation error: 0.628859818
+Epoch: 0178
+1st Train error = 1.971006784
+1st Validation error: 0.627916396
+Epoch: 0179
+1st Train error = 1.969915890
+1st Validation error: 0.626879990
+Epoch: 0180
+1st Train error = 1.968845194
+1st Validation error: 0.626143336
+Epoch: 0181
+1st Train error = 1.967742600
+1st Validation error: 0.625163972
+Epoch: 0182
+1st Train error = 1.966695258
+1st Validation error: 0.624399364
+Epoch: 0183
+1st Train error = 1.965612225
+1st Validation error: 0.623540878
+Epoch: 0184
+1st Train error = 1.964583006
+1st Validation error: 0.622715473
+Epoch: 0185
+1st Train error = 1.963526587
+1st Validation error: 0.621724248
+Epoch: 0186
+1st Train error = 1.962513245
+1st Validation error: 0.621064723
+Epoch: 0187
+1st Train error = 1.961497656
+1st Validation error: 0.620173395
+Epoch: 0188
+1st Train error = 1.960503474
+1st Validation error: 0.619522870
+Epoch: 0189
+1st Train error = 1.959514050
+1st Validation error: 0.618737876
+Epoch: 0190
+1st Train error = 1.958516938
+1st Validation error: 0.618085742
+Epoch: 0191
+1st Train error = 1.957544786
+1st Validation error: 0.617158234
+Epoch: 0192
+1st Train error = 1.956565301
+1st Validation error: 0.616572559
+Epoch: 0193
+1st Train error = 1.955604558
+1st Validation error: 0.615783453
+Epoch: 0194
+1st Train error = 1.954639609
+1st Validation error: 0.615078032
+Epoch: 0195
+1st Train error = 1.953697241
+1st Validation error: 0.614185214
+Epoch: 0196
+1st Train error = 1.952745543
+1st Validation error: 0.613653362
+Epoch: 0197
+1st Train error = 1.951807718
+1st Validation error: 0.612833917
+Epoch: 0198
+1st Train error = 1.950884695
+1st Validation error: 0.612413526
+Epoch: 0199
+1st Train error = 1.949964864
+1st Validation error: 0.611686647
+Epoch: 0200
+1st Train error = 1.949072006
+1st Validation error: 0.611029685
+Epoch: 0201
+1st Train error = 1.948159693
+1st Validation error: 0.610431433
+Epoch: 0202
+1st Train error = 1.947288020
+1st Validation error: 0.609775603
+Epoch: 0203
+1st Train error = 1.946408325
+1st Validation error: 0.609124482
+Epoch: 0204
+1st Train error = 1.945545298
+1st Validation error: 0.608555973
+Epoch: 0205
+1st Train error = 1.944684925
+1st Validation error: 0.607749999
+Epoch: 0206
+1st Train error = 1.943889902
+1st Validation error: 0.607130647
+Epoch: 0207
+1st Train error = 1.943035713
+1st Validation error: 0.606596112
+Epoch: 0208
+1st Train error = 1.942192578
+1st Validation error: 0.606040776
+Epoch: 0209
+1st Train error = 1.941364682
+1st Validation error: 0.605372488
+Epoch: 0210
+1st Train error = 1.940586365
+1st Validation error: 0.604987502
+Epoch: 0211
+1st Train error = 1.939758163
+1st Validation error: 0.604323268
+Epoch: 0212
+1st Train error = 1.938954528
+1st Validation error: 0.603794932
+Epoch: 0213
+1st Train error = 1.938131635
+1st Validation error: 0.603214622
+Epoch: 0214
+1st Train error = 1.937380133
+1st Validation error: 0.602766633
+Epoch: 0215
+1st Train error = 1.936599840
+1st Validation error: 0.602141082
+Epoch: 0216
+1st Train error = 1.935785892
+1st Validation error: 0.601475358
+Epoch: 0217
+1st Train error = 1.935055886
+1st Validation error: 0.600959778
+Epoch: 0218
+1st Train error = 1.934254747
+1st Validation error: 0.600613177
+Epoch: 0219
+1st Train error = 1.933455054
+1st Validation error: 0.599841654
+Epoch: 0220
+1st Train error = 1.932721533
+1st Validation error: 0.599281907
+Epoch: 0221
+1st Train error = 1.931949529
+1st Validation error: 0.598672688
+Epoch: 0222
+1st Train error = 1.931157096
+1st Validation error: 0.597954810
+Epoch: 0223
+1st Train error = 1.930458384
+1st Validation error: 0.597441196
+Epoch: 0224
+1st Train error = 1.929685120
+1st Validation error: 0.596965432
+Epoch: 0225
+1st Train error = 1.928923436
+1st Validation error: 0.596280217
+Epoch: 0226
+1st Train error = 1.928205776
+1st Validation error: 0.595818579
+Epoch: 0227
+1st Train error = 1.927452697
+1st Validation error: 0.595362902
+Epoch: 0228
+1st Train error = 1.926731668
+1st Validation error: 0.594808638
+Epoch: 0229
+1st Train error = 1.926041830
+1st Validation error: 0.594355881
+Epoch: 0230
+1st Train error = 1.925308094
+1st Validation error: 0.594027042
+Epoch: 0231
+1st Train error = 1.924610057
+1st Validation error: 0.593214273
+Epoch: 0232
+1st Train error = 1.923950151
+1st Validation error: 0.592877924
+Epoch: 0233
+1st Train error = 1.923215614
+1st Validation error: 0.592289329
+Epoch: 0234
+1st Train error = 1.922530738
+1st Validation error: 0.591901302
+Epoch: 0235
+1st Train error = 1.921828663
+1st Validation error: 0.591339409
+Epoch: 0236
+1st Train error = 1.921139570
+1st Validation error: 0.590906858
+Epoch: 0237
+1st Train error = 1.920505257
+1st Validation error: 0.590435386
+Epoch: 0238
+1st Train error = 1.919800994
+1st Validation error: 0.589841723
+Epoch: 0239
+1st Train error = 1.919127223
+1st Validation error: 0.589361310
+Epoch: 0240
+1st Train error = 1.918456975
+1st Validation error: 0.588930607
+Epoch: 0241
+1st Train error = 1.917807039
+1st Validation error: 0.588318527
+Epoch: 0242
+1st Train error = 1.917166298
+1st Validation error: 0.587807477
+Epoch: 0243
+1st Train error = 1.916488971
+1st Validation error: 0.587249935
+Epoch: 0244
+1st Train error = 1.915838147
+1st Validation error: 0.586834133
+Epoch: 0245
+1st Train error = 1.915207753
+1st Validation error: 0.586296856
+Epoch: 0246
+1st Train error = 1.914555512
+1st Validation error: 0.585710287
+Epoch: 0247
+1st Train error = 1.913915960
+1st Validation error: 0.585426986
+Epoch: 0248
+1st Train error = 1.913268665
+1st Validation error: 0.584776700
+Epoch: 0249
+1st Train error = 1.912626701
+1st Validation error: 0.584341526
+Epoch: 0250
+1st Train error = 1.911990312
+1st Validation error: 0.583857834
+Epoch: 0251
+1st Train error = 1.911349046
+1st Validation error: 0.583325863
+Epoch: 0252
+1st Train error = 1.910723260
+1st Validation error: 0.582869232
+Epoch: 0253
+1st Train error = 1.910095854
+1st Validation error: 0.582243800
+Epoch: 0254
+1st Train error = 1.909476083
+1st Validation error: 0.581730187
+Epoch: 0255
+1st Train error = 1.908854243
+1st Validation error: 0.581132174
+Epoch: 0256
+1st Train error = 1.908235221
+1st Validation error: 0.580789089
+Epoch: 0257
+1st Train error = 1.907609880
+1st Validation error: 0.580169082
+Epoch: 0258
+1st Train error = 1.906993245
+1st Validation error: 0.579603970
+Epoch: 0259
+1st Train error = 1.906374555
+1st Validation error: 0.578916848
+Epoch: 0260
+1st Train error = 1.905755447
+1st Validation error: 0.578416586
+Epoch: 0261
+1st Train error = 1.905114605
+1st Validation error: 0.577847362
+Epoch: 0262
+1st Train error = 1.904507658
+1st Validation error: 0.577438235
+Epoch: 0263
+1st Train error = 1.903883799
+1st Validation error: 0.576771140
+Epoch: 0264
+1st Train error = 1.903269341
+1st Validation error: 0.576276600
+Epoch: 0265
+1st Train error = 1.902652374
+1st Validation error: 0.575876415
+Epoch: 0266
+1st Train error = 1.902049544
+1st Validation error: 0.575446844
+Epoch: 0267
+1st Train error = 1.901438107
+1st Validation error: 0.575032413
+Epoch: 0268
+1st Train error = 1.900825586
+1st Validation error: 0.574492097
+Epoch: 0269
+1st Train error = 1.900204638
+1st Validation error: 0.574055254
+Epoch: 0270
+1st Train error = 1.899593480
+1st Validation error: 0.573766828
+Epoch: 0271
+1st Train error = 1.898998948
+1st Validation error: 0.573149979
+Epoch: 0272
+1st Train error = 1.898384814
+1st Validation error: 0.572798252
+Epoch: 0273
+1st Train error = 1.897792421
+1st Validation error: 0.572312117
+Epoch: 0274
+1st Train error = 1.897211280
+1st Validation error: 0.572002709
+Epoch: 0275
+1st Train error = 1.896628218
+1st Validation error: 0.571703255
+Epoch: 0276
+1st Train error = 1.896035537
+1st Validation error: 0.571323037
+Epoch: 0277
+1st Train error = 1.895456265
+1st Validation error: 0.570921183
+Epoch: 0278
+1st Train error = 1.894882718
+1st Validation error: 0.570642233
+Epoch: 0279
+1st Train error = 1.894296200
+1st Validation error: 0.570310056
+Epoch: 0280
+1st Train error = 1.893718939
+1st Validation error: 0.570071757
+Epoch: 0281
+1st Train error = 1.893154814
+1st Validation error: 0.569614887
+Epoch: 0282
+1st Train error = 1.892583802
+1st Validation error: 0.569215059
+Epoch: 0283
+1st Train error = 1.892017708
+1st Validation error: 0.568850100
+Epoch: 0284
+1st Train error = 1.891448964
+1st Validation error: 0.568521440
+Epoch: 0285
+1st Train error = 1.890893211
+1st Validation error: 0.568079948
+Epoch: 0286
+1st Train error = 1.890329576
+1st Validation error: 0.567738950
+Epoch: 0287
+1st Train error = 1.889782906
+1st Validation error: 0.567448139
+Epoch: 0288
+1st Train error = 1.889206076
+1st Validation error: 0.567108929
+Epoch: 0289
+1st Train error = 1.888650435
+1st Validation error: 0.566697776
+Epoch: 0290
+1st Train error = 1.888095192
+1st Validation error: 0.566534758
+Epoch: 0291
+1st Train error = 1.887536701
+1st Validation error: 0.566075802
+Epoch: 0292
+1st Train error = 1.886992212
+1st Validation error: 0.565706909
+Epoch: 0293
+1st Train error = 1.886451333
+1st Validation error: 0.565317690
+Epoch: 0294
+1st Train error = 1.885907356
+1st Validation error: 0.564870536
+Epoch: 0295
+1st Train error = 1.885357573
+1st Validation error: 0.564656377
+Epoch: 0296
+1st Train error = 1.884813376
+1st Validation error: 0.564347684
+Epoch: 0297
+1st Train error = 1.884283917
+1st Validation error: 0.564074039
+Epoch: 0298
+1st Train error = 1.883753867
+1st Validation error: 0.563786089
+Epoch: 0299
+1st Train error = 1.883217198
+1st Validation error: 0.563440979
+Epoch: 0300
+1st Train error = 1.882701136
+1st Validation error: 0.563007712
+Epoch: 0301
+1st Train error = 1.882175650
+1st Validation error: 0.562733591
+Epoch: 0302
+1st Train error = 1.881654978
+1st Validation error: 0.562337995
+Epoch: 0303
+1st Train error = 1.881139463
+1st Validation error: 0.561966956
+Epoch: 0304
+1st Train error = 1.880651837
+1st Validation error: 0.561523259
+Epoch: 0305
+1st Train error = 1.880134328
+1st Validation error: 0.561260641
+Epoch: 0306
+1st Train error = 1.879621195
+1st Validation error: 0.560820460
+Epoch: 0307
+1st Train error = 1.879119386
+1st Validation error: 0.560519159
+Epoch: 0308
+1st Train error = 1.878625832
+1st Validation error: 0.560083091
+Epoch: 0309
+1st Train error = 1.878125686
+1st Validation error: 0.559730113
+Epoch: 0310
+1st Train error = 1.877629119
+1st Validation error: 0.559454858
+Epoch: 0311
+1st Train error = 1.877144785
+1st Validation error: 0.559007585
+Epoch: 0312
+1st Train error = 1.876649541
+1st Validation error: 0.558680058
+Epoch: 0313
+1st Train error = 1.876162112
+1st Validation error: 0.558314741
+Epoch: 0314
+1st Train error = 1.875669391
+1st Validation error: 0.557961404
+Epoch: 0315
+1st Train error = 1.875184692
+1st Validation error: 0.557583034
+Epoch: 0316
+1st Train error = 1.874703741
+1st Validation error: 0.557263315
+Epoch: 0317
+1st Train error = 1.874221585
+1st Validation error: 0.556971133
+Epoch: 0318
+1st Train error = 1.873740042
+1st Validation error: 0.556599021
+Epoch: 0319
+1st Train error = 1.873252504
+1st Validation error: 0.556385875
+Epoch: 0320
+1st Train error = 1.872769495
+1st Validation error: 0.556075931
+Epoch: 0321
+1st Train error = 1.872298202
+1st Validation error: 0.555696964
+Epoch: 0322
+1st Train error = 1.871819462
+1st Validation error: 0.555532873
+Epoch: 0323
+1st Train error = 1.871346501
+1st Validation error: 0.555257022
+Epoch: 0324
+1st Train error = 1.870887661
+1st Validation error: 0.554972887
+Epoch: 0325
+1st Train error = 1.870407412
+1st Validation error: 0.554970741
+Epoch: 0326
+1st Train error = 1.869961617
+1st Validation error: 0.554609478
+Epoch: 0327
+1st Train error = 1.869500146
+1st Validation error: 0.554357409
+Epoch: 0328
+1st Train error = 1.869053621
+1st Validation error: 0.554127276
+Epoch: 0329
+1st Train error = 1.868606499
+1st Validation error: 0.553929150
+Epoch: 0330
+1st Train error = 1.868152255
+1st Validation error: 0.553657115
+Epoch: 0331
+1st Train error = 1.867693094
+1st Validation error: 0.553261101
+Epoch: 0332
+1st Train error = 1.867237350
+1st Validation error: 0.553138375
+Epoch: 0333
+1st Train error = 1.866787791
+1st Validation error: 0.552792788
+Epoch: 0334
+1st Train error = 1.866350648
+1st Validation error: 0.552632034
+Epoch: 0335
+1st Train error = 1.865891433
+1st Validation error: 0.552355766
+Epoch: 0336
+1st Train error = 1.865455086
+1st Validation error: 0.552117109
+Epoch: 0337
+1st Train error = 1.865008931
+1st Validation error: 0.552032471
+Epoch: 0338
+1st Train error = 1.864583953
+1st Validation error: 0.551886141
+Epoch: 0339
+1st Train error = 1.864144066
+1st Validation error: 0.551891565
+Epoch: 0340
+1st Train error = 1.863711808
+1st Validation error: 0.551611841
+Epoch: 0341
+1st Train error = 1.863262148
+1st Validation error: 0.551289856
+Epoch: 0342
+1st Train error = 1.862827672
+1st Validation error: 0.551053166
+Epoch: 0343
+1st Train error = 1.862395514
+1st Validation error: 0.550863445
+Epoch: 0344
+1st Train error = 1.861968950
+1st Validation error: 0.550707221
+Epoch: 0345
+1st Train error = 1.861538476
+1st Validation error: 0.550336242
+Epoch: 0346
+1st Train error = 1.861098502
+1st Validation error: 0.550192714
+Epoch: 0347
+1st Train error = 1.860669318
+1st Validation error: 0.549963474
+Epoch: 0348
+1st Train error = 1.860247788
+1st Validation error: 0.549708307
+Epoch: 0349
+1st Train error = 1.859813697
+1st Validation error: 0.549434841
+Epoch: 0350
+1st Train error = 1.859375151
+1st Validation error: 0.549168348
+Epoch: 0351
+1st Train error = 1.858955791
+1st Validation error: 0.548858225
+Epoch: 0352
+1st Train error = 1.858541685
+1st Validation error: 0.548718035
+Epoch: 0353
+1st Train error = 1.858108798
+1st Validation error: 0.548362911
+Epoch: 0354
+1st Train error = 1.857699871
+1st Validation error: 0.548205137
+Epoch: 0355
+1st Train error = 1.857295655
+1st Validation error: 0.547928512
+Epoch: 0356
+1st Train error = 1.856870927
+1st Validation error: 0.547742903
+Epoch: 0357
+1st Train error = 1.856473820
+1st Validation error: 0.547518849
+Epoch: 0358
+1st Train error = 1.856077572
+1st Validation error: 0.547187924
+Epoch: 0359
+1st Train error = 1.855664686
+1st Validation error: 0.546963453
+Epoch: 0360
+1st Train error = 1.855272212
+1st Validation error: 0.546420991
+Epoch: 0361
+1st Train error = 1.854868507
+1st Validation error: 0.545899630
+Epoch: 0362
+1st Train error = 1.854484290
+1st Validation error: 0.545512259
+Epoch: 0363
+1st Train error = 1.854070740
+1st Validation error: 0.545007467
+Epoch: 0364
+1st Train error = 1.853666350
+1st Validation error: 0.544663608
+Epoch: 0365
+1st Train error = 1.853282165
+1st Validation error: 0.544241011
+Epoch: 0366
+1st Train error = 1.852869075
+1st Validation error: 0.543688834
+Epoch: 0367
+1st Train error = 1.852472062
+1st Validation error: 0.543253720
+Epoch: 0368
+1st Train error = 1.852080428
+1st Validation error: 0.542821825
+Epoch: 0369
+1st Train error = 1.851664912
+1st Validation error: 0.542336047
+Epoch: 0370
+1st Train error = 1.851273153
+1st Validation error: 0.542054296
+Epoch: 0371
+1st Train error = 1.850895687
+1st Validation error: 0.541757226
+Epoch: 0372
+1st Train error = 1.850496615
+1st Validation error: 0.541299164
+Epoch: 0373
+1st Train error = 1.850105367
+1st Validation error: 0.540998280
+Epoch: 0374
+1st Train error = 1.849727056
+1st Validation error: 0.540732801
+Epoch: 0375
+1st Train error = 1.849325113
+1st Validation error: 0.540443122
+Epoch: 0376
+1st Train error = 1.848958114
+1st Validation error: 0.540167451
+Epoch: 0377
+1st Train error = 1.848561830
+1st Validation error: 0.539688110
+Epoch: 0378
+1st Train error = 1.848185267
+1st Validation error: 0.539407194
+Epoch: 0379
+1st Train error = 1.847800300
+1st Validation error: 0.538933218
+Epoch: 0380
+1st Train error = 1.847430240
+1st Validation error: 0.538577795
+Epoch: 0381
+1st Train error = 1.847052497
+1st Validation error: 0.538336992
+Epoch: 0382
+1st Train error = 1.846671722
+1st Validation error: 0.538038254
+Epoch: 0383
+1st Train error = 1.846314234
+1st Validation error: 0.537648737
+Epoch: 0384
+1st Train error = 1.845951100
+1st Validation error: 0.537268996
+Epoch: 0385
+1st Train error = 1.845595958
+1st Validation error: 0.536869824
+Epoch: 0386
+1st Train error = 1.845221366
+1st Validation error: 0.536582828
+Epoch: 0387
+1st Train error = 1.844853805
+1st Validation error: 0.536417603
+Epoch: 0388
+1st Train error = 1.844490429
+1st Validation error: 0.535956264
+Epoch: 0389
+1st Train error = 1.844131033
+1st Validation error: 0.535713375
+Epoch: 0390
+1st Train error = 1.843749553
+1st Validation error: 0.535505652
+Epoch: 0391
+1st Train error = 1.843395789
+1st Validation error: 0.535167634
+Epoch: 0392
+1st Train error = 1.843029432
+1st Validation error: 0.534747005
+Epoch: 0393
+1st Train error = 1.842673888
+1st Validation error: 0.534549356
+Epoch: 0394
+1st Train error = 1.842309314
+1st Validation error: 0.534133494
+Epoch: 0395
+1st Train error = 1.841957504
+1st Validation error: 0.533924520
+Epoch: 0396
+1st Train error = 1.841590562
+1st Validation error: 0.533662617
+Epoch: 0397
+1st Train error = 1.841255711
+1st Validation error: 0.533447683
+Epoch: 0398
+1st Train error = 1.840899084
+1st Validation error: 0.533082962
+Epoch: 0399
+1st Train error = 1.840560953
+1st Validation error: 0.532822549
+Epoch: 0400
+1st Train error = 1.840210613
+1st Validation error: 0.532453299
+Epoch: 0401
+1st Train error = 1.839867306
+1st Validation error: 0.532295644
+Epoch: 0402
+1st Train error = 1.839517893
+1st Validation error: 0.531969607
+Epoch: 0403
+1st Train error = 1.839192555
+1st Validation error: 0.531708062
+Epoch: 0404
+1st Train error = 1.838844579
+1st Validation error: 0.531292975
+Epoch: 0405
+1st Train error = 1.838507490
+1st Validation error: 0.531011045
+Epoch: 0406
+1st Train error = 1.838148982
+1st Validation error: 0.530500114
+Epoch: 0407
+1st Train error = 1.837810822
+1st Validation error: 0.530243933
+Epoch: 0408
+1st Train error = 1.837456632
+1st Validation error: 0.529985070
+Epoch: 0409
+1st Train error = 1.837118103
+1st Validation error: 0.529620826
+Epoch: 0410
+1st Train error = 1.836765740
+1st Validation error: 0.529155374
+Epoch: 0411
+1st Train error = 1.836429196
+1st Validation error: 0.528875709
+Epoch: 0412
+1st Train error = 1.836080093
+1st Validation error: 0.528356433
+Epoch: 0413
+1st Train error = 1.835745087
+1st Validation error: 0.528091073
+Epoch: 0414
+1st Train error = 1.835399923
+1st Validation error: 0.527736604
+Epoch: 0415
+1st Train error = 1.835058821
+1st Validation error: 0.527554095
+Epoch: 0416
+1st Train error = 1.834711420
+1st Validation error: 0.527312279
+Epoch: 0417
+1st Train error = 1.834393336
+1st Validation error: 0.526941001
+Epoch: 0418
+1st Train error = 1.834062731
+1st Validation error: 0.526623428
+Epoch: 0419
+1st Train error = 1.833711651
+1st Validation error: 0.526462615
+Epoch: 0420
+1st Train error = 1.833398755
+1st Validation error: 0.526125431
+Epoch: 0421
+1st Train error = 1.833060304
+1st Validation error: 0.525799692
+Epoch: 0422
+1st Train error = 1.832728887
+1st Validation error: 0.525475025
+Epoch: 0423
+1st Train error = 1.832396479
+1st Validation error: 0.525116920
+Epoch: 0424
+1st Train error = 1.832053815
+1st Validation error: 0.525027812
+Epoch: 0425
+1st Train error = 1.831733803
+1st Validation error: 0.524616778
+Epoch: 0426
+1st Train error = 1.831416785
+1st Validation error: 0.524232566
+Epoch: 0427
+1st Train error = 1.831086837
+1st Validation error: 0.523996472
+Epoch: 0428
+1st Train error = 1.830764654
+1st Validation error: 0.523643672
+Epoch: 0429
+1st Train error = 1.830442052
+1st Validation error: 0.523427904
+Epoch: 0430
+1st Train error = 1.830122938
+1st Validation error: 0.523237944
+Epoch: 0431
+1st Train error = 1.829794946
+1st Validation error: 0.523225725
+Epoch: 0432
+1st Train error = 1.829486505
+1st Validation error: 0.522833407
+Epoch: 0433
+1st Train error = 1.829169525
+1st Validation error: 0.522682071
+Epoch: 0434
+1st Train error = 1.828848742
+1st Validation error: 0.522374034
+Epoch: 0435
+1st Train error = 1.828536527
+1st Validation error: 0.522207439
+Epoch: 0436
+1st Train error = 1.828218973
+1st Validation error: 0.522051990
+Epoch: 0437
+1st Train error = 1.827923176
+1st Validation error: 0.521816254
+Epoch: 0438
+1st Train error = 1.827614948
+1st Validation error: 0.521576107
+Epoch: 0439
+1st Train error = 1.827299915
+1st Validation error: 0.521258295
+Epoch: 0440
+1st Train error = 1.826998673
+1st Validation error: 0.520989478
+Epoch: 0441
+1st Train error = 1.826678506
+1st Validation error: 0.520975649
+Epoch: 0442
+1st Train error = 1.826391282
+1st Validation error: 0.520737231
+Epoch: 0443
+1st Train error = 1.826078445
+1st Validation error: 0.520534933
+Epoch: 0444
+1st Train error = 1.825777909
+1st Validation error: 0.520150840
+Epoch: 0445
+1st Train error = 1.825474753
+1st Validation error: 0.519984365
+Epoch: 0446
+1st Train error = 1.825169604
+1st Validation error: 0.519778013
+Epoch: 0447
+1st Train error = 1.824864625
+1st Validation error: 0.519474447
+Epoch: 0448
+1st Train error = 1.824554705
+1st Validation error: 0.519440770
+Epoch: 0449
+1st Train error = 1.824251461
+1st Validation error: 0.519198120
+Epoch: 0450
+1st Train error = 1.823958155
+1st Validation error: 0.518926203
+Epoch: 0451
+1st Train error = 1.823662534
+1st Validation error: 0.518691003
+Epoch: 0452
+1st Train error = 1.823366077
+1st Validation error: 0.518399894
+Epoch: 0453
+1st Train error = 1.823067615
+1st Validation error: 0.518255830
+Epoch: 0454
+1st Train error = 1.822770181
+1st Validation error: 0.517911792
+Epoch: 0455
+1st Train error = 1.822475128
+1st Validation error: 0.517743945
+Epoch: 0456
+1st Train error = 1.822178344
+1st Validation error: 0.517425358
+Epoch: 0457
+1st Train error = 1.821882193
+1st Validation error: 0.517277300
+Epoch: 0458
+1st Train error = 1.821593988
+1st Validation error: 0.517099261
+Epoch: 0459
+1st Train error = 1.821305894
+1st Validation error: 0.516847134
+Epoch: 0460
+1st Train error = 1.821023450
+1st Validation error: 0.516562939
+Epoch: 0461
+1st Train error = 1.820738159
+1st Validation error: 0.516297460
+Epoch: 0462
+1st Train error = 1.820448887
+1st Validation error: 0.516037285
+Epoch: 0463
+1st Train error = 1.820158356
+1st Validation error: 0.515906811
+Epoch: 0464
+1st Train error = 1.819874597
+1st Validation error: 0.515633762
+Epoch: 0465
+1st Train error = 1.819581096
+1st Validation error: 0.515426397
+Epoch: 0466
+1st Train error = 1.819285976
+1st Validation error: 0.515223920
+Epoch: 0467
+1st Train error = 1.819010170
+1st Validation error: 0.515070558
+Epoch: 0468
+1st Train error = 1.818720101
+1st Validation error: 0.514868736
+Epoch: 0469
+1st Train error = 1.818434887
+1st Validation error: 0.514647126
+Epoch: 0470
+1st Train error = 1.818155444
+1st Validation error: 0.514574766
+Epoch: 0471
+1st Train error = 1.817864177
+1st Validation error: 0.514397204
+Epoch: 0472
+1st Train error = 1.817587979
+1st Validation error: 0.514120102
+Epoch: 0473
+1st Train error = 1.817300726
+1st Validation error: 0.513891935
+Epoch: 0474
+1st Train error = 1.817036242
+1st Validation error: 0.513523519
+Epoch: 0475
+1st Train error = 1.816755487
+1st Validation error: 0.513312161
+Epoch: 0476
+1st Train error = 1.816480502
+1st Validation error: 0.513081014
+Epoch: 0477
+1st Train error = 1.816208988
+1st Validation error: 0.512888670
+Epoch: 0478
+1st Train error = 1.815936253
+1st Validation error: 0.512787759
+Epoch: 0479
+1st Train error = 1.815659782
+1st Validation error: 0.512585402
+Epoch: 0480
+1st Train error = 1.815388521
+1st Validation error: 0.512232244
+Epoch: 0481
+1st Train error = 1.815118759
+1st Validation error: 0.512141645
+Epoch: 0482
+1st Train error = 1.814837219
+1st Validation error: 0.511893570
+Epoch: 0483
+1st Train error = 1.814571106
+1st Validation error: 0.511717558
+Epoch: 0484
+1st Train error = 1.814291012
+1st Validation error: 0.511541188
+Epoch: 0485
+1st Train error = 1.814029440
+1st Validation error: 0.511251211
+Epoch: 0486
+1st Train error = 1.813759217
+1st Validation error: 0.511159539
+Epoch: 0487
+1st Train error = 1.813484142
+1st Validation error: 0.511062741
+Epoch: 0488
+1st Train error = 1.813208631
+1st Validation error: 0.511014879
+Epoch: 0489
+1st Train error = 1.812942684
+1st Validation error: 0.510881960
+Epoch: 0490
+1st Train error = 1.812684544
+1st Validation error: 0.510643244
+Epoch: 0491
+1st Train error = 1.812425139
+1st Validation error: 0.510499239
+Epoch: 0492
+1st Train error = 1.812206278
+1st Validation error: 0.509735882
+Epoch: 0493
+1st Train error = 1.811980581
+1st Validation error: 0.509945929
+Epoch: 0494
+1st Train error = 1.811710976
+1st Validation error: 0.509685755
+Epoch: 0495
+1st Train error = 1.811443338
+1st Validation error: 0.509457231
+Epoch: 0496
+1st Train error = 1.811181318
+1st Validation error: 0.509272575
+Epoch: 0497
+1st Train error = 1.810915111
+1st Validation error: 0.509192169
+Epoch: 0498
+1st Train error = 1.810647641
+1st Validation error: 0.508903801
+Epoch: 0499
+1st Train error = 1.810382602
+1st Validation error: 0.508905709
+Epoch: 0500
+1st Train error = 1.810134233
+1st Validation error: 0.508676708
+Epoch: 0501
+1st Train error = 1.809878968
+1st Validation error: 0.508658469
+Epoch: 0502
+1st Train error = 1.809624272
+1st Validation error: 0.508416951
+Epoch: 0503
+1st Train error = 1.809359270
+1st Validation error: 0.508364975
+Epoch: 0504
+1st Train error = 1.809101834
+1st Validation error: 0.508148849
+Epoch: 0505
+1st Train error = 1.808857834
+1st Validation error: 0.508107603
+Epoch: 0506
+1st Train error = 1.808607599
+1st Validation error: 0.507874906
+Epoch: 0507
+1st Train error = 1.808354860
+1st Validation error: 0.507854581
+Epoch: 0508
+1st Train error = 1.808108282
+1st Validation error: 0.507777393
+Epoch: 0509
+1st Train error = 1.807871377
+1st Validation error: 0.507586062
+Epoch: 0510
+1st Train error = 1.807623609
+1st Validation error: 0.507316649
+Epoch: 0511
+1st Train error = 1.807387922
+1st Validation error: 0.507324040
+Epoch: 0512
+1st Train error = 1.807155251
+1st Validation error: 0.507016659
+Epoch: 0513
+1st Train error = 1.806925372
+1st Validation error: 0.506989062
+Epoch: 0514
+1st Train error = 1.806697143
+1st Validation error: 0.506688178
+Epoch: 0515
+1st Train error = 1.806469155
+1st Validation error: 0.506614387
+Epoch: 0516
+1st Train error = 1.806233843
+1st Validation error: 0.506331682
+Epoch: 0517
+1st Train error = 1.806001177
+1st Validation error: 0.506201982
+Epoch: 0518
+1st Train error = 1.805776599
+1st Validation error: 0.506084621
+Epoch: 0519
+1st Train error = 1.805548995
+1st Validation error: 0.505911410
+Epoch: 0520
+1st Train error = 1.805305597
+1st Validation error: 0.505870938
+Epoch: 0521
+1st Train error = 1.805076454
+1st Validation error: 0.505615473
+Epoch: 0522
+1st Train error = 1.804843299
+1st Validation error: 0.505470932
+Epoch: 0523
+1st Train error = 1.804616734
+1st Validation error: 0.505333841
+Epoch: 0524
+1st Train error = 1.804387060
+1st Validation error: 0.505104244
+Epoch: 0525
+1st Train error = 1.804163218
+1st Validation error: 0.505003572
+Epoch: 0526
+1st Train error = 1.803924863
+1st Validation error: 0.504874349
+Epoch: 0527
+1st Train error = 1.803682606
+1st Validation error: 0.504618824
+Epoch: 0528
+1st Train error = 1.803440854
+1st Validation error: 0.504487574
+Epoch: 0529
+1st Train error = 1.803215161
+1st Validation error: 0.504254699
+Epoch: 0530
+1st Train error = 1.802971026
+1st Validation error: 0.504130483
+Epoch: 0531
+1st Train error = 1.802736183
+1st Validation error: 0.504047453
+Epoch: 0532
+1st Train error = 1.802493677
+1st Validation error: 0.503833711
+Epoch: 0533
+1st Train error = 1.802265092
+1st Validation error: 0.503682077
+Epoch: 0534
+1st Train error = 1.802032982
+1st Validation error: 0.503497243
+Epoch: 0535
+1st Train error = 1.801791319
+1st Validation error: 0.503450274
+Epoch: 0536
+1st Train error = 1.801560512
+1st Validation error: 0.503206491
+Epoch: 0537
+1st Train error = 1.801338126
+1st Validation error: 0.502930760
+Epoch: 0538
+1st Train error = 1.801106531
+1st Validation error: 0.502846658
+Epoch: 0539
+1st Train error = 1.800883159
+1st Validation error: 0.502645493
+Epoch: 0540
+1st Train error = 1.800639386
+1st Validation error: 0.502630830
+Epoch: 0541
+1st Train error = 1.800421189
+1st Validation error: 0.502460897
+Epoch: 0542
+1st Train error = 1.800191198
+1st Validation error: 0.502144456
+Epoch: 0543
+1st Train error = 1.799951576
+1st Validation error: 0.501866937
+Epoch: 0544
+1st Train error = 1.799710404
+1st Validation error: 0.501972079
+Epoch: 0545
+1st Train error = 1.799482935
+1st Validation error: 0.501710653
+Epoch: 0546
+1st Train error = 1.799254373
+1st Validation error: 0.501504004
+Epoch: 0547
+1st Train error = 1.799033359
+1st Validation error: 0.501354575
+Epoch: 0548
+1st Train error = 1.798803679
+1st Validation error: 0.501152515
+Epoch: 0549
+1st Train error = 1.798553218
+1st Validation error: 0.501030684
+Epoch: 0550
+1st Train error = 1.798343890
+1st Validation error: 0.500912011
+Epoch: 0551
+1st Train error = 1.798121372
+1st Validation error: 0.500635743
+Epoch: 0552
+1st Train error = 1.797893695
+1st Validation error: 0.500586331
+Epoch: 0553
+1st Train error = 1.797656559
+1st Validation error: 0.500445366
+Epoch: 0554
+1st Train error = 1.797447732
+1st Validation error: 0.500292063
+Epoch: 0555
+1st Train error = 1.797224558
+1st Validation error: 0.500187576
+Epoch: 0556
+1st Train error = 1.796989787
+1st Validation error: 0.500176430
+Epoch: 0557
+1st Train error = 1.796772567
+1st Validation error: 0.499860913
+Epoch: 0558
+1st Train error = 1.796543367
+1st Validation error: 0.499671191
+Epoch: 0559
+1st Train error = 1.796311239
+1st Validation error: 0.499460131
+Epoch: 0560
+1st Train error = 1.796107268
+1st Validation error: 0.499485880
+Epoch: 0561
+1st Train error = 1.795883536
+1st Validation error: 0.499340683
+Epoch: 0562
+1st Train error = 1.795659920
+1st Validation error: 0.499084622
+Epoch: 0563
+1st Train error = 1.795436871
+1st Validation error: 0.499049962
+Epoch: 0564
+1st Train error = 1.795218042
+1st Validation error: 0.498807371
+Epoch: 0565
+1st Train error = 1.794992190
+1st Validation error: 0.498907775
+Epoch: 0566
+1st Train error = 1.794778940
+1st Validation error: 0.498661309
+Epoch: 0567
+1st Train error = 1.794578369
+1st Validation error: 0.498576105
+Epoch: 0568
+1st Train error = 1.794377550
+1st Validation error: 0.498469144
+Epoch: 0569
+1st Train error = 1.794166654
+1st Validation error: 0.498320937
+Epoch: 0570
+1st Train error = 1.793960073
+1st Validation error: 0.498075485
+Epoch: 0571
+1st Train error = 1.793744835
+1st Validation error: 0.497983724
+Epoch: 0572
+1st Train error = 1.793537389
+1st Validation error: 0.497841150
+Epoch: 0573
+1st Train error = 1.793333062
+1st Validation error: 0.497838378
+Epoch: 0574
+1st Train error = 1.793118711
+1st Validation error: 0.497571141
+Epoch: 0575
+1st Train error = 1.792914821
+1st Validation error: 0.497551888
+Epoch: 0576
+1st Train error = 1.792711724
+1st Validation error: 0.497451901
+Epoch: 0577
+1st Train error = 1.792516517
+1st Validation error: 0.497231185
+Epoch: 0578
+1st Train error = 1.792298865
+1st Validation error: 0.497159272
+Epoch: 0579
+1st Train error = 1.792110998
+1st Validation error: 0.497002363
+Epoch: 0580
+1st Train error = 1.791897564
+1st Validation error: 0.496906608
+Epoch: 0581
+1st Train error = 1.791698463
+1st Validation error: 0.496676207
+Epoch: 0582
+1st Train error = 1.791496267
+1st Validation error: 0.496620417
+Epoch: 0583
+1st Train error = 1.791312589
+1st Validation error: 0.496370941
+Epoch: 0584
+1st Train error = 1.791089140
+1st Validation error: 0.496293932
+Epoch: 0585
+1st Train error = 1.790909670
+1st Validation error: 0.496186614
+Epoch: 0586
+1st Train error = 1.790687471
+1st Validation error: 0.496195078
+Epoch: 0587
+1st Train error = 1.790502690
+1st Validation error: 0.496034384
+Epoch: 0588
+1st Train error = 1.790296058
+1st Validation error: 0.495815307
+Epoch: 0589
+1st Train error = 1.790112414
+1st Validation error: 0.495708019
+Epoch: 0590
+1st Train error = 1.789906322
+1st Validation error: 0.495500684
+Epoch: 0591
+1st Train error = 1.789712074
+1st Validation error: 0.495283455
+Epoch: 0592
+1st Train error = 1.789506876
+1st Validation error: 0.495259970
+Epoch: 0593
+1st Train error = 1.789324196
+1st Validation error: 0.495036334
+Epoch: 0594
+1st Train error = 1.789114473
+1st Validation error: 0.494896799
+Epoch: 0595
+1st Train error = 1.788941637
+1st Validation error: 0.494912237
+Epoch: 0596
+1st Train error = 1.788750866
+1st Validation error: 0.494681388
+Epoch: 0597
+1st Train error = 1.788548146
+1st Validation error: 0.494601607
+Epoch: 0598
+1st Train error = 1.788341240
+1st Validation error: 0.494485319
+Epoch: 0599
+1st Train error = 1.788166027
+1st Validation error: 0.494327903
+Epoch: 0600
+1st Train error = 1.787965509
+1st Validation error: 0.494302452
+Epoch: 0601
+1st Train error = 1.787785152
+1st Validation error: 0.494171232
+Epoch: 0602
+1st Train error = 1.787596340
+1st Validation error: 0.493806660
+Epoch: 0603
+1st Train error = 1.787411576
+1st Validation error: 0.493888468
+Epoch: 0604
+1st Train error = 1.787223549
+1st Validation error: 0.493785977
+Epoch: 0605
+1st Train error = 1.787044720
+1st Validation error: 0.493571728
+Epoch: 0606
+1st Train error = 1.786848997
+1st Validation error: 0.493546456
+Epoch: 0607
+1st Train error = 1.786658709
+1st Validation error: 0.493176937
+Epoch: 0608
+1st Train error = 1.786481783
+1st Validation error: 0.493137419
+Epoch: 0609
+1st Train error = 1.786302259
+1st Validation error: 0.493124366
+Epoch: 0610
+1st Train error = 1.786104590
+1st Validation error: 0.492998511
+Epoch: 0611
+1st Train error = 1.785914730
+1st Validation error: 0.492919803
+Epoch: 0612
+1st Train error = 1.785722842
+1st Validation error: 0.492469132
+Epoch: 0613
+1st Train error = 1.785555354
+1st Validation error: 0.492602378
+Epoch: 0614
+1st Train error = 1.785352495
+1st Validation error: 0.492247432
+Epoch: 0615
+1st Train error = 1.785185680
+1st Validation error: 0.492129236
+Epoch: 0616
+1st Train error = 1.784987810
+1st Validation error: 0.492145270
+Epoch: 0617
+1st Train error = 1.784806123
+1st Validation error: 0.491855711
+Epoch: 0618
+1st Train error = 1.784616886
+1st Validation error: 0.491697580
+Epoch: 0619
+1st Train error = 1.784437559
+1st Validation error: 0.491662085
+Epoch: 0620
+1st Train error = 1.784241868
+1st Validation error: 0.491500378
+Epoch: 0621
+1st Train error = 1.784072756
+1st Validation error: 0.491517127
+Epoch: 0622
+1st Train error = 1.783889679
+1st Validation error: 0.491044253
+Epoch: 0623
+1st Train error = 1.783719502
+1st Validation error: 0.491180867
+Epoch: 0624
+1st Train error = 1.783535973
+1st Validation error: 0.490958899
+Epoch: 0625
+1st Train error = 1.783355420
+1st Validation error: 0.490642816
+Epoch: 0626
+1st Train error = 1.783182280
+1st Validation error: 0.490713328
+Epoch: 0627
+1st Train error = 1.783013807
+1st Validation error: 0.490547389
+Epoch: 0628
+1st Train error = 1.782827270
+1st Validation error: 0.490289807
+Epoch: 0629
+1st Train error = 1.782642019
+1st Validation error: 0.490159094
+Epoch: 0630
+1st Train error = 1.782484667
+1st Validation error: 0.490167081
+Epoch: 0631
+1st Train error = 1.782309478
+1st Validation error: 0.490023702
+Epoch: 0632
+1st Train error = 1.782108232
+1st Validation error: 0.489815533
+Epoch: 0633
+1st Train error = 1.781956233
+1st Validation error: 0.489938200
+Epoch: 0634
+1st Train error = 1.781784119
+1st Validation error: 0.489748985
+Epoch: 0635
+1st Train error = 1.781615304
+1st Validation error: 0.489551246
+Epoch: 0636
+1st Train error = 1.781430401
+1st Validation error: 0.489439785
+Epoch: 0637
+1st Train error = 1.781268593
+1st Validation error: 0.489405751
+Epoch: 0638
+1st Train error = 1.781086461
+1st Validation error: 0.489022464
+Epoch: 0639
+1st Train error = 1.780934530
+1st Validation error: 0.489207268
+Epoch: 0640
+1st Train error = 1.780759877
+1st Validation error: 0.489093125
+Epoch: 0641
+1st Train error = 1.780584567
+1st Validation error: 0.489115447
+Epoch: 0642
+1st Train error = 1.780403767
+1st Validation error: 0.488883823
+Epoch: 0643
+1st Train error = 1.780254458
+1st Validation error: 0.488842130
+Epoch: 0644
+1st Train error = 1.780082117
+1st Validation error: 0.488883823
+Epoch: 0645
+1st Train error = 1.779923201
+1st Validation error: 0.488866955
+Epoch: 0646
+1st Train error = 1.779740902
+1st Validation error: 0.488512576
+Epoch: 0647
+1st Train error = 1.779591353
+1st Validation error: 0.488751173
+Epoch: 0648
+1st Train error = 1.779422819
+1st Validation error: 0.488727450
+Epoch: 0649
+1st Train error = 1.779252127
+1st Validation error: 0.488514543
+Epoch: 0650
+1st Train error = 1.779094480
+1st Validation error: 0.488489747
+Epoch: 0651
+1st Train error = 1.778933736
+1st Validation error: 0.488418162
+Epoch: 0652
+1st Train error = 1.778764466
+1st Validation error: 0.488470912
+Epoch: 0653
+1st Train error = 1.778598306
+1st Validation error: 0.488278568
+Epoch: 0654
+1st Train error = 1.778442903
+1st Validation error: 0.488409489
+Epoch: 0655
+1st Train error = 1.778278781
+1st Validation error: 0.488150567
+Epoch: 0656
+1st Train error = 1.778089737
+1st Validation error: 0.488140255
+Epoch: 0657
+1st Train error = 1.777944915
+1st Validation error: 0.488261014
+Epoch: 0658
+1st Train error = 1.777767090
+1st Validation error: 0.488148332
+Epoch: 0659
+1st Train error = 1.777602007
+1st Validation error: 0.487900794
+Epoch: 0660
+1st Train error = 1.777440302
+1st Validation error: 0.488073170
+Epoch: 0661
+1st Train error = 1.777294588
+1st Validation error: 0.488055944
+Epoch: 0662
+1st Train error = 1.777111951
+1st Validation error: 0.487984031
+Epoch: 0663
+1st Train error = 1.776973469
+1st Validation error: 0.487959296
+Epoch: 0664
+1st Train error = 1.776794408
+1st Validation error: 0.487696528
+Epoch: 0665
+1st Train error = 1.776667333
+1st Validation error: 0.487749428
+Epoch: 0666
+1st Train error = 1.776475609
+1st Validation error: 0.487602234
+Epoch: 0667
+1st Train error = 1.776335897
+1st Validation error: 0.487651616
+Epoch: 0668
+1st Train error = 1.776164120
+1st Validation error: 0.487466156
+Epoch: 0669
+1st Train error = 1.776003381
+1st Validation error: 0.487463742
+Epoch: 0670
+1st Train error = 1.775835077
+1st Validation error: 0.487534106
+Epoch: 0671
+1st Train error = 1.775676515
+1st Validation error: 0.487465233
+Epoch: 0672
+1st Train error = 1.775495805
+1st Validation error: 0.487290353
+Epoch: 0673
+1st Train error = 1.775369853
+1st Validation error: 0.487168014
+Epoch: 0674
+1st Train error = 1.775174061
+1st Validation error: 0.487206876
+Epoch: 0675
+1st Train error = 1.775022517
+1st Validation error: 0.487167150
+Epoch: 0676
+1st Train error = 1.774853150
+1st Validation error: 0.487096161
+Epoch: 0677
+1st Train error = 1.774699488
+1st Validation error: 0.486903757
+Epoch: 0678
+1st Train error = 1.774522308
+1st Validation error: 0.486877501
+Epoch: 0679
+1st Train error = 1.774391983
+1st Validation error: 0.486802876
+Epoch: 0680
+1st Train error = 1.774198426
+1st Validation error: 0.486718029
+Epoch: 0681
+1st Train error = 1.774050426
+1st Validation error: 0.486518651
+Epoch: 0682
+1st Train error = 1.773890419
+1st Validation error: 0.486485153
+Epoch: 0683
+1st Train error = 1.773745567
+1st Validation error: 0.486445010
+Epoch: 0684
+1st Train error = 1.773594596
+1st Validation error: 0.486277223
+Epoch: 0685
+1st Train error = 1.773422744
+1st Validation error: 0.486171216
+Epoch: 0686
+1st Train error = 1.773270899
+1st Validation error: 0.486093670
+Epoch: 0687
+1st Train error = 1.773122430
+1st Validation error: 0.486084551
+Epoch: 0688
+1st Train error = 1.772987721
+1st Validation error: 0.486066848
+Epoch: 0689
+1st Train error = 1.772805755
+1st Validation error: 0.485911816
+Epoch: 0690
+1st Train error = 1.772652310
+1st Validation error: 0.485970348
+Epoch: 0691
+1st Train error = 1.772511241
+1st Validation error: 0.485800773
+Epoch: 0692
+1st Train error = 1.772358416
+1st Validation error: 0.485652268
+Epoch: 0693
+1st Train error = 1.772195170
+1st Validation error: 0.485492349
+Epoch: 0694
+1st Train error = 1.772043624
+1st Validation error: 0.485572010
+Epoch: 0695
+1st Train error = 1.771891795
+1st Validation error: 0.485409558
+Epoch: 0696
+1st Train error = 1.771730808
+1st Validation error: 0.485412419
+Epoch: 0697
+1st Train error = 1.771564750
+1st Validation error: 0.485159159
+Epoch: 0698
+1st Train error = 1.771405060
+1st Validation error: 0.485258073
+Epoch: 0699
+1st Train error = 1.771262424
+1st Validation error: 0.485163242
+Epoch: 0700
+1st Train error = 1.771092417
+1st Validation error: 0.484854341
+Epoch: 0701
+1st Train error = 1.770943502
+1st Validation error: 0.484858185
+Epoch: 0702
+1st Train error = 1.770809444
+1st Validation error: 0.484739929
+Epoch: 0703
+1st Train error = 1.770635997
+1st Validation error: 0.484616697
+Epoch: 0704
+1st Train error = 1.770481804
+1st Validation error: 0.484559298
+Epoch: 0705
+1st Train error = 1.770331484
+1st Validation error: 0.484424084
+Epoch: 0706
+1st Train error = 1.770196097
+1st Validation error: 0.484404832
+Epoch: 0707
+1st Train error = 1.770037560
+1st Validation error: 0.484284848
+Epoch: 0708
+1st Train error = 1.769887624
+1st Validation error: 0.484292448
+Epoch: 0709
+1st Train error = 1.769740816
+1st Validation error: 0.483985364
+Epoch: 0710
+1st Train error = 1.769619100
+1st Validation error: 0.483987212
+Epoch: 0711
+1st Train error = 1.769446314
+1st Validation error: 0.483681738
+Epoch: 0712
+1st Train error = 1.769300913
+1st Validation error: 0.483718812
+Epoch: 0713
+1st Train error = 1.769142691
+1st Validation error: 0.483365119
+Epoch: 0714
+1st Train error = 1.769015131
+1st Validation error: 0.483404845
+Epoch: 0715
+1st Train error = 1.768856414
+1st Validation error: 0.483203530
+Epoch: 0716
+1st Train error = 1.768714594
+1st Validation error: 0.483200759
+Epoch: 0717
+1st Train error = 1.768563580
+1st Validation error: 0.483108699
+Epoch: 0718
+1st Train error = 1.768423634
+1st Validation error: 0.483097076
+Epoch: 0719
+1st Train error = 1.768283164
+1st Validation error: 0.482792646
+Epoch: 0720
+1st Train error = 1.768165701
+1st Validation error: 0.482708275
+Epoch: 0721
+1st Train error = 1.767990946
+1st Validation error: 0.482511520
+Epoch: 0722
+1st Train error = 1.767868797
+1st Validation error: 0.482454628
+Epoch: 0723
+1st Train error = 1.767725994
+1st Validation error: 0.482303262
+Epoch: 0724
+1st Train error = 1.767586036
+1st Validation error: 0.482197732
+Epoch: 0725
+1st Train error = 1.767458805
+1st Validation error: 0.482042134
+Epoch: 0726
+1st Train error = 1.767311358
+1st Validation error: 0.481974274
+Epoch: 0727
+1st Train error = 1.767164052
+1st Validation error: 0.481756181
+Epoch: 0728
+1st Train error = 1.767036857
+1st Validation error: 0.481783837
+Epoch: 0729
+1st Train error = 1.766903920
+1st Validation error: 0.481578946
+Epoch: 0730
+1st Train error = 1.766736441
+1st Validation error: 0.481498003
+Epoch: 0731
+1st Train error = 1.766624029
+1st Validation error: 0.481402993
+Epoch: 0732
+1st Train error = 1.766475683
+1st Validation error: 0.481249869
+Epoch: 0733
+1st Train error = 1.766358339
+1st Validation error: 0.481141210
+Epoch: 0734
+1st Train error = 1.766201863
+1st Validation error: 0.480999947
+Epoch: 0735
+1st Train error = 1.766071058
+1st Validation error: 0.480861336
+Epoch: 0736
+1st Train error = 1.765946768
+1st Validation error: 0.480889022
+Epoch: 0737
+1st Train error = 1.765798800
+1st Validation error: 0.480661541
+Epoch: 0738
+1st Train error = 1.765652407
+1st Validation error: 0.480503917
+Epoch: 0739
+1st Train error = 1.765541112
+1st Validation error: 0.480572522
+Epoch: 0740
+1st Train error = 1.765399735
+1st Validation error: 0.480316043
+Epoch: 0741
+1st Train error = 1.765260557
+1st Validation error: 0.480307043
+Epoch: 0742
+1st Train error = 1.765137853
+1st Validation error: 0.480202854
+Epoch: 0743
+1st Train error = 1.764999738
+1st Validation error: 0.480021119
+Epoch: 0744
+1st Train error = 1.764862409
+1st Validation error: 0.479806185
+Epoch: 0745
+1st Train error = 1.764739143
+1st Validation error: 0.479767472
+Epoch: 0746
+1st Train error = 1.764587512
+1st Validation error: 0.479606360
+Epoch: 0747
+1st Train error = 1.764458688
+1st Validation error: 0.479496419
+Epoch: 0748
+1st Train error = 1.764330429
+1st Validation error: 0.479378104
+Epoch: 0749
+1st Train error = 1.764180929
+1st Validation error: 0.479230046
+Epoch: 0750
+1st Train error = 1.764043992
+1st Validation error: 0.479060292
+Epoch: 0751
+1st Train error = 1.763912466
+1st Validation error: 0.479127377
+Epoch: 0752
+1st Train error = 1.763758211
+1st Validation error: 0.478860438
+Epoch: 0753
+1st Train error = 1.763638657
+1st Validation error: 0.478838533
+Epoch: 0754
+1st Train error = 1.763485776
+1st Validation error: 0.478579551
+Epoch: 0755
+1st Train error = 1.763345035
+1st Validation error: 0.478409559
+Epoch: 0756
+1st Train error = 1.763229076
+1st Validation error: 0.478528470
+Epoch: 0757
+1st Train error = 1.763074446
+1st Validation error: 0.478297919
+Epoch: 0758
+1st Train error = 1.762934811
+1st Validation error: 0.478153884
+Epoch: 0759
+1st Train error = 1.762823968
+1st Validation error: 0.478167146
+Epoch: 0760
+1st Train error = 1.762710976
+1st Validation error: 0.477787405
+Epoch: 0761
+1st Train error = 1.762529902
+1st Validation error: 0.477836192
+Epoch: 0762
+1st Train error = 1.762422200
+1st Validation error: 0.477874726
+Epoch: 0763
+1st Train error = 1.762293200
+1st Validation error: 0.477615923
+Epoch: 0764
+1st Train error = 1.762146044
+1st Validation error: 0.477280647
+Epoch: 0765
+1st Train error = 1.762032088
+1st Validation error: 0.477412492
+Epoch: 0766
+1st Train error = 1.761901914
+1st Validation error: 0.477051705
+Epoch: 0767
+1st Train error = 1.761766644
+1st Validation error: 0.476973057
+Epoch: 0768
+1st Train error = 1.761636423
+1st Validation error: 0.476930410
+Epoch: 0769
+1st Train error = 1.761515786
+1st Validation error: 0.476861417
+Epoch: 0770
+1st Train error = 1.761369058
+1st Validation error: 0.476785898
+Epoch: 0771
+1st Train error = 1.761248411
+1st Validation error: 0.476745039
+Epoch: 0772
+1st Train error = 1.761118345
+1st Validation error: 0.476523399
+Epoch: 0773
+1st Train error = 1.760987647
+1st Validation error: 0.476345062
+Epoch: 0774
+1st Train error = 1.760852795
+1st Validation error: 0.476359695
+Epoch: 0775
+1st Train error = 1.760726614
+1st Validation error: 0.476150990
+Epoch: 0776
+1st Train error = 1.760594517
+1st Validation error: 0.476115942
+Epoch: 0777
+1st Train error = 1.760489524
+1st Validation error: 0.476151466
+Epoch: 0778
+1st Train error = 1.760341846
+1st Validation error: 0.475784898
+Epoch: 0779
+1st Train error = 1.760210594
+1st Validation error: 0.475903928
+Epoch: 0780
+1st Train error = 1.760096841
+1st Validation error: 0.475875407
+Epoch: 0781
+1st Train error = 1.759971552
+1st Validation error: 0.475604177
+Epoch: 0782
+1st Train error = 1.759839626
+1st Validation error: 0.475411981
+Epoch: 0783
+1st Train error = 1.759720371
+1st Validation error: 0.475473702
+Epoch: 0784
+1st Train error = 1.759592003
+1st Validation error: 0.475241333
+Epoch: 0785
+1st Train error = 1.759466836
+1st Validation error: 0.475098908
+Epoch: 0786
+1st Train error = 1.759336357
+1st Validation error: 0.475075006
+Epoch: 0787
+1st Train error = 1.759214002
+1st Validation error: 0.474947482
+Epoch: 0788
+1st Train error = 1.759083706
+1st Validation error: 0.474738568
+Epoch: 0789
+1st Train error = 1.758978840
+1st Validation error: 0.474644959
+Epoch: 0790
+1st Train error = 1.758826013
+1st Validation error: 0.474621803
+Epoch: 0791
+1st Train error = 1.758703715
+1st Validation error: 0.474437475
+Epoch: 0792
+1st Train error = 1.758573863
+1st Validation error: 0.474196613
+Epoch: 0793
+1st Train error = 1.758444985
+1st Validation error: 0.474168390
+Epoch: 0794
+1st Train error = 1.758323944
+1st Validation error: 0.474104911
+Epoch: 0795
+1st Train error = 1.758206799
+1st Validation error: 0.473969579
+Epoch: 0796
+1st Train error = 1.758080946
+1st Validation error: 0.473852187
+Epoch: 0797
+1st Train error = 1.757955222
+1st Validation error: 0.473689795
+Epoch: 0798
+1st Train error = 1.757834575
+1st Validation error: 0.473620504
+Epoch: 0799
+1st Train error = 1.757724271
+1st Validation error: 0.473538488
+Epoch: 0800
+1st Train error = 1.757594243
+1st Validation error: 0.473383337
+Epoch: 0801
+1st Train error = 1.757476413
+1st Validation error: 0.473223925
+Epoch: 0802
+1st Train error = 1.757371803
+1st Validation error: 0.473003894
+Epoch: 0803
+1st Train error = 1.757243371
+1st Validation error: 0.472982764
+Epoch: 0804
+1st Train error = 1.757125306
+1st Validation error: 0.472825706
+Epoch: 0805
+1st Train error = 1.757020469
+1st Validation error: 0.472697318
+Epoch: 0806
+1st Train error = 1.756898227
+1st Validation error: 0.472554266
+Epoch: 0807
+1st Train error = 1.756772177
+1st Validation error: 0.472401500
+Epoch: 0808
+1st Train error = 1.756673984
+1st Validation error: 0.472327143
+Epoch: 0809
+1st Train error = 1.756545949
+1st Validation error: 0.472120315
+Epoch: 0810
+1st Train error = 1.756413340
+1st Validation error: 0.472053617
+Epoch: 0811
+1st Train error = 1.756323556
+1st Validation error: 0.471940607
+Epoch: 0812
+1st Train error = 1.756189505
+1st Validation error: 0.471813381
+Epoch: 0813
+1st Train error = 1.756120005
+1st Validation error: 0.471729547
+Epoch: 0814
+1st Train error = 1.755955671
+1st Validation error: 0.471619725
+Epoch: 0815
+1st Train error = 1.755856761
+1st Validation error: 0.471763909
+Epoch: 0816
+1st Train error = 1.755744940
+1st Validation error: 0.471372336
+Epoch: 0817
+1st Train error = 1.755619034
+1st Validation error: 0.471458882
+Epoch: 0818
+1st Train error = 1.755530274
+1st Validation error: 0.471542060
+Epoch: 0819
+1st Train error = 1.755393295
+1st Validation error: 0.471358448
+Epoch: 0820
+1st Train error = 1.755271605
+1st Validation error: 0.471276939
+Epoch: 0821
+1st Train error = 1.755192120
+1st Validation error: 0.471205562
+Epoch: 0822
+1st Train error = 1.755030493
+1st Validation error: 0.471068799
+Epoch: 0823
+1st Train error = 1.754947826
+1st Validation error: 0.471078932
+Epoch: 0824
+1st Train error = 1.754812807
+1st Validation error: 0.470898539
+Epoch: 0825
+1st Train error = 1.754730232
+1st Validation error: 0.470815599
+Epoch: 0826
+1st Train error = 1.754596262
+1st Validation error: 0.471000552
+Epoch: 0827
+1st Train error = 1.754484672
+1st Validation error: 0.470804721
+Epoch: 0828
+1st Train error = 1.754363080
+1st Validation error: 0.470726520
+Epoch: 0829
+1st Train error = 1.754276145
+1st Validation error: 0.470779240
+Epoch: 0830
+1st Train error = 1.754142555
+1st Validation error: 0.470732242
+Epoch: 0831
+1st Train error = 1.754044596
+1st Validation error: 0.470563620
+Epoch: 0832
+1st Train error = 1.753932266
+1st Validation error: 0.470463485
+Epoch: 0833
+1st Train error = 1.753811060
+1st Validation error: 0.470506161
+Epoch: 0834
+1st Train error = 1.753712142
+1st Validation error: 0.470363379
+Epoch: 0835
+1st Train error = 1.753613410
+1st Validation error: 0.470424682
+Epoch: 0836
+1st Train error = 1.753531385
+1st Validation error: 0.470230132
+Epoch: 0837
+1st Train error = 1.753380042
+1st Validation error: 0.470264584
+Epoch: 0838
+1st Train error = 1.753290296
+1st Validation error: 0.470182151
+Epoch: 0839
+1st Train error = 1.753187711
+1st Validation error: 0.469998538
+Epoch: 0840
+1st Train error = 1.753070215
+1st Validation error: 0.469965398
+Epoch: 0841
+1st Train error = 1.752965150
+1st Validation error: 0.469959199
+Epoch: 0842
+1st Train error = 1.752889289
+1st Validation error: 0.470016688
+Epoch: 0843
+1st Train error = 1.752765520
+1st Validation error: 0.469844878
+Epoch: 0844
+1st Train error = 1.752666354
+1st Validation error: 0.469700366
+Epoch: 0845
+1st Train error = 1.752551399
+1st Validation error: 0.469842643
+Epoch: 0846
+1st Train error = 1.752462894
+1st Validation error: 0.469879895
+Epoch: 0847
+1st Train error = 1.752362077
+1st Validation error: 0.469779968
+Epoch: 0848
+1st Train error = 1.752249512
+1st Validation error: 0.469703019
+Epoch: 0849
+1st Train error = 1.752161778
+1st Validation error: 0.469612956
+Epoch: 0850
+1st Train error = 1.752032564
+1st Validation error: 0.469493628
+Epoch: 0851
+1st Train error = 1.751934941
+1st Validation error: 0.469562829
+Epoch: 0852
+1st Train error = 1.751822070
+1st Validation error: 0.469476223

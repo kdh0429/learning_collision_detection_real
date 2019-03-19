@@ -1,0 +1,19 @@
+{
+    "root": "/home/kim/dusan_ws/real/resi",
+    "startedAt": "2019-03-18T12:01:56.615033",
+    "host": "kim",
+    "username": "kim",
+    "os": "Linux-4.15.0-46-generic-x86_64-with-debian-stretch-sid",
+    "python": "3.6.7",
+    "gpu": "GeForce GTX 1060 3GB",
+    "gpu_count": 1,
+    "cpu_count": 8,
+    "program": "/home/kim/dusan_ws/real/resi/collision_detection_nn.py",
+    "cuda": "9.0.176\n",
+    "args": [],
+    "state": "finished",
+    "heartbeatAt": "2019-03-18T12:02:22.626577",
+    "jobType": null,
+    "mode": "run",
+    "exitcode": 0
+}

@@ -1,0 +1,161 @@
+2019-03-18 11:02:41.581389: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-03-18 11:02:41.666313: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:964] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2019-03-18 11:02:41.666628: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1432] Found device 0 with properties: 
+name: GeForce GTX 1060 3GB major: 6 minor: 1 memoryClockRate(GHz): 1.7845
+pciBusID: 0000:01:00.0
+totalMemory: 2.95GiB freeMemory: 2.16GiB
+2019-03-18 11:02:41.666649: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1511] Adding visible gpu devices: 0
+2019-03-18 11:02:41.843565: I tensorflow/core/common_runtime/gpu/gpu_device.cc:982] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-03-18 11:02:41.843597: I tensorflow/core/common_runtime/gpu/gpu_device.cc:988]      0 
+2019-03-18 11:02:41.843602: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1001] 0:   N 
+2019-03-18 11:02:41.843711: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 1850 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1060 3GB, pci bus id: 0000:01:00.0, compute capability: 6.1)
+Epoch: 0001
+Train Accuracy = 0.431404959 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0002
+Train Accuracy = 0.502479339 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0003
+Train Accuracy = 0.498636364 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0004
+Train Accuracy = 0.503305785 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0005
+Train Accuracy = 0.505165289 Train l2 reg cost = 0.000000000
+Validation Accuracy: 0.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0006
+Train Accuracy = 0.481173554 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0007
+Train Accuracy = 0.493322314 Train l2 reg cost = 0.000000000
+Validation Accuracy: 0.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0008
+Train Accuracy = 0.505190083 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0009
+Train Accuracy = 0.509041322 Train l2 reg cost = 0.000000000
+Validation Accuracy: 0.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0010
+Train Accuracy = 0.512809917 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0011
+Train Accuracy = 0.522677686 Train l2 reg cost = 0.000000000
+Validation Accuracy: 0.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0012
+Train Accuracy = 0.538165289 Train l2 reg cost = 0.000000000
+Validation Accuracy: 0.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0013
+Train Accuracy = 0.539256198 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0014
+Train Accuracy = 0.541479339 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0015
+Train Accuracy = 0.543636364 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0016
+Train Accuracy = 0.548338843 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0017
+Train Accuracy = 0.548776860 Train l2 reg cost = 0.000000000
+Validation Accuracy: 0.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0018
+Train Accuracy = 0.549537190 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0019
+Train Accuracy = 0.553347107 Train l2 reg cost = 0.000000000
+Validation Accuracy: 0.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0020
+Train Accuracy = 0.558776859 Train l2 reg cost = 0.000000000
+Validation Accuracy: 0.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0021
+Train Accuracy = 0.560834711 Train l2 reg cost = 0.000000000
+Validation Accuracy: 0.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0022
+Train Accuracy = 0.559578512 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0023
+Train Accuracy = 0.559049587 Train l2 reg cost = 0.000000000
+Validation Accuracy: 0.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0024
+Train Accuracy = 0.560446281 Train l2 reg cost = 0.000000000
+Validation Accuracy: 0.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0025
+Train Accuracy = 0.558975207 Train l2 reg cost = 0.000000000
+Validation Accuracy: 0.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0026
+Train Accuracy = 0.547289256 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0027
+Train Accuracy = 0.545446281 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0028
+Train Accuracy = 0.541438016 Train l2 reg cost = 0.000000000
+Validation Accuracy: 0.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0029
+Train Accuracy = 0.540123967 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0030
+Train Accuracy = 0.539297521 Train l2 reg cost = 0.000000000
+Validation Accuracy: 0.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0031
+Train Accuracy = 0.537991736 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0032
+Train Accuracy = 0.534363636 Train l2 reg cost = 0.000000000
+Validation Accuracy: 0.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0033
+Train Accuracy = 0.532876033 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0034
+Train Accuracy = 0.531338843 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0035
+Train Accuracy = 0.530884298 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0036
+Train Accuracy = 0.530305785 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0037
+Train Accuracy = 0.530123967 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0038
+Train Accuracy = 0.528388430 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0039
+Train Accuracy = 0.526041322 Train l2 reg cost = 0.000000000
+Validation Accuracy: 0.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0040
+Train Accuracy = 0.523809917 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0041
+Train Accuracy = 0.523702479 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0042
+Train Accuracy = 0.523041322 Train l2 reg cost = 0.000000000
+Validation Accuracy: 0.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0043
+Train Accuracy = 0.521173554 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0044
+Train Accuracy = 0.521305785 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0045
+Train Accuracy = 0.522280992 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0046
+Train Accuracy = 0.519363636 Train l2 reg cost = 0.000000000
+Validation Accuracy: 0.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0047
+Train Accuracy = 0.519107438 Train l2 reg cost = 0.000000000
+Validation Accuracy: 0.508497417 Validation l2 regularization: 0.000000000
+Epoch: 0048
+Train Accuracy = 0.516966942 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0049
+Train Accuracy = 0.518289256 Train l2 reg cost = 0.000000000
+Validation Accuracy: 0.000000000 Validation l2 regularization: 0.000000000
+Epoch: 0050
+Train Accuracy = 0.516561983 Train l2 reg cost = 0.000000000
+Validation Accuracy: 1.000000000 Validation l2 regularization: 0.000000000

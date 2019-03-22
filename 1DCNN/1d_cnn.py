@@ -21,7 +21,7 @@ if wandb_use == True:
 num_input = 42
 num_output =2
 SEED = 42
-total_epochs = 2000
+total_epochs = 200
 batch_size = 128
 
 
@@ -33,20 +33,20 @@ hidden_initializer = random_uniform(seed=SEED)
 dropout_rate = 0.25
 
 #load data
-f1 = open('data/training_data_.csv', 'r', encoding='utf-8')
+f1 = open('../data/FC/training_data_.csv', 'r', encoding='utf-8')
 rdr = csv.reader(f1)
 X_train = []
 y_train = []
 for line in rdr:
     line = [float(i) for i in line]
-    X_train.append(line[1:num_input+1])
+    X_train.append(line[0:num_input])
     #x_data_val.append(line[29:43])
     y_train.append(line[-num_output:])
 X_train = np.reshape(X_train, (-1, num_input))
 y_train = np.reshape(y_train, (-1, num_output))
 #X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.25, random_state=1)
 
-f2 = open('data/testing_data_.csv', 'r', encoding='utf-8')
+f2 = open('../data/FC/testing_data_.csv', 'r', encoding='utf-8')
 rdr = csv.reader(f2)
 X_test = []
 y_test = []
@@ -58,7 +58,7 @@ for line in rdr:
 X_test = np.reshape(X_test, (-1, num_input))
 y_test = np.reshape(y_test, (-1, num_output))
 
-f3 = open('data/validation_data_.csv', 'r', encoding='utf-8')
+f3 = open('../data/FC/validation_data_.csv', 'r', encoding='utf-8')
 rdr = csv.reader(f3)
 X_val = []
 y_val = []
@@ -75,6 +75,7 @@ X_train = X_train.reshape(X_train.shape[0], X_train.shape[1], 1)
 X_test = X_test.reshape(X_test.shape[0], X_test.shape[1], 1)
 X_val = X_val.reshape(X_val.shape[0], X_val.shape[1], 1)
 
+print(X_train.shape[1:3])
 
 # create model
 model = Sequential()
@@ -101,7 +102,8 @@ model.add(Dropout(dropout_rate))
 
 #Fully connected 1st layer
 model.add(Flatten()) #flatten serves as a connection between the convolution and dense layers
-model.add(Dense(256, input_dim=input_dimension, kernel_initializer=hidden_initializer, activation='relu'))
+#model.add(Dense(256, input_dim=input_dimension, kernel_initializer=hidden_initializer, activation='relu'))
+model.add(Dense(256, kernel_initializer=hidden_initializer, activation='relu'))
 model.add(BatchNormalization())
 model.add(Activation('relu'))
 model.add(Dropout(0.5))
@@ -129,7 +131,7 @@ plt.plot(CNN.history['val_acc'])
 plt.title('Model accuracy')
 plt.ylabel('Accuracy')
 plt.xlabel('Epoch')
-plt.legend(['Train', 'Test'], loc='upper left')
+plt.legend(['Train', 'Validation'], loc='upper left')
 plt.show()
 
 # Plot training & validation loss values
@@ -138,10 +140,10 @@ plt.plot(CNN.history['val_loss'])
 plt.title('Model loss')
 plt.ylabel('Loss')
 plt.xlabel('Epoch')
-plt.legend(['Train', 'Test'], loc='upper left')
+plt.legend(['Train', 'Validation'], loc='upper left')
 plt.show()
 
 #save model
-model.save('model/test.h5')
+model.save('model/ttest.h5')
 print("Saved model to disk")
   

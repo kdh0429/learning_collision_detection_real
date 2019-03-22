@@ -1,0 +1,39 @@
+model = Sequential()
+#convolution 1st layer
+model.add(Conv1D(32, kernel_size=6, input_shape=X_train.shape[1:3], padding='same'))
+model.add(Activation('relu'))
+model.add(Conv1D(32, kernel_size=3, activation='relu'))
+model.add(BatchNormalization())
+model.add(MaxPooling1D())
+model.add(Dropout(dropout_rate))
+
+#convolution 2nd layer
+model.add(Conv1D(64, kernel_size=3, padding='same', activation='relu'))
+model.add(Conv1D(64, kernel_size=3, activation='relu'))
+model.add(BatchNormalization())
+model.add(MaxPooling1D())
+model.add(Dropout(dropout_rate))
+
+#convolution 3rd layer
+model.add(Conv1D(64, kernel_size=3, activation='relu'))
+model.add(BatchNormalization())
+model.add(MaxPooling1D())
+model.add(Dropout(dropout_rate))
+
+#Fully connected 1st layer
+model.add(Flatten()) #flatten serves as a connection between the convolution and dense layers
+model.add(Dense(256, input_dim=input_dimension, kernel_initializer=hidden_initializer, activation='relu'))
+model.add(BatchNormalization())
+model.add(Activation('relu'))
+model.add(Dropout(0.5))
+
+#fully connected final layer
+#Dense(첫번째 인자 : 출력 뉴런의 수, input_dim : 입력 뉴런의 수, init :'uniform’ or ‘normal’)
+model.add(Dense(64, kernel_initializer=hidden_initializer, activation='relu'))
+model.add(Dense(2, activation='softmax'))
+#softmax makes the output sum up to 1 so interpreted as probabilities
+
+sgd = SGD(lr=learning_rate, momentum=momentum)
+adam = Adam(lr=learning_rate, beta_1=0.9, beta_2=0.999, epsilon=None, decay=0.0, amsgrad=False)
+model.compile(loss='categorical_crossentropy', optimizer=adam, metrics=['acc'])
+

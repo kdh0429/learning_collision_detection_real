@@ -12,17 +12,16 @@ import h5py
 from keras.utils import plot_model
 
 num_input = 42
-num_time_step = 5
 num_output =2
 #hyperparameters
-
 
 loaded_model = load_model('model/test.h5')
 print("Loaded model from disk")
 print(loaded_model.summary())
-    
+plot_model(loaded_model, to_file='result/model.png', show_shapes=True)
+
 for i in range(192):
-    path = 'data/TestingDivide/Testing_raw_data_' + str(i+1) + '.csv'
+    path = '../data/FC/TestingDivide/Testing_raw_data_' + str(i+1) + '.csv'
     # raw data
     f = open(path, 'r', encoding='utf-8')
     rdr = csv.reader(f)
@@ -32,7 +31,7 @@ for i in range(192):
     num_data = 0
     for line in rdr:
         line = [float(i) for i in line]
-        x_data_raw.append(line[1:num_input+1])
+        x_data_raw.append(line[0:num_input])
         y_data_raw.append(line[-num_output:])
         num_data = num_data+1
         
@@ -55,7 +54,7 @@ for i in range(192):
     plt.ylabel('Collision Probability')
     plt.ylim(0, 1)
     plt.legend()
-    plt.savefig('Figure_.' + str(i) + '.png')
+    plt.savefig('result/Figure_.' + str(i) + '.png')
     plt.clf()
 
-    plot_model(loaded_model, to_file='model.png', show_shapes=True)
+

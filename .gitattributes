@@ -1,2 +1,4 @@
 data/CNN/Training_raw_data_.csv filter=lfs diff=lfs merge=lfs -text
 data/CNN/training_data_.csv filter=lfs diff=lfs merge=lfs -text
+data/CNN_try/Training_raw_data_.csv filter=lfs diff=lfs merge=lfs -text
+data/CNN_try/training_data_.csv filter=lfs diff=lfs merge=lfs -text

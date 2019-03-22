@@ -34,17 +34,27 @@ class Model:
             L1 = tf.layers.batch_normalization(L1, training=self.is_train)
             L1 = tf.layers.dropout(L1, rate=1-self.keep_prob, training=self.is_train)
 
-            L2 = tf.layers.conv2d(inputs= L1, filters= 32, kernel_size= [3,3], padding="SAME", activation=tf.nn.relu, kernel_regularizer=self.regularizer)
+            L2 = tf.layers.conv2d(inputs= L1, filters= 32, kernel_size= [3,3],padding="SAME", activation=tf.nn.relu, kernel_regularizer=self.regularizer)
             L2 = tf.layers.batch_normalization(L2, training=self.is_train)
             L2 = tf.layers.dropout(L2, rate=1-self.keep_prob, training=self.is_train)
             self.hidden_layers += 1
 
-            L3 = tf.layers.conv2d(inputs= L2, filters= 32, kernel_size= [3,3], padding="SAME", activation=tf.nn.relu, kernel_regularizer=self.regularizer)
-            L3 = tf.layers.batch_normalization(L3, training=self.is_train)
-            L3 = tf.layers.dropout(L3, rate=1-self.keep_prob, training=self.is_train)
+            L3 = tf.layers.conv2d(inputs= L2, filters= 64, kernel_size= [3,3], padding="SAME", activation=tf.nn.relu, kernel_regularizer=self.regularizer)
+            L3 = tf.layers.batch_normalization(L2, training=self.is_train)
+            L3 = tf.layers.dropout(L2, rate=1-self.keep_prob, training=self.is_train)
             self.hidden_layers += 1
 
-            Flat = tf.reshape(L3, [-1, 32*num_time_step*num_input])
+            L4 = tf.layers.conv2d(L3, filters= 64, kernel_size= [3,3],padding="SAME", activation=tf.nn.relu, kernel_regularizer=self.regularizer)
+            L4 = tf.layers.batch_normalization(L4, training=self.is_train)
+            L4 = tf.layers.dropout(L4, rate=1-self.keep_prob, training=self.is_train)
+            self.hidden_layers += 1
+
+            L5 = tf.layers.conv2d(inputs= L4, filters= 128, kernel_size= [3,3], padding="SAME", activation=tf.nn.relu, kernel_regularizer=self.regularizer)
+            L5 = tf.layers.batch_normalization(L5, training=self.is_train)
+            L5 = tf.layers.dropout(L5, rate=1-self.keep_prob, training=self.is_train)
+            self.hidden_layers += 1
+
+            Flat = tf.reshape(L5, [-1, 128*num_time_step*num_input])
             Dense1 = tf.layers.dense(inputs=Flat, units=self.hidden_neurons, activation=tf.nn.relu, kernel_regularizer=self.regularizer)
             Dense1 = tf.layers.batch_normalization(Dense1, training=self.is_train)
             self.hidden_layers += 1
@@ -68,10 +78,10 @@ class Model:
         self.accuracy = tf.reduce_mean(tf.cast(self.correct_prediction, tf.float32))
 
     def get_mean_error_hypothesis(self, x_test, y_test, keep_prop=1.0, is_train=False):
-        return self.sess.run([self.accuracy, self.hypothesis, self.X, self.Y], feed_dict={self.X: x_test, self.Y: y_test, self.keep_prob: keep_prop, self.is_train: is_train})
+        return self.sess.run([self.accuracy, self.hypothesis, self.X, self.Y, self.l2_reg, self.cost], feed_dict={self.X: x_test, self.Y: y_test, self.keep_prob: keep_prop, self.is_train: is_train})
 
     def train(self, x_data, y_data, keep_prop=1.0, is_train=True):
-        return self.sess.run([self.accuracy, self.optimizer], feed_dict={
+        return self.sess.run([self.accuracy, self.cost, self.l2_reg, self.optimizer], feed_dict={
             self.X: x_data, self.Y: y_data, self.keep_prob: keep_prop, self.is_train: is_train})
 
     def next_batch(self, num, data):
@@ -96,17 +106,17 @@ class Model:
 # input/output number
 num_input = 36
 num_output = 2
-num_time_step = 5
+num_time_step = 20
 
 # parameters
 learning_rate = 0.000050 #0.000001
-training_epochs = 150
+training_epochs = 100
 batch_size = 100
 total_batch = 1337
 total_batch_val = 199
 total_batch_test = 192
-drop_out = 1.0
-regul_factor = 0.01
+drop_out = 0.75
+regul_factor = 0.001
 
 
 # initialize
@@ -132,33 +142,50 @@ if wandb_use == True:
 train_mse = np.zeros(training_epochs)
 validation_mse = np.zeros(training_epochs)
 
+train_cost = np.zeros(training_epochs)
+validation_cost = np.zeros(training_epochs)
+
 for epoch in range(training_epochs):
     accu_train = 0
     accu_val = 0
-    f = open('../data/CNN/training_data_.csv', 'r', encoding='utf-8')
+    cost_train = 0
+    reg_train = 0
+    reg_val = 0
+    cost_val = 0
+    f = open('../data/CNN_try/training_data_.csv', 'r', encoding='utf-8')
     rdr = csv.reader(f)
 
     for i in range(total_batch):
         batch_xs, batch_ys = m1.next_batch(batch_size, rdr)
-        c, _ = m1.train(batch_xs, batch_ys, drop_out)
+        c, cost, reg, _ = m1.train(batch_xs, batch_ys, drop_out)
         accu_train += c / total_batch
+        cost_train += cost / total_batch
+        reg_train += reg / total_batch
 
     print('Epoch:', '%04d' % (epoch + 1))
     print('Train Accuracy =', '{:.9f}'.format(accu_train))
 
-    f_val = open('../data/CNN/validation_data_.csv', 'r', encoding='utf-8')
+    f_val = open('../data/CNN_try/validation_data_.csv', 'r', encoding='utf-8')
     rdr_val = csv.reader(f_val)
     for i in range(total_batch_val):
         batch_xs_val, batch_ys_val = m1.next_batch(batch_size, rdr_val)
-        c, _, _, _ = m1.get_mean_error_hypothesis(batch_xs_val, batch_ys_val)
+        c, _, _, _ , reg, cost = m1.get_mean_error_hypothesis(batch_xs_val, batch_ys_val)
         accu_val += c / total_batch_val
+        reg_val += reg / total_batch_val
+        cost_val += cost / total_batch_val
     print('Validation Accuracy =', '{:.9f}'.format(accu_val))
+    print('Train Cost =', '{:.9f}'.format(cost_train), 'Train Regul =', '{:.9f}'.format(reg_train))
+    print('Validation Cost =', '{:.9f}'.format(cost_val), 'Validation Regul =', '{:.9f}'.format(reg_val))
 
     train_mse[epoch] = accu_train
     validation_mse[epoch] = accu_val
 
+    train_cost[epoch] = cost_train
+    validation_cost[epoch] = cost_val
+
     if wandb_use == True:
         wandb.log({'training Accuracy': accu_train, 'validation Accuracy': accu_val})
+        wandb.log({'training cost': cost_train, 'training reg': reg_train, 'validation cost': cost_val, 'validation reg': reg_val})
 
         # if epoch % 20 ==0:
         #     for var in tf.trainable_variables():
@@ -168,15 +195,20 @@ for epoch in range(training_epochs):
 
 print('Learning Finished!')
 
-f_test = open('../data/CNN/testing_data_.csv', 'r', encoding='utf-8')
+f_test = open('../data/CNN_try/testing_data_.csv', 'r', encoding='utf-8')
 rdr_test = csv.reader(f_test)
 accu_test = 0
+reg_test = 0
+cost_test = 0
 
 for i in range(total_batch_test):
     batch_xs_test, batch_ys_test = m1.next_batch(batch_size, rdr_test)
-    c, _, _, _  = m1.get_mean_error_hypothesis(batch_xs_test, batch_ys_test)
+    c, _, _, _, reg, cost  = m1.get_mean_error_hypothesis(batch_xs_test, batch_ys_test)
     accu_test += c / total_batch_test
+    reg_test += reg / total_batch_test
+    cost_test += cost / total_batch_test
 print('Test Accuracy: ', accu_test)
+print('Test Cost: ', cost_test)
 
 elapsed_time = time.time() - start_time
 print(elapsed_time)

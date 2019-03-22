@@ -26,7 +26,7 @@ class Model:
             self.is_train = tf.placeholder(tf.bool, name = "is_train")
             self.keep_prob = tf.placeholder(tf.float32, name="keep_prob")
             self.hidden_layers = 0
-            self.hidden_neurons = 40
+            self.hidden_neurons = 500
 
             # weights & bias for nn layers
             # http://stackoverflow.com/questions/33640581/how-to-do-xavier-initialization-on-tensorflow
@@ -76,7 +76,7 @@ class Model:
             self.hypothesis = tf.identity(self.hypothesis, "hypothesis")
 
             # define cost/loss & optimizer
-            self.l2_reg = tf.nn.l2_loss(W1)# + tf.nn.l2_loss(W2) + tf.nn.l2_loss(W3) + tf.nn.l2_loss(W4) + tf.nn.l2_loss(W5) + tf.nn.l2_loss(W6) + tf.nn.l2_loss(W7)
+            self.l2_reg = tf.nn.l2_loss(W1) + tf.nn.l2_loss(W2) + tf.nn.l2_loss(W3) + tf.nn.l2_loss(W4) + tf.nn.l2_loss(W5) + tf.nn.l2_loss(W9)
             self.l2_reg = regul_factor* self.l2_reg
             self.cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits_v2(logits=self.logits, labels=self.Y))
             #self.cost = tf.reduce_mean(tf.reduce_mean(tf.square(self.hypothesis - self.Y)))
@@ -89,10 +89,10 @@ class Model:
         self.accuracy = tf.reduce_mean(tf.cast(self.correct_prediction, tf.float32))
 
     def get_mean_error_hypothesis(self, x_test, y_test, keep_prop=1.0, is_train=False):
-        return self.sess.run([self.accuracy, self.hypothesis, self.X, self.Y, self.l2_reg], feed_dict={self.X: x_test, self.Y: y_test, self.keep_prob: keep_prop, self.is_train: is_train})
+        return self.sess.run([self.accuracy, self.hypothesis, self.X, self.Y, self.l2_reg, self.cost], feed_dict={self.X: x_test, self.Y: y_test, self.keep_prob: keep_prop, self.is_train: is_train})
 
     def train(self, x_data, y_data, keep_prop=1.0, is_train=True):
-        return self.sess.run([self.accuracy, self.l2_reg, self.optimizer], feed_dict={
+        return self.sess.run([self.accuracy, self.l2_reg, self.cost, self.optimizer], feed_dict={
             self.X: x_data, self.Y: y_data, self.keep_prob: keep_prop, self.is_train: is_train})
 
     def next_batch(self, num, data):
@@ -119,10 +119,10 @@ output_idx = 6
 # parameters
 learning_rate = 0.000010 #0.000001
 training_epochs = 1000
-batch_size = 100
-total_batch = 1337
-drop_out = 1.0
-regul_factor = 0.00000
+batch_size = 1000
+total_batch = 133
+drop_out = 0.85
+regul_factor = 0.001
 
 # loading testing data
 f_test = open('../data/FC/testing_data_.csv', 'r', encoding='utf-8')
@@ -175,29 +175,43 @@ if wandb_use == True:
 train_mse = np.zeros(training_epochs)
 validation_mse = np.zeros(training_epochs)
 
+train_cost = np.zeros(training_epochs)
+validation_cost = np.zeros(training_epochs)
+
 for epoch in range(training_epochs):
     accu_train = 0
     avg_reg_cost = 0
+    avg_cost_train = 0
     f = open('../data/FC/training_data_.csv', 'r', encoding='utf-8')
     rdr = csv.reader(f)
 
     for i in range(total_batch):
         batch_xs, batch_ys = m1.next_batch(batch_size, rdr)
-        c, reg_c,_ = m1.train(batch_xs, batch_ys, drop_out)
+        c, reg_c, cost,_ = m1.train(batch_xs, batch_ys, drop_out)
         accu_train += c / total_batch
         avg_reg_cost += reg_c / total_batch
+        avg_cost_train += cost / total_batch
 
     print('Epoch:', '%04d' % (epoch + 1))
-    print('Train Accuracy =', '{:.9f}'.format(accu_train), 'Train l2 reg cost =', '{:.9f}'.format(avg_reg_cost))
+    print('Train Accuracy =', '{:.9f}'.format(accu_train))
 
-    [accu_val, hypo, x_val, y_val, l2_reg_val] = m1.get_mean_error_hypothesis(x_data_val, y_data_val)
-    print('Validation Accuracy:', '{:.9f}'.format(accu_val), 'Validation l2 regularization:', '{:.9f}'.format(l2_reg_val))
+    [accu_val, hypo, x_val, y_val, l2_reg_val, val_cost] = m1.get_mean_error_hypothesis(x_data_val, y_data_val)
+    print('Validation Accuracy:', '{:.9f}'.format(accu_val))
+
+    print('Train Cost =', '{:.9f}'.format(avg_cost_train))
+    print('Train reg =', '{:.9f}'.format(avg_reg_cost))
+    print('Validation Cost =', '{:.9f}'.format(val_cost))
+    print('Validation reg =', '{:.9f}'.format(l2_reg_val))
 
     train_mse[epoch] = accu_train
     validation_mse[epoch] = accu_val
 
+    train_cost[epoch] = avg_cost_train
+    validation_cost[epoch] = val_cost
+
     if wandb_use == True:
-        wandb.log({'training Accuracy': accu_train, 'validation Accuracy': accu_val, 'validation l2_reg': l2_reg_val})
+        wandb.log({'training Accuracy': accu_train, 'validation Accuracy': accu_val})
+        wandb.log({'training cost': avg_cost_train, 'training reg': avg_reg_cost, 'validation cost': val_cost, 'validation l2_reg': l2_reg_val})
 
         if epoch % 20 ==0:
             for var in tf.trainable_variables():
@@ -206,9 +220,10 @@ for epoch in range(training_epochs):
 
 
 print('Learning Finished!')
-[accu_test, hypo, x_test, y_test, l2_reg_test] = m1.get_mean_error_hypothesis(x_data_test, y_data_test)
+[accu_test, hypo, x_test, y_test, l2_reg_test, test_cost] = m1.get_mean_error_hypothesis(x_data_test, y_data_test)
 # print('Error: ', error,"\n x_data: ", x_test,"\nHypothesis: ", hypo, "\n y_data: ", y_test)
 print('Test Accuracy: ', accu_test)
+print('Test Cost: ', test_cost)
 print('Test l2 regularization:', l2_reg_test)
 
 elapsed_time = time.time() - start_time

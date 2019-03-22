@@ -11,7 +11,7 @@ num_time_step = 5
 
 
 for i in range(192):
-    path = '../data/CNN/TestingDivide/Testing_raw_data_' + str(i+1) + '.csv'
+    path = '../data/CNN_try/TestingDivide/Testing_raw_data_' + str(i+1) + '.csv'
     # raw data
     f = open(path, 'r', encoding='utf-8')
     rdr = csv.reader(f)

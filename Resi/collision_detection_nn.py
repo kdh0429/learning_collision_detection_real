@@ -27,7 +27,7 @@ class Model:
             self.keep_prob_1st = tf.placeholder(tf.float32, name="keep_prob_1st")
             self.is_train_1st = tf.placeholder(tf.bool, name = "is_train_1st")
             self.hidden_layers_1st = 0
-            self.hidden_neurons_1st = 40
+            self.hidden_neurons_1st = 300
 
             # weights & bias for nn layers
             # http://stackoverflow.com/questions/33640581/how-to-do-xavier-initialization-on-tensorflow
@@ -99,7 +99,7 @@ class Model:
             self.keep_prob_2nd = tf.placeholder(tf.float32, name="keep_prob_2nd")
             self.is_train_2nd = tf.placeholder(tf.bool, name = "is_train_2nd")
             self.hidden_layers_2nd = 0
-            self.hidden_neurons_2nd = 40
+            self.hidden_neurons_2nd = 300
 
             # weights & bias for nn layers
             # http://stackoverflow.com/questions/33640581/how-to-do-xavier-initialization-on-tensorflow
@@ -211,8 +211,8 @@ num_output_2nd = 2
 learning_rate_1st = 0.00001 #0.000001
 learning_rate_2nd = 0.00001
 training_epochs = 1000
-batch_size = 100
-total_batch = 1337
+batch_size = 1000
+total_batch = 133
 drop_out = 1.0
 regul_factor = 0.00000
 
@@ -335,7 +335,7 @@ validation_acc_2nd = np.zeros(training_epochs)
 
 for epoch in range(training_epochs):
     acc_train_2nd = 0
-    f = open('training_data_.csv', 'r', encoding='utf-8')
+    f = open('../data/Resi/training_data_.csv', 'r', encoding='utf-8')
     rdr = csv.reader(f)
 
     for i in range(total_batch):

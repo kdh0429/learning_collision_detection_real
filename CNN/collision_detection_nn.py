@@ -152,7 +152,7 @@ for epoch in range(training_epochs):
     reg_train = 0
     reg_val = 0
     cost_val = 0
-    f = open('../data/CNN_try/training_data_.csv', 'r', encoding='utf-8')
+    f = open('../data/CNN/training_data_.csv', 'r', encoding='utf-8')
     rdr = csv.reader(f)
 
     for i in range(total_batch):
@@ -165,7 +165,7 @@ for epoch in range(training_epochs):
     print('Epoch:', '%04d' % (epoch + 1))
     print('Train Accuracy =', '{:.9f}'.format(accu_train))
 
-    f_val = open('../data/CNN_try/validation_data_.csv', 'r', encoding='utf-8')
+    f_val = open('../data/CNN/validation_data_.csv', 'r', encoding='utf-8')
     rdr_val = csv.reader(f_val)
     for i in range(total_batch_val):
         batch_xs_val, batch_ys_val = m1.next_batch(batch_size, rdr_val)
@@ -195,7 +195,7 @@ for epoch in range(training_epochs):
 
 print('Learning Finished!')
 
-f_test = open('../data/CNN_try/testing_data_.csv', 'r', encoding='utf-8')
+f_test = open('../data/CNN/testing_data_.csv', 'r', encoding='utf-8')
 rdr_test = csv.reader(f_test)
 accu_test = 0
 reg_test = 0

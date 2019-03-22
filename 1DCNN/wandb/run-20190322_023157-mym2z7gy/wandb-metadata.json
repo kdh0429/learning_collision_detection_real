@@ -1,0 +1,24 @@
+{
+    "jobType": null,
+    "exitcode": 0,
+    "cpu_count": 8,
+    "os": "Linux-4.15.0-45-generic-x86_64-with-Ubuntu-16.04-xenial",
+    "python": "3.5.2",
+    "gpu_count": 1,
+    "username": "jiyeong",
+    "mode": "dryrun",
+    "gpu": "GeForce GTX 970",
+    "state": "finished",
+    "root": "/home/jiyeong/1D_CNN/learning_collision_detection_real",
+    "startedAt": "2019-03-22T02:31:58.038212",
+    "git": {
+        "commit": "c6c3680db04c3d1b7534786266913b72cc283227",
+        "remote": "https://github.com/kdh0429/learning_collision_detection_real.git"
+    },
+    "program": "1d_cnn.py",
+    "args": [],
+    "host": "dyros",
+    "email": "jy951111@gmail.com",
+    "heartbeatAt": "2019-03-22T06:19:21.836587",
+    "cuda": "10.0.130\n"
+}

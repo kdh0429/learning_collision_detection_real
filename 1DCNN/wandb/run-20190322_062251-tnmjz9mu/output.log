@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "1d_cnn.py", line 36, in <module>
+    f1 = open('data/training_data_.csv', 'r', encoding='utf-8')
+FileNotFoundError: [Errno 2] No such file or directory: 'data/training_data_.csv'

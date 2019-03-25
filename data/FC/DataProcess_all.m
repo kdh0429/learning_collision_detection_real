@@ -1,5 +1,5 @@
 % Change DataType to 'Testing'/'Validation'/'Training'
-DataType = 'Training';
+DataType = 'Testing';
 
 motor_constant1_3 = -1/0.09368;
 motor_constant4_6 = -1/0.09064;
@@ -42,3 +42,5 @@ elseif strcmp(DataType,'Validation')
 elseif strcmp(DataType,'Testing')
     csvwrite('testing_data_.csv', Testing);
 end
+
+

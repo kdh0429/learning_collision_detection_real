@@ -5,8 +5,11 @@ import matplotlib.pyplot as plt
 from sklearn import preprocessing
 
 # parameters
-num_input = 36*5
+time_step = 10
+num_input = 36*time_step
 num_output = 2
+false_negative = 0.0
+false_positive = 0.0
 
 
 for i in range(393):

@@ -112,17 +112,19 @@ class Model:
         return [self.hidden_layers, self.hidden_neurons]
 
 # input/output number
-num_input = 36*5
+time_step = 10
+num_input = 36*time_step
 num_output = 2
 output_idx = 6
 
 # parameters
 learning_rate = 0.000010 #0.000001
-training_epochs = 300
+training_epochs = 200
 batch_size = 1000
 total_batch = 224
 drop_out = 0.85
 regul_factor = 0.001
+analog_clipping = 0.00
 
 # loading testing data
 f_test = open('../data/FCTime/testing_data_.csv', 'r', encoding='utf-8')
@@ -165,11 +167,13 @@ if wandb_use == True:
     wandb.config.drop_out = drop_out
     wandb.config.num_input = num_input
     wandb.config.num_output = num_output
+    wandb.config.time_step = time_step
     wandb.config.total_batch = total_batch
     wandb.config.activation_function = "ReLU"
     wandb.config.training_episode = 1200
     wandb.config.hidden_layers, wandb.config.hidden_neurons = m1.get_hidden_number()
     wandb.config.L2_regularization = regul_factor 
+    wandb.config.analog_clipping = analog_clipping
 
 # train my model
 train_mse = np.zeros(training_epochs)

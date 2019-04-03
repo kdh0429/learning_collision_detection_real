@@ -1,12 +1,12 @@
 % Change DataType to 'Testing'/'Validation'/'Training'
-DataType = 'Testing';
+DataType = 'Training';
 
 motor_constant1_3 = -1/0.09368;
 motor_constant4_6 = -1/0.09064;
 hz = 100;
 
 num_input = 36;
-num_time_step = 10;
+num_time_step = 5;
 
 fileName = strcat('../MonitoringDataLog',DataType,'.txt');
 RawData = load(fileName);
@@ -14,15 +14,15 @@ ProcessData=zeros(size(RawData,1),num_input*num_time_step+2);
 
 CollisionProcess = zeros(size(RawData,1), 2);
 CollisionProcess(:,1) = RawData(:,58);
-% for i=1:size(CollisionProcess,1)
-%     if CollisionProcess(i,1)== 1
-%         if RawData(i,28) > 0.85
-%             CollisionProcess(i,1) = 1;
-%         else
-%             CollisionProcess(i,1) = 0;
-%         end
-%     end
-% end
+for i=1:size(CollisionProcess,1)
+    if CollisionProcess(i,1)== 1
+        if RawData(i,28) > 0.85
+            CollisionProcess(i,1) = 1;
+        else
+            CollisionProcess(i,1) = 0;
+        end
+    end
+end
 CollisionProcess(:,2) = 1-CollisionProcess(:,1);
 
 for k=num_time_step:size(RawData,1)

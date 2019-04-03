@@ -10,7 +10,7 @@ import os
 wandb_use = True
 start_time = time.time()
 if wandb_use == True:
-    wandb.init(project="real_FC_Time", tensorboard=False)
+    wandb.init(project="real_FC_Time_random_normalize", tensorboard=False)
 
 class Model:
 
@@ -112,7 +112,7 @@ class Model:
         return [self.hidden_layers, self.hidden_neurons]
 
 # input/output number
-time_step = 10
+time_step = 5
 num_input = 36*time_step
 num_output = 2
 output_idx = 6
@@ -120,14 +120,14 @@ output_idx = 6
 # parameters
 learning_rate = 0.000010 #0.000001
 training_epochs = 200
-batch_size = 1000
-total_batch = 224
+batch_size = 500 #1000
+total_batch = 316 #224
 drop_out = 0.85
-regul_factor = 0.001
+regul_factor = 0.064
 analog_clipping = 0.00
 
 # loading testing data
-f_test = open('../data/FCTime/testing_data_.csv', 'r', encoding='utf-8')
+f_test = open('../data/random/FCTime_normalize/testing_data_.csv', 'r', encoding='utf-8')
 rdr_test = csv.reader(f_test)
 x_data_test = []
 y_data_test = []
@@ -141,7 +141,7 @@ x_data_test = np.reshape(x_data_test, (-1, num_input))
 y_data_test = np.reshape(y_data_test, (-1, num_output))
 
 # load validation data
-f_val = open('../data/FCTime/validation_data_.csv', 'r', encoding='utf-8')
+f_val = open('../data/random/FCTime_normalize/validation_data_.csv', 'r', encoding='utf-8')
 rdr_val = csv.reader(f_val)
 x_data_val = []
 y_data_val = []
@@ -186,7 +186,7 @@ for epoch in range(training_epochs):
     accu_train = 0
     avg_reg_cost = 0
     avg_cost_train = 0
-    f = open('../data/FCTime/training_data_.csv', 'r', encoding='utf-8')
+    f = open('../data/random/FCTime_normalize/training_data_.csv', 'r', encoding='utf-8')
     rdr = csv.reader(f)
 
     for i in range(total_batch):
@@ -240,10 +240,10 @@ if wandb_use == True:
     saver.save(sess, os.path.join(wandb.run.dir, 'model/model.ckpt'))
     wandb.config.elapsed_time = elapsed_time
 
-epoch = np.arange(training_epochs)
-plt.plot(epoch, train_mse, 'r', label='train')
-plt.plot(epoch, validation_mse, 'b', label='validation')
-plt.legend()
-plt.xlabel('epoch')
-plt.ylabel('abs error')
-plt.show()
+#epoch = np.arange(training_epochs)
+#plt.plot(epoch, train_mse, 'r', label='train')
+#plt.plot(epoch, validation_mse, 'b', label='validation')
+#plt.legend()
+#plt.xlabel('epoch')
+#plt.ylabel('abs error')
+#plt.show()

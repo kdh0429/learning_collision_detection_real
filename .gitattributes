@@ -1,12 +1,1 @@
-data/joint/CNN/Training_raw_data_.csv filter=lfs diff=lfs merge=lfs -text
-data/joint/CNN/training_data_.csv filter=lfs diff=lfs merge=lfs -text
-data/joint/FCTime/Training_raw_data_.csv filter=lfs diff=lfs merge=lfs -text
-data/joint/FCTime/training_data_.csv filter=lfs diff=lfs merge=lfs -text
-data/joint/FCTime_normalize/Training_raw_data_.csv filter=lfs diff=lfs merge=lfs -text
-data/joint/FCTime_normalize/training_data_.csv filter=lfs diff=lfs merge=lfs -text
-data/joint/ResiTime/Training_raw_data_.csv filter=lfs diff=lfs merge=lfs -text
-data/joint/ResiTime/training_data_.csv filter=lfs diff=lfs merge=lfs -text
-data/random/FCTime/Training_raw_data_.csv filter=lfs diff=lfs merge=lfs -text
-data/random/FCTime/training_data_.csv filter=lfs diff=lfs merge=lfs -text
-data/random/FCTime_normalize/Training_raw_data_.csv filter=lfs diff=lfs merge=lfs -text
-data/random/FCTime_normalize/training_data_.csv filter=lfs diff=lfs merge=lfs -text
+data/** filter=lfs diff=lfs merge=lfs -text

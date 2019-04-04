@@ -3,3 +3,4 @@ CNN/wandb/*
 Resi/wandb/*
 FCTime/wandb/*
 ResiTime/wandb/*
+data/*

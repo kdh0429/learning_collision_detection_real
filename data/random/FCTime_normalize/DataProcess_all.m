@@ -1,5 +1,6 @@
 % Change DataType to 'Testing'/'Validation'/'Training'
-DataType = 'Training';
+clear all;
+DataType = 'Testing';
 
 motor_constant1_3 = -1/0.09368;
 motor_constant4_6 = -1/0.09064;
@@ -12,11 +13,13 @@ fileName = strcat('../MonitoringDataLog',DataType,'.txt');
 RawData = load(fileName);
 ProcessData=zeros(size(RawData,1),num_input*num_time_step+2);
 
-MaxRawData = zeros(1,size(RawData,2));
-MinRawData = zeros(1,size(RawData,2));
-for i=1:size(RawData,2)
-   MaxRawData(1,i) = max(RawData(:,i));
-   MinRawData(1,i) = min(RawData(:,i));
+TrainingfileName = '../MonitoringDataLogTraining.txt';
+TrainingData = load(TrainingfileName);
+MaxTrainingData = zeros(1,size(TrainingData,2));
+MinTrainingData = zeros(1,size(TrainingData,2));
+for i=1:size(TrainingData,2)
+    MaxTrainingData(1,i) = max(TrainingData(:,i));
+    MinTrainingData(1,i) = min(TrainingData(:,i));
 end
 
 for k=num_time_step:size(RawData,1)
@@ -24,15 +27,15 @@ for k=num_time_step:size(RawData,1)
     ProcessData(k,num_input*num_time_step+2) = 1-RawData(k,58);
     for i=1:num_time_step
         for j=1:3
-            ProcessData(k,num_input*(i-1)+j) = motor_constant1_3*RawData(k-i+1,51+j) / (MaxRawData(1,51+j)-MinRawData(1,51+j));
-            ProcessData(k,num_input*(i-1)+j+3) = motor_constant4_6*RawData(k-i+1,54+j) / (MaxRawData(1,54+j)-MinRawData(1,51+j));
+            ProcessData(k,num_input*(i-1)+j) = (motor_constant1_3*RawData(k-i+1,51+j)-MinTrainingData(1,51+j)) / (MaxTrainingData(1,51+j)-MinTrainingData(1,51+j));
+            ProcessData(k,num_input*(i-1)+j+3) = (motor_constant4_6*RawData(k-i+1,54+j)-MinTrainingData(1,54+j)) / (MaxTrainingData(1,54+j)-MinTrainingData(1,51+j));
         end
         for j=1:6
-            ProcessData(k,num_input*(i-1)+j+6) = RawData(k-i+1,3+j) / (MaxRawData(1,3+j)-MinRawData(1,3+j)); % q
-            ProcessData(k,num_input*(i-1)+j+12) = RawData(k-i+1,15+j) / (MaxRawData(1,15+j)-MinRawData(1,15+j)); % qdot
-            ProcessData(k,num_input*(i-1)+j+18) = RawData(k-i+1,9+j) / (MaxRawData(1,9+j)-MinRawData(1,9+j)); % q_desired
-            ProcessData(k,num_input*(i-1)+j+24) = RawData(k-i+1,21+j) / (MaxRawData(1,21+j)-MinRawData(1,21+j)); % qdot_desired
-            ProcessData(k,num_input*(i-1)+j+30) = RawData(k-i+1,39+j) / (MaxRawData(1,39+j)-MinRawData(1,39+j)); % dynamic torque
+            ProcessData(k,num_input*(i-1)+j+6) = (RawData(k-i+1,3+j)-MinTrainingData(1,3+j)) / (MaxTrainingData(1,3+j)-MinTrainingData(1,3+j)); % q
+            ProcessData(k,num_input*(i-1)+j+12) = (RawData(k-i+1,15+j)-MinTrainingData(1,15+j)) / (MaxTrainingData(1,15+j)-MinTrainingData(1,15+j)); % qdot
+            ProcessData(k,num_input*(i-1)+j+18) = (RawData(k-i+1,9+j)-MinTrainingData(1,9+j)) / (MaxTrainingData(1,9+j)-MinTrainingData(1,9+j)); % q_desired
+            ProcessData(k,num_input*(i-1)+j+24) = (RawData(k-i+1,21+j)-MinTrainingData(1,21+j)) / (MaxTrainingData(1,21+j)-MinTrainingData(1,21+j)); % qdot_desired
+            ProcessData(k,num_input*(i-1)+j+30) = (RawData(k-i+1,39+j)-MinTrainingData(1,39+j)) / (MaxTrainingData(1,39+j)-MinTrainingData(1,39+j)); % dynamic torque
         end
     end
 end
@@ -52,8 +55,3 @@ elseif strcmp(DataType,'Validation')
 elseif strcmp(DataType,'Testing')
     csvwrite('testing_data_.csv', Testing);
 end
-
-
-
-
-

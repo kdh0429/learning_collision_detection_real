@@ -195,6 +195,17 @@ for epoch in range(training_epochs):
     print('Epoch:', '%04d' % (epoch + 1))
     print('Train Accuracy =', '{:.9f}'.format(accu_train))
 
+    f_val = open('../data/FC/validation_data_.csv', 'r', encoding='utf-8')
+    rdr_val = csv.reader(f_val)
+    for i in range(total_batch_val):
+        batch_xs_val, batch_ys_val = m1.next_batch(batch_size, rdr_val)
+        c, _, _, _ , reg, cost = m1.get_mean_error_hypothesis(batch_xs_val, batch_ys_val)
+        accu_val += c / total_batch_val
+        reg_val += reg / total_batch_val
+        cost_val += cost / total_batch_val
+
+
+
     [accu_val, hypo, x_val, y_val, l2_reg_val, val_cost] = m1.get_mean_error_hypothesis(x_data_val, y_data_val)
     print('Validation Accuracy:', '{:.9f}'.format(accu_val))
 

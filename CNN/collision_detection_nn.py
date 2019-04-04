@@ -106,15 +106,15 @@ class Model:
 # input/output number
 num_input = 36
 num_output = 2
-num_time_step = 20
+num_time_step = 5
 
 # parameters
 learning_rate = 0.000050 #0.000001
 training_epochs = 100
 batch_size = 100
-total_batch = 1337
-total_batch_val = 199
-total_batch_test = 192
+total_batch = 4929 # joint: 4929, random:4490
+total_batch_val = 1056 # joint: 1056, random: 962
+total_batch_test = 1056 # joint: 1056, random: 962
 drop_out = 0.75
 regul_factor = 0.001
 
@@ -152,7 +152,7 @@ for epoch in range(training_epochs):
     reg_train = 0
     reg_val = 0
     cost_val = 0
-    f = open('../data/CNN/training_data_.csv', 'r', encoding='utf-8')
+    f = open('../data/joint/CNN/training_data_.csv', 'r', encoding='utf-8')
     rdr = csv.reader(f)
 
     for i in range(total_batch):
@@ -162,10 +162,7 @@ for epoch in range(training_epochs):
         cost_train += cost / total_batch
         reg_train += reg / total_batch
 
-    print('Epoch:', '%04d' % (epoch + 1))
-    print('Train Accuracy =', '{:.9f}'.format(accu_train))
-
-    f_val = open('../data/CNN/validation_data_.csv', 'r', encoding='utf-8')
+    f_val = open('../data/joint/CNN/validation_data_.csv', 'r', encoding='utf-8')
     rdr_val = csv.reader(f_val)
     for i in range(total_batch_val):
         batch_xs_val, batch_ys_val = m1.next_batch(batch_size, rdr_val)
@@ -173,6 +170,9 @@ for epoch in range(training_epochs):
         accu_val += c / total_batch_val
         reg_val += reg / total_batch_val
         cost_val += cost / total_batch_val
+
+    print('Epoch:', '%04d' % (epoch + 1))
+    print('Train Accuracy =', '{:.9f}'.format(accu_train))
     print('Validation Accuracy =', '{:.9f}'.format(accu_val))
     print('Train Cost =', '{:.9f}'.format(cost_train), 'Train Regul =', '{:.9f}'.format(reg_train))
     print('Validation Cost =', '{:.9f}'.format(cost_val), 'Validation Regul =', '{:.9f}'.format(reg_val))
@@ -195,7 +195,7 @@ for epoch in range(training_epochs):
 
 print('Learning Finished!')
 
-f_test = open('../data/CNN/testing_data_.csv', 'r', encoding='utf-8')
+f_test = open('../data/joint/CNN/testing_data_.csv', 'r', encoding='utf-8')
 rdr_test = csv.reader(f_test)
 accu_test = 0
 reg_test = 0

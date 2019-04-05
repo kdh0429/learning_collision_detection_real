@@ -13,7 +13,7 @@ false_positive = 0.0
 
 
 for i in range(1056): #1056 joint 963 random
-    path = '../data/joint/FCTime_normalize/TestingDivide/Testing_raw_data_' + str(i+1) + '.csv'
+    path = '../data/joint/FCModulize/TestingDivide/Testing_raw_data_' + str(i+1) + '.csv'
     # raw data
     f = open(path, 'r', encoding='utf-8')
     rdr = csv.reader(f)
@@ -41,7 +41,7 @@ for i in range(1056): #1056 joint 963 random
     y = graph.get_tensor_by_name("m1/output:0")
     keep_prob = graph.get_tensor_by_name("m1/keep_prob:0")
     is_train = graph.get_tensor_by_name("m1/is_train:0")
-    hypothesis = graph.get_tensor_by_name("m1/hypothesis:0")
+    hypothesis = graph.get_tensor_by_name("m1/ConcatenateNet/hypothesis:0")
 
     hypo = sess.run(hypothesis, feed_dict={x: x_data_raw, keep_prob: 1.0, is_train:False})
 

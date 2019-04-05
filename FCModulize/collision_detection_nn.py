@@ -31,16 +31,15 @@ class Model:
             # weights & bias for nn layers
             # http://stackoverflow.com/questions/33640581/how-to-do-xavier-initialization-on-tensorflow
             for i in range(6):
-                scope_name = "Joint"+str(i)+"Net"
-                with tf.variable_scope(scope_name):
-                    W1 = tf.get_variable("W1", shape=[num_one_joint_data, self.hidden_neurons], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.GraphKeys.REGULARIZATION_LOSSES)
+                with tf.variable_scope("Joint"+str(i)+"Net"):
+                    W1 = tf.get_variable("W1", shape=[num_one_joint_data, self.hidden_neurons], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.contrib.layers.l2_regularizer(regul_factor))
                     b1 = tf.Variable(tf.random_normal([self.hidden_neurons]))
                     L1 = tf.matmul(self.X[:, num_one_joint_data*i:num_one_joint_data*(i+1)], W1) +b1
                     L1 = tf.nn.relu(L1)
                     L1 = tf.layers.batch_normalization(L1, training=self.is_train)
                     L1 = tf.nn.dropout(L1, keep_prob=self.keep_prob)
 
-                    W2 = tf.get_variable("W2", shape=[self.hidden_neurons, self.hidden_neurons], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.GraphKeys.REGULARIZATION_LOSSES)
+                    W2 = tf.get_variable("W2", shape=[self.hidden_neurons, self.hidden_neurons], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.contrib.layers.l2_regularizer(regul_factor))
                     b2 = tf.Variable(tf.random_normal([self.hidden_neurons]))
                     L2 = tf.matmul(L1, W2) +b2
                     L2 = tf.nn.relu(L2)
@@ -48,7 +47,7 @@ class Model:
                     L2 = tf.nn.dropout(L2, keep_prob=self.keep_prob)
                     self.hidden_layers += 1
 
-                    W3 = tf.get_variable("W3", shape=[self.hidden_neurons, self.hidden_neurons], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.GraphKeys.REGULARIZATION_LOSSES)
+                    W3 = tf.get_variable("W3", shape=[self.hidden_neurons, self.hidden_neurons], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.contrib.layers.l2_regularizer(regul_factor))
                     b3 = tf.Variable(tf.random_normal([self.hidden_neurons]))
                     L3 = tf.matmul(L2, W3) +b3
                     L3 = tf.nn.relu(L3)
@@ -56,7 +55,7 @@ class Model:
                     L3 = tf.nn.dropout(L3, keep_prob=self.keep_prob)
                     self.hidden_layers += 1
 
-                    W4 = tf.get_variable("W4", shape=[self.hidden_neurons, 1], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.GraphKeys.REGULARIZATION_LOSSES)
+                    W4 = tf.get_variable("W4", shape=[self.hidden_neurons, 1], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.contrib.layers.l2_regularizer(regul_factor))
                     b4 = tf.Variable(tf.random_normal([1]))
                     L4 = tf.matmul(L3, W4) +b4
                     L4 = tf.nn.relu(L4)
@@ -68,24 +67,23 @@ class Model:
                         self.LConcat = tf.concat([self.LConcat, L4],1)
 
             with tf.variable_scope("ConcatenateNet"):
-                W5 = tf.get_variable("W5", shape=[6, self.hidden_neurons], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.GraphKeys.REGULARIZATION_LOSSES)
+                W5 = tf.get_variable("W5", shape=[6, self.hidden_neurons], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.contrib.layers.l2_regularizer(regul_factor))
                 b5 = tf.Variable(tf.random_normal([self.hidden_neurons]))
                 L5 = tf.matmul(self.LConcat, W5) +b5
                 L5 = tf.nn.relu(L5)
                 L5 = tf.layers.batch_normalization(L5, training=self.is_train)
                 L5 = tf.nn.dropout(L5, keep_prob=self.keep_prob)
 
-                W6 = tf.get_variable("W6", shape=[self.hidden_neurons, num_output], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.GraphKeys.REGULARIZATION_LOSSES)
+                W6 = tf.get_variable("W6", shape=[self.hidden_neurons, num_output], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.contrib.layers.l2_regularizer(regul_factor))
                 b6 = tf.Variable(tf.random_normal([num_output]))
                 self.logits = tf.matmul(L5, W6) + b6
                 self.hypothesis = tf.nn.softmax(self.logits)
                 self.hypothesis = tf.identity(self.hypothesis, "hypothesis")
 
             # define cost/loss & optimizer
-            self.l2_reg = tf.get_collection(tf.GraphKeys.REGULARIZATION_LOSSES)
-            self.l2_reg = regul_factor* sum(self.l2_reg)
+            self.l2_reg = sum(tf.get_collection(tf.GraphKeys.REGULARIZATION_LOSSES))
             self.cost = tf.reduce_mean(tf.nn.softmax_cross_entropy_with_logits_v2(logits=self.logits, labels=self.Y))
-            #self.cost = tf.reduce_mean(tf.reduce_mean(tf.square(self.hypothesis - self.Y)))
+
             self.update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)
             with tf.control_dependencies(self.update_ops):
                 self.optimizer = tf.train.AdamOptimizer(learning_rate= learning_rate).minimize(self.cost + self.l2_reg)

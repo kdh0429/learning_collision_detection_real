@@ -26,7 +26,7 @@ class Model:
             self.is_train = tf.placeholder(tf.bool, name = "is_train")
             self.keep_prob = tf.placeholder(tf.float32, name="keep_prob")
             self.hidden_layers = 0
-            self.hidden_neurons = 500
+            self.hidden_neurons = 300
 
             # weights & bias for nn layers
             # http://stackoverflow.com/questions/33640581/how-to-do-xavier-initialization-on-tensorflow
@@ -89,7 +89,7 @@ class Model:
         self.accuracy = tf.reduce_mean(tf.cast(self.correct_prediction, tf.float32))
 
     def get_mean_error_hypothesis(self, x_test, y_test, keep_prop=1.0, is_train=False):
-        return self.sess.run([self.accuracy,  self.l2_reg, self.cost, self.optimizer], feed_dict={self.X: x_test, self.Y: y_test, self.keep_prob: keep_prop, self.is_train: is_train})
+        return self.sess.run([self.accuracy,  self.l2_reg, self.cost], feed_dict={self.X: x_test, self.Y: y_test, self.keep_prob: keep_prop, self.is_train: is_train})
 
     def train(self, x_data, y_data, keep_prop=1.0, is_train=True):
         return self.sess.run([self.accuracy, self.l2_reg, self.cost, self.optimizer], feed_dict={
@@ -125,7 +125,7 @@ total_batch = 492 # joint : 492, random : 449
 total_batch_val = 105 # joint: 105, random: 96
 total_batch_test = 105 # joint: 105, random: 96
 drop_out = 0.85
-regul_factor = 0.064
+regul_factor = 0.032
 analog_clipping = 0.00
 
 
@@ -178,7 +178,7 @@ for epoch in range(training_epochs):
     rdr_val = csv.reader(f_val)
     for i in range(total_batch_val):
         batch_xs_val, batch_ys_val = m1.next_batch(batch_size, rdr_val)
-        c, reg_c, cost, _  = m1.get_mean_error_hypothesis(batch_xs_val, batch_ys_val)
+        c, reg_c, cost = m1.get_mean_error_hypothesis(batch_xs_val, batch_ys_val)
         accu_val += c / total_batch_val
         reg_val += reg_c / total_batch_val
         cost_val += cost / total_batch_val
@@ -215,7 +215,7 @@ cost_test = 0
 
 for i in range(total_batch_test):
     batch_xs_test, batch_ys_test = m1.next_batch(batch_size, rdr_test)
-    c, reg, cost, _  = m1.get_mean_error_hypothesis(batch_xs_test, batch_ys_test)
+    c, reg, cost  = m1.get_mean_error_hypothesis(batch_xs_test, batch_ys_test)
     accu_test += c / total_batch_test
     reg_test += reg / total_batch_test
     cost_test += cost / total_batch_test

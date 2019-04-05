@@ -3,4 +3,5 @@ CNN/wandb/*
 Resi/wandb/*
 FCTime/wandb/*
 ResiTime/wandb/*
+FCModulize/wandb/*
 data/*

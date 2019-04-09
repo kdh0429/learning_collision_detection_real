@@ -10,7 +10,7 @@ import os
 wandb_use = True
 start_time = time.time()
 if wandb_use == True:
-    wandb.init(project="real_FC_Time", tensorboard=False)
+    wandb.init(project="real_FC_Time_joint_normalize", tensorboard=False)
 
 class Model:
 
@@ -26,7 +26,7 @@ class Model:
             self.is_train = tf.placeholder(tf.bool, name = "is_train")
             self.keep_prob = tf.placeholder(tf.float32, name="keep_prob")
             self.hidden_layers = 0
-            self.hidden_neurons = 500
+            self.hidden_neurons = 300
 
             # weights & bias for nn layers
             # http://stackoverflow.com/questions/33640581/how-to-do-xavier-initialization-on-tensorflow
@@ -89,7 +89,7 @@ class Model:
         self.accuracy = tf.reduce_mean(tf.cast(self.correct_prediction, tf.float32))
 
     def get_mean_error_hypothesis(self, x_test, y_test, keep_prop=1.0, is_train=False):
-        return self.sess.run([self.accuracy, self.hypothesis, self.X, self.Y, self.l2_reg, self.cost], feed_dict={self.X: x_test, self.Y: y_test, self.keep_prob: keep_prop, self.is_train: is_train})
+        return self.sess.run([self.accuracy,  self.l2_reg, self.cost], feed_dict={self.X: x_test, self.Y: y_test, self.keep_prob: keep_prop, self.is_train: is_train})
 
     def train(self, x_data, y_data, keep_prop=1.0, is_train=True):
         return self.sess.run([self.accuracy, self.l2_reg, self.cost, self.optimizer], feed_dict={
@@ -112,44 +112,21 @@ class Model:
         return [self.hidden_layers, self.hidden_neurons]
 
 # input/output number
-num_input = 36*5
+time_step = 5
+num_input = 36*time_step
 num_output = 2
 output_idx = 6
 
 # parameters
-learning_rate = 0.000010 #0.000001
-training_epochs = 300
-batch_size = 1000
-total_batch = 224
+learning_rate = 0.00001 #0.000001
+training_epochs = 200
+batch_size = 1000 
+total_batch = 492 # joint : 492, random : 449
+total_batch_val = 105 # joint: 105, random: 96
+total_batch_test = 105 # joint: 105, random: 96
 drop_out = 0.85
-regul_factor = 0.001
-
-# loading testing data
-f_test = open('../data/FCTime/testing_data_.csv', 'r', encoding='utf-8')
-rdr_test = csv.reader(f_test)
-x_data_test = []
-y_data_test = []
-
-for line in rdr_test:
-    line = [float(i) for i in line]
-    x_data_test.append(line[0:num_input])
-    y_data_test.append(line[-num_output:])
-
-x_data_test = np.reshape(x_data_test, (-1, num_input))
-y_data_test = np.reshape(y_data_test, (-1, num_output))
-
-# load validation data
-f_val = open('../data/FCTime/validation_data_.csv', 'r', encoding='utf-8')
-rdr_val = csv.reader(f_val)
-x_data_val = []
-y_data_val = []
-for line in rdr_val:
-    line = [float(i) for i in line]
-    x_data_val.append(line[0:num_input])
-    #x_data_val.append(line[29:43])
-    y_data_val.append(line[-num_output:])
-x_data_val = np.reshape(x_data_val, (-1, num_input))
-y_data_val = np.reshape(y_data_val, (-1, num_output))
+regul_factor = 0.032
+analog_clipping = 0.00
 
 
 # initialize
@@ -165,11 +142,13 @@ if wandb_use == True:
     wandb.config.drop_out = drop_out
     wandb.config.num_input = num_input
     wandb.config.num_output = num_output
+    wandb.config.time_step = time_step
     wandb.config.total_batch = total_batch
     wandb.config.activation_function = "ReLU"
     wandb.config.training_episode = 1200
     wandb.config.hidden_layers, wandb.config.hidden_neurons = m1.get_hidden_number()
     wandb.config.L2_regularization = regul_factor 
+    wandb.config.analog_clipping = analog_clipping
 
 # train my model
 train_mse = np.zeros(training_epochs)
@@ -180,38 +159,45 @@ validation_cost = np.zeros(training_epochs)
 
 for epoch in range(training_epochs):
     accu_train = 0
-    avg_reg_cost = 0
-    avg_cost_train = 0
-    f = open('../data/FCTime/training_data_.csv', 'r', encoding='utf-8')
-    rdr = csv.reader(f)
+    accu_val = 0
+    reg_train = 0
+    reg_val = 0
+    cost_train = 0
+    cost_val = 0
 
+    f = open('../data/joint/FCTime_normalize/training_data_.csv', 'r', encoding='utf-8')
+    rdr = csv.reader(f)
     for i in range(total_batch):
         batch_xs, batch_ys = m1.next_batch(batch_size, rdr)
         c, reg_c, cost,_ = m1.train(batch_xs, batch_ys, drop_out)
         accu_train += c / total_batch
-        avg_reg_cost += reg_c / total_batch
-        avg_cost_train += cost / total_batch
+        reg_train += reg_c / total_batch
+        cost_train += cost / total_batch
+
+    f_val = open('../data/joint/FCTime_normalize/validation_data_.csv', 'r', encoding='utf-8')
+    rdr_val = csv.reader(f_val)
+    for i in range(total_batch_val):
+        batch_xs_val, batch_ys_val = m1.next_batch(batch_size, rdr_val)
+        c, reg_c, cost = m1.get_mean_error_hypothesis(batch_xs_val, batch_ys_val)
+        accu_val += c / total_batch_val
+        reg_val += reg_c / total_batch_val
+        cost_val += cost / total_batch_val
 
     print('Epoch:', '%04d' % (epoch + 1))
     print('Train Accuracy =', '{:.9f}'.format(accu_train))
-
-    [accu_val, hypo, x_val, y_val, l2_reg_val, val_cost] = m1.get_mean_error_hypothesis(x_data_val, y_data_val)
-    print('Validation Accuracy:', '{:.9f}'.format(accu_val))
-
-    print('Train Cost =', '{:.9f}'.format(avg_cost_train))
-    print('Train reg =', '{:.9f}'.format(avg_reg_cost))
-    print('Validation Cost =', '{:.9f}'.format(val_cost))
-    print('Validation reg =', '{:.9f}'.format(l2_reg_val))
+    print('Validation Accuracy =', '{:.9f}'.format(accu_val))
+    print('Train Cost =', '{:.9f}'.format(cost_train), 'Train Regul =', '{:.9f}'.format(reg_train))
+    print('Validation Cost =', '{:.9f}'.format(cost_val), 'Validation Regul =', '{:.9f}'.format(reg_val))
 
     train_mse[epoch] = accu_train
     validation_mse[epoch] = accu_val
 
-    train_cost[epoch] = avg_cost_train
-    validation_cost[epoch] = val_cost
+    train_cost[epoch] = cost_train
+    validation_cost[epoch] = cost_val
 
     if wandb_use == True:
         wandb.log({'training Accuracy': accu_train, 'validation Accuracy': accu_val})
-        wandb.log({'training cost': avg_cost_train, 'training reg': avg_reg_cost, 'validation cost': val_cost, 'validation l2_reg': l2_reg_val})
+        wandb.log({'training cost': cost_train, 'training reg': reg_train, 'validation cost': cost_val, 'validation l2_reg': reg_val})
 
         if epoch % 20 ==0:
             for var in tf.trainable_variables():
@@ -220,11 +206,21 @@ for epoch in range(training_epochs):
 
 
 print('Learning Finished!')
-[accu_test, hypo, x_test, y_test, l2_reg_test, test_cost] = m1.get_mean_error_hypothesis(x_data_test, y_data_test)
-# print('Error: ', error,"\n x_data: ", x_test,"\nHypothesis: ", hypo, "\n y_data: ", y_test)
+
+f_test = open('../data/joint/FCTime_normalize/testing_data_.csv', 'r', encoding='utf-8')
+rdr_test = csv.reader(f_test)
+accu_test = 0
+reg_test = 0
+cost_test = 0
+
+for i in range(total_batch_test):
+    batch_xs_test, batch_ys_test = m1.next_batch(batch_size, rdr_test)
+    c, reg, cost  = m1.get_mean_error_hypothesis(batch_xs_test, batch_ys_test)
+    accu_test += c / total_batch_test
+    reg_test += reg / total_batch_test
+    cost_test += cost / total_batch_test
 print('Test Accuracy: ', accu_test)
-print('Test Cost: ', test_cost)
-print('Test l2 regularization:', l2_reg_test)
+print('Test Cost: ', cost_test)
 
 elapsed_time = time.time() - start_time
 print(elapsed_time)
@@ -236,10 +232,10 @@ if wandb_use == True:
     saver.save(sess, os.path.join(wandb.run.dir, 'model/model.ckpt'))
     wandb.config.elapsed_time = elapsed_time
 
-epoch = np.arange(training_epochs)
-plt.plot(epoch, train_mse, 'r', label='train')
-plt.plot(epoch, validation_mse, 'b', label='validation')
-plt.legend()
-plt.xlabel('epoch')
-plt.ylabel('abs error')
-plt.show()
+#epoch = np.arange(training_epochs)
+#plt.plot(epoch, train_mse, 'r', label='train')
+#plt.plot(epoch, validation_mse, 'b', label='validation')
+#plt.legend()
+#plt.xlabel('epoch')
+#plt.ylabel('abs error')
+#plt.show()

@@ -5,12 +5,15 @@ import matplotlib.pyplot as plt
 from sklearn import preprocessing
 
 # parameters
-num_input = 36*5
+time_step = 5
+num_input = 36*time_step
 num_output = 2
+false_negative = 0.0
+false_positive = 0.0
 
 
-for i in range(393):
-    path = '../data/FCTime/TestingDivide/Testing_raw_data_' + str(i+1) + '.csv'
+for i in range(1056): #1056 joint 963 random
+    path = '../data/joint/FCTime_normalize/TestingDivide/Testing_raw_data_' + str(i+1) + '.csv'
     # raw data
     f = open(path, 'r', encoding='utf-8')
     rdr = csv.reader(f)

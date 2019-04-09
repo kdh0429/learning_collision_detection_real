@@ -10,8 +10,8 @@ num_output = 2
 num_time_step = 5
 
 
-for i in range(192):
-    path = '../data/CNN/TestingDivide/Testing_raw_data_' + str(i+1) + '.csv'
+for i in range(1056): #1056 joint 963 random
+    path = '../data/joint/CNN/TestingDivide/Testing_raw_data_' + str(i+1) + '.csv'
     # raw data
     f = open(path, 'r', encoding='utf-8')
     rdr = csv.reader(f)

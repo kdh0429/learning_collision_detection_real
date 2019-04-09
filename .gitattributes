@@ -1,4 +1,0 @@
-data/CNN/Training_raw_data_.csv filter=lfs diff=lfs merge=lfs -text
-data/CNN/training_data_.csv filter=lfs diff=lfs merge=lfs -text
-data/FCTime/Training_raw_data_.csv filter=lfs diff=lfs merge=lfs -text
-data/FCTime/training_data_.csv filter=lfs diff=lfs merge=lfs -text

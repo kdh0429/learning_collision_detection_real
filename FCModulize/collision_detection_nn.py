@@ -47,17 +47,17 @@ class Model:
                     L2 = tf.nn.dropout(L2, keep_prob=self.keep_prob)
                     self.hidden_layers += 1
 
-                    # W3 = tf.get_variable("W3", shape=[self.hidden_neurons, self.hidden_neurons], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.contrib.layers.l2_regularizer(regul_factor))
-                    # b3 = tf.Variable(tf.random_normal([self.hidden_neurons]))
-                    # L3 = tf.matmul(L2, W3) +b3
-                    # L3 = tf.nn.relu(L3)
-                    # L3 = tf.layers.batch_normalization(L3, training=self.is_train)
-                    # L3 = tf.nn.dropout(L3, keep_prob=self.keep_prob)
-                    # self.hidden_layers += 1
+                    W3 = tf.get_variable("W3", shape=[self.hidden_neurons, self.hidden_neurons], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.contrib.layers.l2_regularizer(regul_factor))
+                    b3 = tf.Variable(tf.random_normal([self.hidden_neurons]))
+                    L3 = tf.matmul(L2, W3) +b3
+                    L3 = tf.nn.relu(L3)
+                    L3 = tf.layers.batch_normalization(L3, training=self.is_train)
+                    L3 = tf.nn.dropout(L3, keep_prob=self.keep_prob)
+                    self.hidden_layers += 1
 
                     W4 = tf.get_variable("W4", shape=[self.hidden_neurons, 1], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.contrib.layers.l2_regularizer(regul_factor))
                     b4 = tf.Variable(tf.random_normal([1]))
-                    L4 = tf.matmul(L2, W4) +b4
+                    L4 = tf.matmul(L3, W4) +b4
                     L4 = tf.nn.relu(L4)
                     L4 = tf.layers.batch_normalization(L4, training=self.is_train)
                     L4 = tf.nn.dropout(L4, keep_prob=self.keep_prob, name="L4")

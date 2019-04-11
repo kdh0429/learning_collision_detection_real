@@ -10,10 +10,10 @@ num_input = 36*time_step
 num_output = 2
 false_negative = 0.0
 false_positive = 0.0
+total_batch = 963 #1056 joint 963 random
 
-
-for i in range(1056): #1056 joint 963 random
-    path = '../data/joint/FCModulize/TestingDivide/Testing_raw_data_' + str(i+1) + '.csv'
+for i in range(total_batch): 
+    path = '../data/random/FCModulize/TestingDivide/Testing_raw_data_' + str(i+1) + '.csv'
     # raw data
     f = open(path, 'r', encoding='utf-8')
     rdr = csv.reader(f)
@@ -51,13 +51,33 @@ for i in range(1056): #1056 joint 963 random
 
     print("Accuracy : %f" % accuracy)
 
+    false_positive_local_arr = np.zeros_like(t)
+    false_negative_local_arr = np.zeros_like(t)
 
-    plt.plot(t,y_data_raw[:,0], color='r', marker="o", label='real')
-    plt.plot(t,hypo[:,0], color='b',marker="x", label='prediction')
-    plt.xlabel('time')
-    plt.ylabel('Collision Probability')
-    plt.legend()
-    plt.ylim(0,1)
-    plt.savefig('Figure_' + str(i)+'.png')
-    plt.clf()
-    #plt.show()
+    for j in range(len(x_data_raw)):
+        false_positive_local_arr[j] = np.equal(prediction[j], 0) and np.equal(np.argmax(y_data_raw[j,:]), 1)
+        false_negative_local_arr[j] = np.equal(prediction[j], 1) and np.equal(np.argmax(y_data_raw[j,:]), 0)
+
+    false_positive_local = 0.0
+    false_negative_local = 0.0
+    if (np.sum(np.equal(np.argmax(y_data_raw,1), 1)) != 0):
+        false_positive_local = np.sum(false_positive_local_arr)/np.sum(np.equal(np.argmax(y_data_raw,1), 1))
+    if (np.sum(np.equal(np.argmax(y_data_raw,1), 0)) != 0):
+        false_negative_local = np.sum(false_negative_local_arr)/np.sum(np.equal(np.argmax(y_data_raw,1), 0))
+    false_positive += np.mean(false_positive_local)/total_batch
+    false_negative += np.mean(false_negative_local)/total_batch
+    print("False Positive Local: ", false_positive_local)
+    print("False Negative Local: ", false_negative_local)
+    print("False Positive: ",false_positive)
+    print("False Negative: ",false_negative)
+
+    if(i < 100):
+        plt.plot(t,y_data_raw[:,0], color='r', marker="o", label='real')
+        plt.plot(t,hypo[:,0], color='b',marker="x", label='prediction')
+        plt.xlabel('time')
+        plt.ylabel('Collision Probability')
+        plt.legend()
+        plt.ylim(0,1)
+        plt.savefig('Figure_' + str(i)+'.png')
+        plt.clf()
+        #plt.show()

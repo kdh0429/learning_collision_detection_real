@@ -10,7 +10,7 @@ import os
 wandb_use = True
 start_time = time.time()
 if wandb_use == True:
-    wandb.init(project="real_FC_Modulize", tensorboard=False)
+    wandb.init(project="real_FC_random_Modulize", tensorboard=False)
 
 class Model:
 
@@ -26,7 +26,7 @@ class Model:
             self.is_train = tf.placeholder(tf.bool, name = "is_train")
             self.keep_prob = tf.placeholder(tf.float32, name="keep_prob")
             self.hidden_layers = 0
-            self.hidden_neurons = 50
+            self.hidden_neurons = 20
 
             # weights & bias for nn layers
             # http://stackoverflow.com/questions/33640581/how-to-do-xavier-initialization-on-tensorflow
@@ -47,17 +47,17 @@ class Model:
                     L2 = tf.nn.dropout(L2, keep_prob=self.keep_prob)
                     self.hidden_layers += 1
 
-                    W3 = tf.get_variable("W3", shape=[self.hidden_neurons, self.hidden_neurons], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.contrib.layers.l2_regularizer(regul_factor))
-                    b3 = tf.Variable(tf.random_normal([self.hidden_neurons]))
-                    L3 = tf.matmul(L2, W3) +b3
-                    L3 = tf.nn.relu(L3)
-                    L3 = tf.layers.batch_normalization(L3, training=self.is_train)
-                    L3 = tf.nn.dropout(L3, keep_prob=self.keep_prob)
-                    self.hidden_layers += 1
+                    # W3 = tf.get_variable("W3", shape=[self.hidden_neurons, self.hidden_neurons], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.contrib.layers.l2_regularizer(regul_factor))
+                    # b3 = tf.Variable(tf.random_normal([self.hidden_neurons]))
+                    # L3 = tf.matmul(L2, W3) +b3
+                    # L3 = tf.nn.relu(L3)
+                    # L3 = tf.layers.batch_normalization(L3, training=self.is_train)
+                    # L3 = tf.nn.dropout(L3, keep_prob=self.keep_prob)
+                    # self.hidden_layers += 1
 
                     W4 = tf.get_variable("W4", shape=[self.hidden_neurons, 1], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.contrib.layers.l2_regularizer(regul_factor))
                     b4 = tf.Variable(tf.random_normal([1]))
-                    L4 = tf.matmul(L3, W4) +b4
+                    L4 = tf.matmul(L2, W4) +b4
                     L4 = tf.nn.relu(L4)
                     L4 = tf.layers.batch_normalization(L4, training=self.is_train)
                     L4 = tf.nn.dropout(L4, keep_prob=self.keep_prob, name="L4")
@@ -127,11 +127,11 @@ output_idx = 6
 learning_rate = 0.00001 #0.000001
 training_epochs = 200
 batch_size = 1000 
-total_batch = 492 # joint : 492, random : 449
-total_batch_val = 105 # joint: 105, random: 96
-total_batch_test = 105 # joint: 105, random: 96
-drop_out = 0.85
-regul_factor = 0.032
+total_batch = 449 # joint : 492, random : 449
+total_batch_val = 96 # joint: 105, random: 96
+total_batch_test = 96 # joint: 105, random: 96
+drop_out = 1.0
+regul_factor = 0.00001#0.032
 analog_clipping = 0.00
 
 
@@ -171,7 +171,7 @@ for epoch in range(training_epochs):
     cost_train = 0
     cost_val = 0
 
-    f = open('../data/joint/FCModulize/training_data_.csv', 'r', encoding='utf-8')
+    f = open('../data/random/FCModulize/training_data_.csv', 'r', encoding='utf-8')
     rdr = csv.reader(f)
     for i in range(total_batch):
         batch_xs, batch_ys = m1.next_batch(batch_size, rdr)
@@ -180,7 +180,7 @@ for epoch in range(training_epochs):
         reg_train += reg_c / total_batch
         cost_train += cost / total_batch
 
-    f_val = open('../data/joint/FCModulize/validation_data_.csv', 'r', encoding='utf-8')
+    f_val = open('../data/random/FCModulize/validation_data_.csv', 'r', encoding='utf-8')
     rdr_val = csv.reader(f_val)
     for i in range(total_batch_val):
         batch_xs_val, batch_ys_val = m1.next_batch(batch_size, rdr_val)
@@ -213,7 +213,7 @@ for epoch in range(training_epochs):
 
 print('Learning Finished!')
 
-f_test = open('../data/joint/FCModulize/testing_data_.csv', 'r', encoding='utf-8')
+f_test = open('../data/random/FCModulize/testing_data_.csv', 'r', encoding='utf-8')
 rdr_test = csv.reader(f_test)
 accu_test = 0
 reg_test = 0

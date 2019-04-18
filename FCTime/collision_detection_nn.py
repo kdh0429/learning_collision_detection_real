@@ -10,7 +10,7 @@ import os
 wandb_use = True
 start_time = time.time()
 if wandb_use == True:
-    wandb.init(project="real_FC_Time_joint_normalize", tensorboard=False)
+    wandb.init(project="real_FC_Time_random_normalize", tensorboard=False)
 
 class Model:
 
@@ -69,9 +69,17 @@ class Model:
             L5 = tf.nn.dropout(L5, keep_prob=self.keep_prob)
             self.hidden_layers += 1
 
+            W6 = tf.get_variable("W6", shape=[self.hidden_neurons, self.hidden_neurons], initializer=tf.contrib.layers.xavier_initializer())
+            b6 = tf.Variable(tf.random_normal([self.hidden_neurons]))
+            L6 = tf.matmul(L5, W6) +b6
+            L6 = tf.nn.relu(L6)
+            L6 = tf.layers.batch_normalization(L6, training=self.is_train)
+            L6 = tf.nn.dropout(L6, keep_prob=self.keep_prob)
+            self.hidden_layers += 1
+
             W9 = tf.get_variable("W9", shape=[self.hidden_neurons, num_output], initializer=tf.contrib.layers.xavier_initializer())
             b9 = tf.Variable(tf.random_normal([num_output]))
-            self.logits = tf.matmul(L5, W9) + b9
+            self.logits = tf.matmul(L6, W9) + b9
             self.hypothesis = tf.nn.softmax(self.logits)
             self.hypothesis = tf.identity(self.hypothesis, "hypothesis")
 
@@ -120,12 +128,12 @@ output_idx = 6
 # parameters
 learning_rate = 0.00001 #0.000001
 training_epochs = 200
-batch_size = 1000 
-total_batch = 492 # joint : 492, random : 449
-total_batch_val = 105 # joint: 105, random: 96
-total_batch_test = 105 # joint: 105, random: 96
+batch_size = 1000/2 
+total_batch = 449*2 # joint : 492, random : 449
+total_batch_val = 96*2 # joint: 105, random: 96
+total_batch_test = 96*2 # joint: 105, random: 96
 drop_out = 0.85
-regul_factor = 0.032
+regul_factor = 0.064
 analog_clipping = 0.00
 
 
@@ -165,7 +173,7 @@ for epoch in range(training_epochs):
     cost_train = 0
     cost_val = 0
 
-    f = open('../data/joint/FCTime_normalize/training_data_.csv', 'r', encoding='utf-8')
+    f = open('../data/random/FCTime_normalize/training_data_.csv', 'r', encoding='utf-8')
     rdr = csv.reader(f)
     for i in range(total_batch):
         batch_xs, batch_ys = m1.next_batch(batch_size, rdr)
@@ -174,7 +182,7 @@ for epoch in range(training_epochs):
         reg_train += reg_c / total_batch
         cost_train += cost / total_batch
 
-    f_val = open('../data/joint/FCTime_normalize/validation_data_.csv', 'r', encoding='utf-8')
+    f_val = open('../data/random/FCTime_normalize/validation_data_.csv', 'r', encoding='utf-8')
     rdr_val = csv.reader(f_val)
     for i in range(total_batch_val):
         batch_xs_val, batch_ys_val = m1.next_batch(batch_size, rdr_val)
@@ -207,7 +215,7 @@ for epoch in range(training_epochs):
 
 print('Learning Finished!')
 
-f_test = open('../data/joint/FCTime_normalize/testing_data_.csv', 'r', encoding='utf-8')
+f_test = open('../data/random/FCTime_normalize/testing_data_.csv', 'r', encoding='utf-8')
 rdr_test = csv.reader(f_test)
 accu_test = 0
 reg_test = 0

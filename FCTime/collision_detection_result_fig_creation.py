@@ -12,8 +12,8 @@ false_negative = 0.0
 false_positive = 0.0
 
 
-for i in range(1056): #1056 joint 963 random
-    path = '../data/joint/FCTime_normalize/TestingDivide/Testing_raw_data_' + str(i+1) + '.csv'
+for i in range(963): #1056 joint 963 random
+    path = '../data/random/FCTime_normalize/TestingDivide/Testing_raw_data_' + str(i+1) + '.csv'
     # raw data
     f = open(path, 'r', encoding='utf-8')
     rdr = csv.reader(f)

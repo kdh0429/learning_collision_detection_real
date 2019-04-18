@@ -26,7 +26,7 @@ class Model:
             self.is_train = tf.placeholder(tf.bool, name = "is_train")
             self.keep_prob = tf.placeholder(tf.float32, name="keep_prob")
             self.hidden_layers = 0
-            self.hidden_neurons = 20
+            self.hidden_neurons = 15
 
             # weights & bias for nn layers
             # http://stackoverflow.com/questions/33640581/how-to-do-xavier-initialization-on-tensorflow
@@ -124,8 +124,8 @@ num_output = 2
 output_idx = 6
 
 # parameters
-learning_rate = 0.00001 #0.000001
-training_epochs = 200
+learning_rate = 0.00002 #0.000001
+training_epochs = 1000
 batch_size = 1000 
 total_batch = 449 # joint : 492, random : 449
 total_batch_val = 96 # joint: 105, random: 96

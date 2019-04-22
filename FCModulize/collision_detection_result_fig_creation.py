@@ -10,7 +10,7 @@ num_input = 36*time_step
 num_output = 2
 false_negative = 0.0
 false_positive = 0.0
-total_batch = 963 #1056 joint 963 random
+total_batch = 1510 #1056 joint 1510 random
 
 for i in range(total_batch): 
     path = '../data/random/FCModulize/TestingDivide/Testing_raw_data_' + str(i+1) + '.csv'

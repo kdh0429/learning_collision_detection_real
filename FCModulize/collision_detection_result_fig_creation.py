@@ -12,6 +12,27 @@ false_negative = 0.0
 false_positive = 0.0
 total_batch = 1510 #1056 joint 1510 random
 
+tf.reset_default_graph()
+sess = tf.Session()
+
+new_saver = tf.train.import_meta_graph('model/model.ckpt.meta')
+new_saver.restore(sess, 'model/model.ckpt')
+
+graph = tf.get_default_graph()
+x = graph.get_tensor_by_name("m1/input:0")
+y = graph.get_tensor_by_name("m1/output:0")
+keep_prob = graph.get_tensor_by_name("m1/keep_prob:0")
+is_train = graph.get_tensor_by_name("m1/is_train:0")
+hypothesis = graph.get_tensor_by_name("m1/ConcatenateNet/hypothesis:0")
+
+accuracy_all = 0.0
+
+#tensor = [n.name for n in tf.get_default_graph().as_graph_def().node]
+# f = open("name.txt", 'w')
+# for n in tensor:
+#     f.write(n)
+# f.close()
+
 for i in range(total_batch): 
     path = '../data/random/FCModulize/TestingDivide/Testing_raw_data_' + str(i+1) + '.csv'
     # raw data
@@ -30,24 +51,13 @@ for i in range(total_batch):
     x_data_raw = np.reshape(x_data_raw, (-1, num_input))
     y_data_raw = np.reshape(y_data_raw, (-1, num_output))
 
-    tf.reset_default_graph()
-    sess = tf.Session()
-
-    new_saver = tf.train.import_meta_graph('model/model.ckpt.meta')
-    new_saver.restore(sess, 'model/model.ckpt')
-
-    graph = tf.get_default_graph()
-    x = graph.get_tensor_by_name("m1/input:0")
-    y = graph.get_tensor_by_name("m1/output:0")
-    keep_prob = graph.get_tensor_by_name("m1/keep_prob:0")
-    is_train = graph.get_tensor_by_name("m1/is_train:0")
-    hypothesis = graph.get_tensor_by_name("m1/ConcatenateNet/hypothesis:0")
-
     hypo = sess.run(hypothesis, feed_dict={x: x_data_raw, keep_prob: 1.0, is_train:False})
 
     prediction = np.argmax(hypo, 1)
     correct_prediction = np.equal(prediction, np.argmax(y_data_raw, 1))
     accuracy = np.mean(correct_prediction)
+    accuracy_all = accuracy_all + accuracy
+
 
     print("Accuracy : %f" % accuracy)
 
@@ -81,3 +91,10 @@ for i in range(total_batch):
         plt.savefig('Figure_' + str(i)+'.png')
         plt.clf()
         #plt.show()
+        fileName = "Result"+str(i)+".txt"
+        savefile = open(fileName, 'w')
+        np.savetxt(savefile, hypo[:,0])
+        savefile.close()
+
+accuracy_all = accuracy_all/total_batch
+print(accuracy_all)

@@ -143,11 +143,11 @@ output_idx = 6
 learning_rate = 0.00002 #0.000001
 training_epochs = 1
 batch_size = 1000 
-total_batch = 705 # joint : 492, random : 1132/ 705 / 449 / 566
+total_batch = 566 # joint : 492, random : 1132/ 705 / 449 / 566
 total_batch_val = 151 # joint: 105, random: 242/ 151 / 96/ 121
-total_batch_test = 151 # joint: 105, random: 242/ 151 / 96 / 121
+total_batch_test = 121 # joint: 105, random: 242/ 151 / 96 / 121
 drop_out = 1.0
-regul_factor = 0.00001#0.032
+regul_factor = 0.000004#0.032
 analog_clipping = 0.00
 
 

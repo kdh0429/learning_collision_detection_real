@@ -1,3 +1,10 @@
 {
-    "python.pythonPath": "/home/kim/anaconda3/envs/tensorflow-cpu/bin/python"
+    "python.pythonPath": "/home/dg/anaconda3/bin/python",
+    "python.testing.pyTestArgs": [
+        "CNNModulize"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pyTestEnabled": false,
+    "python.testing.promptToConfigure": false
 }

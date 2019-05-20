@@ -10,7 +10,7 @@ import os
 wandb_use = True
 start_time = time.time()
 if wandb_use == True:
-    wandb.init(project="real_FC_Modulize", tensorboard=False)
+    wandb.init(project="real_FC_random_Modulize", tensorboard=False)
 
 class Model:
 
@@ -26,7 +26,7 @@ class Model:
             self.is_train = tf.placeholder(tf.bool, name = "is_train")
             self.keep_prob = tf.placeholder(tf.float32, name="keep_prob")
             self.hidden_layers = 0
-            self.hidden_neurons = 50
+            self.hidden_neurons = 15
 
             # weights & bias for nn layers
             # http://stackoverflow.com/questions/33640581/how-to-do-xavier-initialization-on-tensorflow
@@ -124,14 +124,14 @@ num_output = 2
 output_idx = 6
 
 # parameters
-learning_rate = 0.00001 #0.000001
-training_epochs = 200
+learning_rate = 0.00002 #0.000001
+training_epochs = 1000
 batch_size = 1000 
-total_batch = 492 # joint : 492, random : 449
-total_batch_val = 105 # joint: 105, random: 96
-total_batch_test = 105 # joint: 105, random: 96
-drop_out = 0.85
-regul_factor = 0.032
+total_batch = 705 # joint : 492, random : 705 / 449
+total_batch_val = 151 # joint: 105, random: 151 / 96
+total_batch_test = 151 # joint: 105, random: 151 / 96
+drop_out = 1.0
+regul_factor = 0.00001#0.032
 analog_clipping = 0.00
 
 
@@ -171,7 +171,7 @@ for epoch in range(training_epochs):
     cost_train = 0
     cost_val = 0
 
-    f = open('../data/joint/FCModulize/training_data_.csv', 'r', encoding='utf-8')
+    f = open('./data/random/FCModulize/training_data_.csv', 'r', encoding='utf-8')
     rdr = csv.reader(f)
     for i in range(total_batch):
         batch_xs, batch_ys = m1.next_batch(batch_size, rdr)
@@ -180,7 +180,7 @@ for epoch in range(training_epochs):
         reg_train += reg_c / total_batch
         cost_train += cost / total_batch
 
-    f_val = open('../data/joint/FCModulize/validation_data_.csv', 'r', encoding='utf-8')
+    f_val = open('./data/random/FCModulize/validation_data_.csv', 'r', encoding='utf-8')
     rdr_val = csv.reader(f_val)
     for i in range(total_batch_val):
         batch_xs_val, batch_ys_val = m1.next_batch(batch_size, rdr_val)
@@ -213,7 +213,7 @@ for epoch in range(training_epochs):
 
 print('Learning Finished!')
 
-f_test = open('../data/joint/FCModulize/testing_data_.csv', 'r', encoding='utf-8')
+f_test = open('./data/random/FCModulize/testing_data_.csv', 'r', encoding='utf-8')
 rdr_test = csv.reader(f_test)
 accu_test = 0
 reg_test = 0

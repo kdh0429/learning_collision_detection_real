@@ -6,3 +6,4 @@ ResiTime/wandb/*
 FCModulize/wandb/*
 CNNModulize/wandb/*
 data/*
+FCModulize/result/*

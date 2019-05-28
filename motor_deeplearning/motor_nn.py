@@ -6,14 +6,14 @@ from sklearn import preprocessing
 import time
 import wandb
 import os
+import math
 
-wandb_use = False
+wandb_use = True
 start_time = time.time()
 if wandb_use == True:
-    wandb.init(project="Motor1_Torque_DNN", tensorboard=False)
+    wandb.init(project="Motor2_Torque_DNN", tensorboard=False)
 
 class Model:
-
     def __init__(self, sess, name):
         self.sess = sess
         self.name = name
@@ -32,7 +32,7 @@ class Model:
         # http://stackoverflow.com/questions/33640581/how-to-do-xavier-initialization-on-tensorflow
         W1 = tf.get_variable("W1", shape=[num_input, self.hidden_neurons], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.contrib.layers.l2_regularizer(regul_factor))
         b1 = tf.Variable(tf.random_normal([self.hidden_neurons]))
-        L1 = tf.matmul(self.X[:, num_one_joint_data*(num_joint-1):num_one_joint_data*(num_joint)], W1) +b1
+        L1 = tf.matmul(self.X[:, 0:num_one_joint_data], W1) +b1
         L1 = tf.layers.batch_normalization(L1, training=self.is_train)
         L1 = tf.nn.softsign(L1)
         # L1 = tf.nn.relu(L1)
@@ -56,7 +56,7 @@ class Model:
         L3 = tf.nn.dropout(L3, keep_prob=self.keep_prob)
         self.hidden_layers += 1
 
-        W4 = tf.get_variable("W4", shape=[self.hidden_neurons, num_output], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.contrib.layers.l2_regularizer(regul_factor))
+        W4 = tf.get_variable("output", shape=[self.hidden_neurons, num_output], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.contrib.layers.l2_regularizer(regul_factor))
         b4 = tf.Variable(tf.random_normal([num_output]))
         self.pred = tf.matmul(L3, W4) + b4
         # self.hypothesis = tf.nn.softmax(self.logits)
@@ -69,7 +69,7 @@ class Model:
 
         self.update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)
         with tf.control_dependencies(self.update_ops):
-            self.optimizer = tf.train.AdamOptimizer(learning_rate= learning_rate).minimize(self.cost)#+ self.l2_reg)
+            self.optimizer = tf.train.AdamOptimizer(learning_rate= learning_rate).minimize(self.cost + self.l2_reg)
         
         # self.prediction = tf.argmax(self.hypothesis, 1)
         # self.correct_prediction = tf.equal(self.prediction, tf.argmax(self.Y, 1))
@@ -99,21 +99,22 @@ class Model:
         return [self.hidden_layers, self.hidden_neurons]
 
 # input/output number
-time_step = 5
-num_one_joint_data = time_step*4+1
-num_joint = 1  #joint index
-num_input = time_step*4
+num_input_param = 2
+time_step = 3
+num_one_joint_data = time_step*num_input_param+1
+num_joint = 2  #joint index
+num_input = time_step*num_input_param
 num_output = 1
 
 # parameters
-learning_rate = 0.000005 #0.000001
+learning_rate = 0.0001 #0.000001
 training_epochs = 1000
-batch_size = 2000 
-total_batch = 352 # joint : 492, random : 705 / 449
-total_batch_val = 167 # joint: 105, random: 151 / 96
-total_batch_test = 167 # joint: 105, random: 151 / 96
+batch_size = 32 
+total_batch = math.floor(1564382/batch_size) # joint : 492, random : 705 / 449
+total_batch_val = math.floor(335227/batch_size) # joint: 105, random: 151 / 96
+total_batch_test = math.floor(335227/batch_size) # joint: 105, random: 151 / 96
 drop_out = 1.0
-regul_factor = 0.001#0.032
+regul_factor = 0.00001#0.032
 # analog_clipping = 0.00
 
 
@@ -149,6 +150,7 @@ validation_cost = np.zeros(training_epochs)
 
 
 for epoch in range(training_epochs):
+
     accu_train = 0
     accu_val = 0
     reg_train = 0
@@ -209,7 +211,7 @@ reg_test = 0
 cost_test = 0
 
 for i in range(total_batch_test):
-    batch_xs_test, batch_ys_test = m1.next_batch(batch_size, rdr_test)
+    batch_xs_test, batch_ys_test = m1.next_batch(batch_size, i, rdr_test)
     reg, cost  = m1.get_mean_error_hypothesis(batch_xs_test, batch_ys_test)
     # accu_test += c / total_batch_test
     reg_test += reg / total_batch_test
@@ -221,16 +223,16 @@ elapsed_time = time.time() - start_time
 print(elapsed_time)
 
 saver = tf.train.Saver()
-saver.save(sess,'model/model_j'+num_joint+'.ckpt')
+saver.save(sess,'motor_deeplearning/model/model_j2.ckpt')
 
 if wandb_use == True:
-    saver.save(sess, os.path.join(wandb.run.dir, 'model/model_j'+num_joint+'.ckpt'))
+    saver.save(sess, os.path.join(wandb.run.dir, 'motor_deeplearning/model/model_j2.ckpt'))
     wandb.config.elapsed_time = elapsed_time
 
-#epoch = np.arange(training_epochs)
-#plt.plot(epoch, train_mse, 'r', label='train')
-#plt.plot(epoch, validation_mse, 'b', label='validation')
-#plt.legend()
-#plt.xlabel('epoch')
-#plt.ylabel('abs error')
-#plt.show()
+# epoch = np.arange(training_epochs)
+# plt.plot(epoch, train_mse, 'r', label='train')
+# plt.plot(epoch, validation_mse, 'b', label='validation')
+# plt.legend()
+# plt.xlabel('epoch')
+# plt.ylabel('abs error')
+# plt.show()

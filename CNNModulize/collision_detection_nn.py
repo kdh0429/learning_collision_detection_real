@@ -232,8 +232,7 @@ for epoch in range(training_epochs):
         accu_train += c / total_batch
         reg_train += reg_c / total_batch
         cost_train += cost / total_batch
-        print('input_sample :' , batch_xs[1, :])
-        print('output_sample :' , batch_ys[1, :])
+
 
     f_val = open('./data/random/FCModulize/validation_data_.csv', 'r', encoding='utf-8')
     rdr_val = csv.reader(f_val)

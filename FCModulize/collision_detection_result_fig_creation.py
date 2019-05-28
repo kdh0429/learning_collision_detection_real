@@ -11,7 +11,6 @@ num_output = 2
 false_negative = 0.0
 false_positive = 0.0
 
-
 for i in range(1056): #1056 joint 963 random
     path = '../data/joint/FCModulize/TestingDivide/Testing_raw_data_' + str(i+1) + '.csv'
     # raw data

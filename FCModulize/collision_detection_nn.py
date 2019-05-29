@@ -35,44 +35,33 @@ class Model:
                     W1 = tf.get_variable("W1", shape=[num_one_joint_data, self.hidden_neurons], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.contrib.layers.l2_regularizer(regul_factor))
                     b1 = tf.Variable(tf.random_normal([self.hidden_neurons]))
                     L1 = tf.matmul(self.X[:, num_one_joint_data*i:num_one_joint_data*(i+1)], W1) +b1
-                    tf.identity(L1, "Joint"+str(i)+"Net"+"L1_matmul")
-                    L1 = tf.nn.relu(L1)
-                    tf.identity(L1, "Joint"+str(i)+"Net"+"L1_relu")
                     L1 = tf.layers.batch_normalization(L1, training=self.is_train)
-                    tf.identity(L1, "Joint"+str(i)+"Net"+"L1_batch")
+                    L1 = tf.nn.relu(L1)
                     L1 = tf.nn.dropout(L1, keep_prob=self.keep_prob)
 
                     W2 = tf.get_variable("W2", shape=[self.hidden_neurons, self.hidden_neurons], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.contrib.layers.l2_regularizer(regul_factor))
                     b2 = tf.Variable(tf.random_normal([self.hidden_neurons]))
                     L2 = tf.matmul(L1, W2) +b2
-                    tf.identity(L2, "Joint"+str(i)+"Net"+"L2_matmul")
-                    L2 = tf.nn.relu(L2)
-                    tf.identity(L2, "Joint"+str(i)+"Net"+"L2_relu")
                     L2 = tf.layers.batch_normalization(L2, training=self.is_train)
-                    tf.identity(L2, "Joint"+str(i)+"Net"+"L2_batch")
+                    L2 = tf.nn.relu(L2)
                     L2 = tf.nn.dropout(L2, keep_prob=self.keep_prob)
                     self.hidden_layers += 1
 
                     W3 = tf.get_variable("W3", shape=[self.hidden_neurons, self.hidden_neurons], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.contrib.layers.l2_regularizer(regul_factor))
                     b3 = tf.Variable(tf.random_normal([self.hidden_neurons]))
                     L3 = tf.matmul(L2, W3) +b3
-                    tf.identity(L3, "Joint"+str(i)+"Net"+"L3_matmul")
-                    L3 = tf.nn.relu(L3)
-                    tf.identity(L3, "Joint"+str(i)+"Net"+"L3_relu")
                     L3 = tf.layers.batch_normalization(L3, training=self.is_train)
-                    tf.identity(L3, "Joint"+str(i)+"Net"+"L3_batch")
+                    L3 = tf.nn.relu(L3)
                     L3 = tf.nn.dropout(L3, keep_prob=self.keep_prob)
                     self.hidden_layers += 1
 
                     W4 = tf.get_variable("W4", shape=[self.hidden_neurons, 1], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.contrib.layers.l2_regularizer(regul_factor))
                     b4 = tf.Variable(tf.random_normal([1]))
                     L4 = tf.matmul(L3, W4) +b4
-                    tf.identity(L4, "Joint"+str(i)+"Net"+"L4_matmul")
-                    L4 = tf.nn.relu(L4)
-                    tf.identity(L4, "Joint"+str(i)+"Net"+"L4_relu")
                     L4 = tf.layers.batch_normalization(L4, training=self.is_train)
-                    tf.identity(L4, "Joint"+str(i)+"Net"+"L4_batch")
-                    L4 = tf.nn.dropout(L4, keep_prob=self.keep_prob, name="L4")
+                    L4 = tf.nn.relu(L4)
+                    L4 = tf.nn.dropout(L4, keep_prob=self.keep_prob)
+
                     if(i == 0):
                         self.LConcat = L4
                     else:
@@ -82,11 +71,8 @@ class Model:
                 W5 = tf.get_variable("W5", shape=[6, self.hidden_neurons], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.contrib.layers.l2_regularizer(regul_factor))
                 b5 = tf.Variable(tf.random_normal([self.hidden_neurons]))
                 L5 = tf.matmul(self.LConcat, W5) +b5
-                tf.identity(L5, "ConcatenateNet"+"L5_matmul")
-                L5 = tf.nn.relu(L5)
-                tf.identity(L5, "ConcatenateNet"+"relu")
                 L5 = tf.layers.batch_normalization(L5, training=self.is_train)
-                tf.identity(L5, "ConcatenateNet"+"L4_batch")
+                L5 = tf.nn.relu(L5)
                 L5 = tf.nn.dropout(L5, keep_prob=self.keep_prob)
 
                 W6 = tf.get_variable("W6", shape=[self.hidden_neurons, num_output], initializer=tf.contrib.layers.xavier_initializer(), regularizer=tf.contrib.layers.l2_regularizer(regul_factor))
@@ -141,11 +127,11 @@ output_idx = 6
 
 # parameters
 learning_rate = 0.00002 #0.000001
-training_epochs = 1
+training_epochs = 150
 batch_size = 1000 
-total_batch = 566 # joint : 492, random : 1132/ 705 / 449 / 566
-total_batch_val = 151 # joint: 105, random: 242/ 151 / 96/ 121
-total_batch_test = 121 # joint: 105, random: 242/ 151 / 96 / 121
+total_batch = 1307 # joint : 492, random : 1132/ 705 / 449 / 566
+total_batch_val = 292 # joint: 105, random: 242/ 151 / 96/ 121
+total_batch_test = 275 # joint: 105, random: 242/ 151 / 96 / 121
 drop_out = 1.0
 regul_factor = 0.000004#0.032
 analog_clipping = 0.00

@@ -10,7 +10,7 @@ num_input = 36*time_step
 num_output = 2
 false_negative = 0.0
 false_positive = 0.0
-total_batch = 1510 #1056 joint 1510 random
+total_batch = 2754 #1056 joint 1510 random
 
 tf.reset_default_graph()
 sess = tf.Session()
@@ -81,17 +81,17 @@ for i in range(total_batch):
     print("False Positive: ",false_positive)
     print("False Negative: ",false_negative)
 
-    if(i < 100):
+    if(i < total_batch):
         plt.plot(t,y_data_raw[:,0], color='r', marker="o", label='real')
         plt.plot(t,hypo[:,0], color='b',marker="x", label='prediction')
         plt.xlabel('time')
         plt.ylabel('Collision Probability')
         plt.legend()
         plt.ylim(0,1)
-        plt.savefig('Figure_' + str(i)+'.png')
+        plt.savefig('../FCModulize/result/Figure_' + str(i)+'.png')
         plt.clf()
         #plt.show()
-        fileName = "Result"+str(i)+".txt"
+        fileName = "../FCModulize/result/Result"+str(i)+".txt"
         savefile = open(fileName, 'w')
         np.savetxt(savefile, hypo[:,0])
         savefile.close()
